@@ -4,8 +4,11 @@ class SessionForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
-      password: ''
+      first_name: '',
+      last_name: '',
+      email: '',
+      password: '',
+      state: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -38,24 +41,46 @@ class SessionForm extends React.Component {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to BenchBnB!
           <br />
           Please {this.props.formType} or {this.props.navLink}
           {this.renderErrors()}
           <div className="login-form">
-            <br />
-            <label>Username:
+            <label>First name
               <input type="text"
-                value={this.state.username}
-                onChange={this.update('username')}
+                value={this.state.first_name}
+                onChange={this.update('first_name')}
                 className="login-input"
               />
             </label>
             <br />
-            <label>Password:
+            <label>Last name
+              <input type="text"
+                value={this.state.last_name}
+                onChange={this.update('last_name')}
+                className="login-input"
+              />
+            </label>
+            <br />
+            <label>Email
+              <input type="email"
+                value={this.state.email}
+                onChange={this.update('email')}
+                className="login-input"
+              />
+            </label>
+            <br />
+            <label>Password
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
+                className="login-input"
+              />
+            </label>
+            <br />
+            <label>State
+              <input type="text"
+                value={this.state.state}
+                onChange={this.update('state')}
                 className="login-input"
               />
             </label>
