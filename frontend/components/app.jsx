@@ -8,9 +8,16 @@ import {
   HashRouter
 } from 'react-router-dom';
 
+import GreetingContainer from './greeting/greeting_container';
+
 const App = () => (
   <div>
-    <h1>CloneBase</h1>
+    <header>
+      <Link to="/" className="header-link">
+        <h1>CloneBase</h1>
+      </Link>
+      <GreetingContainer />
+    </header>
   </div>
 );
 
