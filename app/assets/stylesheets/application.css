@@ -13,3 +13,76 @@
  *= require_tree .
  *= require_self
  */
+* {
+  box-sizing: border-box;
+}
+
+html {
+    line-height: 1.15;
+    text-size-adjust: 100%;
+}
+
+body, html {
+  font-family: Graphik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  margin: 0px
+}
+div > header {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 auto;
+  height: 55px;
+  align-items: center;
+  background-color: blue;
+}
+
+.login-signup {
+  position: relative;
+  right: 5px;
+}
+
+.login-signup a {
+  padding: 20px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+
+}
+
+.header-link {
+  position: relative;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  margin: 0 20px 0 20px;
+  display: flex;
+  font-size: 1.5em;
+  font-weight: 600;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.nav-list{
+  padding-right: 300px;
+}
+.nav-list ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-list ul li {
+  display: flex;
+  list-style-type: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 20px;
+}
+
+

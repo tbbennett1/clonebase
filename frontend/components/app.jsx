@@ -16,8 +16,15 @@ const App = () => (
   <div>
     <header>
       <Link to="/" className="header-link">
-        <h1>CloneBase</h1>
+        clonebase
       </Link>
+      <nav className="nav-list">
+        <ul>
+          <li>Prices</li>
+          <li>Products</li>
+          <li>Company</li>
+        </ul>
+      </nav>
       <GreetingContainer />
     </header>
     <Switch>
