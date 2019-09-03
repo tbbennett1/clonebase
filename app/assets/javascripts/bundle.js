@@ -432,12 +432,12 @@ function (_React$Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "session-form-container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Sign in to Clonebase"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit,
         className: "session-form-box"
       }, this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "session-form"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Sign in to Clonebase"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "box-form"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "email",
@@ -595,12 +595,12 @@ function (_React$Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "session-form-container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Create your account"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit,
         className: "session-form-box"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "session-form"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Create your account"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "box-form"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "First name", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
@@ -636,7 +636,7 @@ function (_React$Component) {
         className: "session-submit",
         type: "submit",
         value: "Create account"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), this.props.navLink))));
+      })), this.props.navLink)));
     }
   }]);
 

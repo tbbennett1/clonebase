@@ -37,10 +37,10 @@ class LoginForm extends React.Component {
   render() {
     return (
       <div className="session-form-container">
+        <h2>Sign in to Clonebase</h2>
         <form onSubmit={this.handleSubmit} className="session-form-box">
           {this.renderErrors()}
           <div className="session-form">
-            <h2>Sign in to Clonebase</h2>
             <div className="box-form">
               <label>
                 <input type="email"

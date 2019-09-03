@@ -40,11 +40,11 @@ class SignupForm extends React.Component {
   render() {
     return (
       <div className="session-form-container">
+        <h2>Create your account</h2>
         <form onSubmit={this.handleSubmit} className="session-form-box">
           <br />
           {this.renderErrors()}
           <div className="session-form">
-            <h2>Create your account</h2>
             <div className="box-form">
               <label>First name
                 <input type="text"
@@ -92,9 +92,8 @@ class SignupForm extends React.Component {
               </label>
               <br />
               <input className="session-submit" type="submit" value="Create account" />
-              <br />
-              {this.props.navLink}
             </div>
+              {this.props.navLink}
           </div>
         </form>
       </div>

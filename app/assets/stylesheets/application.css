@@ -17,7 +17,7 @@
   box-sizing: border-box;
 }
 
-body, html, ul, li, p {
+body, html, li, p {
   font-family: Graphik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
@@ -25,6 +25,16 @@ body, html, ul, li, p {
   line-height: 1.15;
   text-size-adjust: 100%;
   background-color: #0667d0;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1180px;
+  flex-shrink: 0;
+  margin: 0px auto;
+  padding: 0px 16px;
 }
 
 .nav-bar {
@@ -117,21 +127,17 @@ body, html, ul, li, p {
   border-image: initial;
 }
 
-
-
 .session-form-container {
   display: flex;
+  -webkit-box-pack: center;
   justify-content: center;
-  background-color: #0667d0;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1 0 auto;
  }
 
-.session-form {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.session-form h2 {
+.session-form-container h2 {
   margin-bottom: 40px;
   height: 34px;
   font-size: 30px;
@@ -142,13 +148,19 @@ body, html, ul, li, p {
 }
 
 .session-form-box{
-  border-radius: 0;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(17, 51, 83, 0.02) 0px 4px 12px 0px;
+  margin-bottom: 24px;
+  border-radius: 4px;
+  padding: 24px;
 }
-.box-form {
-  background: white;
-  padding: 32px 24px;
-  box-shadow: 0 1px 46px -4px rgba(0,0,0,.28);
+
+.session-form {
+  width: 432px;
 }
+
 
 .session-input {
   margin-bottom: 10px;
