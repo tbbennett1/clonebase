@@ -15,17 +15,19 @@ import LogInFormContainer from './session_form/login_form_container';
 const App = () => (
   <div>
     <header>
-      <Link to="/" className="header-link">
-        clonebase
-      </Link>
-      <nav className="nav-list">
-        <ul>
-          <li>Prices</li>
-          <li>Products</li>
-          <li>Company</li>
-        </ul>
-      </nav>
-      <GreetingContainer />
+      <div className="nav-bar">
+        <Link to="/" className="header-link">
+          clonebase
+        </Link>
+        <nav className="nav-list">
+          <ul>
+            <li>Prices</li>
+            <li>Products</li>
+            <li>Company</li>
+          </ul>
+        </nav>
+        <GreetingContainer/>
+      </div>
     </header>
     <Switch>
       <AuthRoute exact path="/signin" component={LogInFormContainer} />
