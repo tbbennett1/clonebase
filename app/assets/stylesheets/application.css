@@ -20,6 +20,7 @@
 html {
     line-height: 1.15;
     text-size-adjust: 100%;
+    background-color: #0667d0;
 }
 
 body, html {
@@ -34,7 +35,7 @@ div > header {
   flex: 1 1 auto;
   height: 55px;
   align-items: center;
-  background-color: blue;
+  background-color: #0667d0;
 }
 
 .login-signup {
@@ -43,13 +44,29 @@ div > header {
 }
 
 .login-signup a {
-  padding: 20px;
+  padding-right: 20px;
   color: white;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
   text-decoration: none;
+}
 
+.get-started-btn {
+  position: relative;
+  width: auto;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  background-color: transparent;
+  margin: 0px;
+  border-radius: 4px;
+  transition: all 80ms ease-in-out 0s;
+  padding: 8px 12px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: white;
+  border-image: initial;
 }
 
 .header-link {
@@ -83,6 +100,41 @@ div > header {
   font-weight: 600;
   cursor: pointer;
   padding: 20px;
+}
+
+.session-form-container {
+  display: flex;
+  justify-content: center;
+  background-color: #0667d0;
+ }
+
+.session-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.session-form h2 {
+  margin-bottom: 40px;
+  height: 34px;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.13;
+  text-align: center;
+  color: #fff;
+}
+
+.session-form-box{
+  border-radius: 0;
+}
+.box-form {
+  background: white;
+  padding: 32px 24px;
+  box-shadow: 0 1px 46px -4px rgba(0,0,0,.28);
+}
+
+.session-input {
+  margin-bottom: 10px;
 }
 
 
