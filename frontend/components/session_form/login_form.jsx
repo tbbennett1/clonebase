@@ -4,11 +4,8 @@ class LoginForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // first_name: '',
-      // last_name: '',
       email: '',
       password: '',
-      // state: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -41,26 +38,8 @@ class LoginForm extends React.Component {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          {/* <br />
-          Please {this.props.formType} or {this.props.navLink} */}
           {this.renderErrors()}
           <div className="login-form">
-            {/* <label>First name
-              <input type="text"
-                value={this.state.first_name}
-                onChange={this.update('first_name')}
-                className="login-input"
-              />
-            </label>
-            <br />
-            <label>Last name
-              <input type="text"
-                value={this.state.last_name}
-                onChange={this.update('last_name')}
-                className="login-input"
-              />
-            </label>
-            <br /> */}
             <label>Email
               <input type="email"
                 value={this.state.email}
@@ -77,14 +56,6 @@ class LoginForm extends React.Component {
               />
             </label>
             <br />
-            {/* <label>State
-              <input type="text"
-                value={this.state.state}
-                onChange={this.update('state')}
-                className="login-input"
-              />
-            </label>
-            <br /> */}
             <input className="session-submit" type="submit" value={this.props.formType} />
           </div>
         </form>
