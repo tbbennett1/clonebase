@@ -33,18 +33,6 @@ column name     | data type | details
 `purchase_date` | date | not null
 `purchase_amount`   | float | not null
 `purchase_price` | float  | not null
- 
-<!-- ## `Prices`
-column name     | data type | details
-----------------|-----------|---------------
-`coin_id` | integer | not null, primary key
-`open` | float | not null
-`close` | float | not null
-`high` | float | not null
-`low` | float | not null
-`price_date` | date | not null
-`created_at` | datetime | not null
-`updated_at` | datetime | not null -->
 
 ## `Portfolio`
 column name | data type | details
@@ -69,14 +57,6 @@ column name | data type | details
 ------------|-----------|---------
 `id` | integer | not null, primary key
 `user_id` | integer | not null, foreign key
-`created_at` | datetime | not null
-`updated_at` | datetime | not null
-
-## `Following-Coins`
-column name | data type | details
-------------|-----------|---------
-`id` | integer | not null, primary key
-`user_id` | integer | not null, foreign key
-`following_id` | integer | not null, foreign key
+`coin_id` | integer | not null, foreign key
 `created_at` | datetime | not null
 `updated_at` | datetime | not null

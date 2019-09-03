@@ -44,6 +44,7 @@ class SignupForm extends React.Component {
           <br />
           {this.renderErrors()}
           <div className="session-form">
+            <h2>Create your account</h2>
             <div className="box-form">
               <label>First name
                 <input type="text"
