@@ -11,9 +11,9 @@
 * /
   * Splash
 * /signin
-  * SessionForm
+  * LoginForm
 * /signup
-  * SessionForm
+  * SignupForm
 * /price
   * CoinList
   * SearchBar
