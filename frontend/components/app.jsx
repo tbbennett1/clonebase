@@ -12,6 +12,7 @@ import Greeting from './greeting/greeting_container';
 import SignUp from './session_form/signup_form_container';
 import LogIn from './session_form/login_form_container';
 import CenterMessage from './greeting/center_message';
+import AssetTable from './greeting/asset_table'
 
 const App = () => (
   <div>
@@ -36,6 +37,7 @@ const App = () => (
         <AuthRoute exact path="/signin" component={LogIn} />
         <AuthRoute exact path="/signup" component={SignUp} />
         <CenterMessage />
+        <AssetTable />
     </Switch>
   </div>
 );

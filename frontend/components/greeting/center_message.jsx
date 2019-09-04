@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import SignUp from '../session_form/signup_form_container'
 
 class CenterMessage extends React.Component{
@@ -12,7 +12,7 @@ class CenterMessage extends React.Component{
 
   handleSubmit(e){
     e.preventDefault();
-    <Route path='/signup' component={SignUp} />
+    return <Route path='/signup' component={SignUp} />
   }
 
   update(email){
@@ -28,9 +28,11 @@ class CenterMessage extends React.Component{
           <div className="cm-email-form">
             <form>
               <input type="email" placeholder="Email address" onChange={e => this.update(e.target.value)} value={this.state.email} />
-              <button onClick={e => this.handleSubmit(e)} type="button" className="cm-button">
-                Get started
-              </button>
+              <Link to="/signup" >
+                <button type="button" className="cm-button">
+                    Get started
+                </button>
+              </Link>
             </form>
           </div>
         </div>

@@ -55,6 +55,10 @@ header {
   margin-right: 16px;
 }
 
+.nav-list > ul > li:hover {
+  color: lightgrey;
+}
+
 .end-nav {
   display: flex;
   flex-direction: row;
@@ -76,6 +80,10 @@ header {
   text-decoration: none;
 }
 
+.login-signup a:first-child:hover {
+  color: lightgrey;
+}
+
 .get-started-btn {
   position: relative;
   width: auto;
@@ -91,4 +99,9 @@ header {
   border-style: solid;
   border-color: white;
   border-image: initial;
+}
+
+.get-started-btn:hover {
+  background-color: white;
+  color: rgb(22, 82, 240);
 }
