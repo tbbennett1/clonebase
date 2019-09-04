@@ -1,6 +1,24 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
+import SignUp from '../session_form/signup_form_container'
 
 class CenterMessage extends React.Component{
+  constructor(props) {
+    super(props);
+    this.state = {email: ""};
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit(e){
+    e.preventDefault();
+    <Route path='/signup' component={SignUp} />
+  }
+
+  update(email){
+    this.setState({email})
+  }
+
   render() {
     return(
       <div className="center-message">
@@ -9,9 +27,9 @@ class CenterMessage extends React.Component{
           <h4>Clonebase is the easiest place to practice buying and selling cryptocurrency</h4>
           <div className="cm-email-form">
             <form>
-              <input type="email" placeholder="Email address" />
-              <button type="green" className="cm-button">
-                <span>Get started</span>
+              <input type="email" placeholder="Email address" onChange={e => this.update(e.target.value)} value={this.state.email} />
+              <button onClick={e => this.handleSubmit(e)} type="button" className="cm-button">
+                Get started
               </button>
             </form>
           </div>

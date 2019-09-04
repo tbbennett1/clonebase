@@ -249,6 +249,8 @@ var App = function App() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _session_form_signup_form_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../session_form/signup_form_container */ "./frontend/components/session_form/signup_form_container.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -259,13 +261,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
 
 
 
@@ -274,15 +278,40 @@ var CenterMessage =
 function (_React$Component) {
   _inherits(CenterMessage, _React$Component);
 
-  function CenterMessage() {
+  function CenterMessage(props) {
+    var _this;
+
     _classCallCheck(this, CenterMessage);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(CenterMessage).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(CenterMessage).call(this, props));
+    _this.state = {
+      email: ""
+    };
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(CenterMessage, [{
+    key: "handleSubmit",
+    value: function handleSubmit(e) {
+      e.preventDefault();
+      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        path: "/signup",
+        component: _session_form_signup_form_container__WEBPACK_IMPORTED_MODULE_2__["default"]
+      });
+    }
+  }, {
+    key: "update",
+    value: function update(email) {
+      this.setState({
+        email: email
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "center-message"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -291,11 +320,18 @@ function (_React$Component) {
         className: "cm-email-form"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "email",
-        placeholder: "Email address"
+        placeholder: "Email address",
+        onChange: function onChange(e) {
+          return _this2.update(e.target.value);
+        },
+        value: this.state.email
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        type: "green",
+        onClick: function onClick(e) {
+          return _this2.handleSubmit(e);
+        },
+        type: "button",
         className: "cm-button"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Get started"))))));
+      }, "Get started")))));
     }
   }]);
 
