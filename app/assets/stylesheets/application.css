@@ -47,7 +47,7 @@ html, body {
   margin: 0px;
   line-height: 1.15;
   text-size-adjust: 100%;
-  background-color: #0667d0;
+  background-color: rgb(22, 82, 240);
 }
 
 header {
@@ -67,7 +67,7 @@ header {
   flex: 1 1 auto;
   height: 55px;
   align-items: center;
-  background-color: #0667d0;
+  background-color: rgb(22, 82, 240);
 }
 
 .header-link {
@@ -237,6 +237,24 @@ header {
   border-color: rgb(236, 239, 241);
   border-radius: 4px;
   background: none;
+}
+
+.session-submit {
+  position: relative;
+  width: 100%;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-family: Graphik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  background-color: rgb(22, 82, 240);
+  margin: 0px;
+  border-radius: 4px;
+  padding: 25px 35px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(22, 82, 240);
+  border-image: initial;
 }
 
 

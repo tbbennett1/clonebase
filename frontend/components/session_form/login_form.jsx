@@ -62,10 +62,10 @@ class LoginForm extends React.Component {
               <br />
               <input className="session-input" type="submit" value="SIGN IN" />
               <br />
-              {this.props.navLink}
             </div>
           </div>
         </form>
+        {this.props.navLink}
       </div>
     );
   }
