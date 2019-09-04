@@ -1,0 +1,94 @@
+header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1180px;
+  flex-shrink: 0;
+  margin: 0px auto;
+  padding: 0px 16px;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  flex: 1 1 auto;
+  height: 55px;
+  align-items: center;
+  background-color: rgb(22, 82, 240);
+}
+
+.header-link {
+  position: relative;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  margin: 0 20px 0 20px;
+  display: flex;
+  font-size: 1.5em;
+  font-weight: 700;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav-list{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-grow: 1;
+  max-width: 300px;
+}
+.nav-list ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-list > ul > li {
+  display: flex;
+  list-style-type: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 20px;
+  margin-right: 16px;
+}
+
+.end-nav {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+}
+
+.login-signup {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.login-signup a {
+  padding-right: 20px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.get-started-btn {
+  position: relative;
+  width: auto;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  background-color: transparent;
+  margin: 0px;
+  border-radius: 4px;
+  transition: all 80ms ease-in-out 0s;
+  padding: 8px 12px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: white;
+  border-image: initial;
+}

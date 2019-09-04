@@ -1,0 +1,18 @@
+.center-message {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1180px;
+  flex-shrink: 0;
+  justify-content: center;
+  margin: 0px auto;
+  padding: 24px;
+}
+
+.center-message-padding{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  padding: 35px 24px 200px;
+}
