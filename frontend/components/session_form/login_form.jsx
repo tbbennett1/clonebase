@@ -36,9 +36,9 @@ class LoginForm extends React.Component {
 
   render() {
     return (
-      <div className="session-form-container">
+      <div className="session-form-container-login">
         <h2>Sign in to Clonebase</h2>
-        <form onSubmit={this.handleSubmit} className="session-form-box">
+        <form onSubmit={this.handleSubmit} className="session-form-box-login">
           {this.renderErrors()}
           <div className="session-form">
             <div className="box-form">
@@ -46,7 +46,7 @@ class LoginForm extends React.Component {
                 <input type="email"
                   value={this.state.email}
                   onChange={this.update('email')}
-                  className="session-input"
+                  className="session-input-login"
                   placeholder="Email"
                 />
               </label>
@@ -55,12 +55,12 @@ class LoginForm extends React.Component {
                 <input type="password"
                   value={this.state.password}
                   onChange={this.update('password')}
-                  className="session-input"
+                  className="session-input-login"
                   placeholder="Password"
                 />
               </label>
               <br />
-              <input className="session-input" type="submit" value="SIGN IN" />
+              <input className="session-submit" type="submit" value="SIGN IN" />
               <br />
             </div>
           </div>
