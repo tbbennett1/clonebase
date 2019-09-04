@@ -37,8 +37,8 @@ const App = () => (
         <AuthRoute exact path="/signin" component={LogIn} />
         <AuthRoute exact path="/signup" component={SignUp} />
         <CenterMessage />
-        <AssetTable />
     </Switch>
+        <AssetTable />
   </div>
 );
 

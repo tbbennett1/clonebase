@@ -11,11 +11,17 @@ header {
 .nav-bar {
   display: flex;
   flex-direction: row;
+  position: static;
+  top: -104px;
+  right: 0px;
+  left: 0px;
   padding: 16px;
   flex: 1 1 auto;
-  height: 55px;
+  height: 72px;
+  min-height: 26px;
   align-items: center;
-  background-color: rgb(22, 82, 240);
+  background: transparent;
+  z-index: 2;
 }
 
 .header-link {
@@ -25,7 +31,7 @@ header {
   margin: 0 20px 0 20px;
   display: flex;
   font-size: 1.5em;
-  font-weight: 700;
+  font-weight: 400;
   justify-content: flex-start;
   flex-direction: row;
   align-items: center;
@@ -42,6 +48,8 @@ header {
 .nav-list ul {
   display: flex;
   list-style-type: none;
+  justify-content: space-evenly;
+
 }
 
 .nav-list > ul > li {
@@ -55,12 +63,17 @@ header {
   margin-right: 16px;
 }
 
+.nav-list > ul > li:first-child{
+  margin-left: 50px;
+}
+
 .nav-list > ul > li:hover {
   color: lightgrey;
 }
 
 .end-nav {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   margin-left: auto;
 }

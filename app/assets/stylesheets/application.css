@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-html, body, header, nav, a,
+/* html, body, header, nav, a,
 ul, li, strong, main, button, i,
 section, img, div, p, form,
 fieldset, label, textarea,
@@ -30,11 +30,7 @@ span, article, footer, time, small {
   vertical-align: inherit;
   box-sizing: inherit;
   background: inherit;
-}
-
-ol, ul {
-  list-style: none
-}
+} */
 
 * {
   box-sizing: border-box;
