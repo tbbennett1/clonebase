@@ -11,8 +11,18 @@
 
 .center-message-padding{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
+  max-width: 725px;
   justify-content: center;
+  align-items: center;
+  text-align: center;
   padding: 35px 24px 200px;
+}
+
+.center-message-padding > span {
+  font-family: Graphik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  font-size: 48px;
+  font-weight: 800;
 }
