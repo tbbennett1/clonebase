@@ -3,7 +3,7 @@
   width: 100%;
   max-width: 1180px;
   flex-shrink: 0;
-  display: block;
+  display: flex;
   box-shadow: rgba(17, 51, 83, 0.02) 0px 4px 12px 0px;
   margin: -175px auto 0px;
   padding: 0px;
@@ -41,4 +41,60 @@
   font-weight: 400;
   line-height: 1.6;
   color: rgba(17, 51, 83, 0.6);
+}
+
+.at-row th:first-child {
+  padding-left: 32px;
+}
+
+.at-body {
+  padding: 0px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  transition: opacity 300ms ease 0s;
+}
+
+.at-body > tr {
+  font-size: 18px;
+  user-select: none;
+  padding: 28px 36px;
+  background: rgb(255, 255, 255);
+}
+
+.at-body > tr:hover{
+  background: rgb(238, 240, 243);
+}
+
+.at-body > tr > td {
+  cursor: pointer;
+  border-top: 1px solid rgb(236, 239, 241);
+  padding: 14px 48px 14px 0px;
+}
+
+.at-body > tr > td:first-child {
+  padding-left: 32px;
+}
+
+.at-body button {
+  position: relative;
+  width: auto;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-size: 14px;
+  background-color: rgb(5, 177, 105);
+  margin: 0px;
+  border-radius: 4px;
+  transition: all 80ms ease-in-out 0s;
+  padding: 12px 16px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(5, 177, 105);
+  border-image: initial;
+}
+
+.at-body button:hover {
+  background-color: #019662;
+  border-color: #019662;
 }

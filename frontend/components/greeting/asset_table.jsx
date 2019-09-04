@@ -6,7 +6,7 @@ class AssetTable extends React.Component {
       <div className="asset-table-wrap">
         <table className="asset-table">
           <thead className="at-head">
-            <tr className='at-row'>
+            <tr className="at-row">
               <th>#</th>
               <th>Name</th>
               <th>Price</th>
@@ -15,7 +15,7 @@ class AssetTable extends React.Component {
               <th>Trade</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="at-body">
             <tr>
               <td>1</td>
               <td>Bitcoin</td>
