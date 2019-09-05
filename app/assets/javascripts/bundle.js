@@ -480,7 +480,10 @@ var Heading = function Heading(_ref) {
       className: "header-link"
     }, "clonebase"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
       className: "nav-list"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Prices"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Products"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Company"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      to: "/price",
+      id: "price-link"
+    }, "Prices")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Products"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Company"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "end-nav"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
       className: "login-signup"
@@ -1270,7 +1273,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _nullUser = Object.freeze({
-  id: null
+  id: null,
+  email: null
 });
 
 var sessionReducer = function sessionReducer() {
@@ -1281,7 +1285,9 @@ var sessionReducer = function sessionReducer() {
   switch (action.type) {
     case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_CURRENT_USER"]:
       return Object.assign({}, {
-        id: action.currentUser.id
+        id: action.currentUser.id,
+        email: action.currentUser.email,
+        first_name: action.currentUser.first_name
       });
 
     case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["LOGOUT_CURRENT_USER"]:

@@ -13,7 +13,7 @@ const Heading = ({ currentUser, logout }) => {
           </Link>
           <nav className="nav-list">
             <ul>
-              <li>Prices</li>
+              <li><Link to="/price" id="price-link">Prices</Link></li>
               <li>Products</li>
               <li>Company</li>
             </ul>

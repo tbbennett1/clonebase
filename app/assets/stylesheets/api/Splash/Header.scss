@@ -71,6 +71,15 @@ header {
   margin-left: 50px;
 }
 
+#price-link{
+  color: white;
+  text-decoration: none;
+}
+
+#price-link:hover{
+  color: lightgrey;
+}
+
 .nav-list > ul > li:hover {
   color: lightgrey;
 }
