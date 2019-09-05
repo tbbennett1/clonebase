@@ -1,3 +1,7 @@
+.cm-background {
+  background-color: rgb(22, 82, 240);
+}
+
 .center-message {
   display: flex;
   flex-direction: row;
@@ -7,7 +11,6 @@
   justify-content: center;
   margin: 0px auto;
   padding: 24px;
-  background-color: rgb(22, 82, 240);
 }
 
 .center-message-padding{

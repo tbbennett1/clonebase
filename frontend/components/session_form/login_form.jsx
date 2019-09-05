@@ -4,6 +4,7 @@ import Heading from '../homepage/heading';
 class LoginForm extends React.Component {
   constructor(props) {
     super(props);
+    debugger
     this.state = {
       email: '',
       password: '',

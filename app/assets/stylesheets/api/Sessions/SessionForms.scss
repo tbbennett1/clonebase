@@ -7,6 +7,9 @@
   align-items: center;
   flex-direction: column;
   flex: 1 0 auto;
+  height: calc(100vh - 72px);
+  padding-bottom: 150px;
+  background-color: rgb(22, 82, 240);
  }
 
 .session-form-container h2, .session-form-container-login h2 {
@@ -117,6 +120,9 @@
   align-items: center;
   flex-direction: column;
   flex: 1 0 auto;
+  height: calc(100vh - 72px);
+  padding-bottom: 500px;
+  background-color: rgb(22, 82, 240);
  }
 
 .session-form-box-login {
