@@ -8,20 +8,18 @@ import {
   HashRouter
 } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
-import Greeting from './homepage/heading_container';
 import SignUp from './session_form/signup_form_container';
 import LogIn from './session_form/login_form_container';
-import CenterMessage from './homepage/center_message';
-import AssetTable from './homepage/asset_table';
 import Splash from './homepage/splash';
+import Price from './price/price'
 
 const App = () => (
-    <Switch>
-        <AuthRoute exact path="/" component={Splash} />
-        <AuthRoute exact path="/signin" component={LogIn} />
-        <AuthRoute exact path="/signup" component={SignUp} />
-    </Switch>
-
+  <Switch>
+      <AuthRoute exact path="/" component={Splash} />
+      <AuthRoute exact path="/signin" component={LogIn} />
+      <AuthRoute exact path="/signup" component={SignUp} />
+      <AuthRoute exact path="/price" component={Price} />
+  </Switch>
 );
 
 export default App;
