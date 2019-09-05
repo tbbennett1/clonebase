@@ -1,15 +1,16 @@
 import React from 'react';
+import {Redirect} from 'react-router-dom';
 import Heading from '../homepage/heading';
 
 class LoginForm extends React.Component {
   constructor(props) {
     super(props);
-    debugger
     this.state = {
       email: '',
-      password: '',
+      password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   update(field) {
@@ -24,26 +25,36 @@ class LoginForm extends React.Component {
     this.props.login(user);
   }
 
+  handleClick(e) {
+    e.preventDefault();
+    this.props.errors.pop();
+    this.render();
+  }
+
   renderErrors() {
     return (
-      <ul>
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
-        ))}
-      </ul>
+      <div className="login-errors">
+        <ul>
+          {this.props.errors.map((error, i) => (
+            <li key={`error-${i}`}>
+              {error}
+            </li>
+          ))}
+        </ul>
+        <button className="close" onClick={this.handleClick} >Close</button>
+      </div >
     );
   }
 
   render() {
+    let errors = this.props.errors;
     return (
       <div>
         <Heading />
         <div className="session-form-container-login">
+          {errors.length > 0 ? this.renderErrors() : null} 
           <h2>Sign in to Clonebase</h2>
           <form onSubmit={this.handleSubmit} className="session-form-box-login">
-            {this.renderErrors()}
             <div className="session-form">
               <div className="box-form">
                 <label>
