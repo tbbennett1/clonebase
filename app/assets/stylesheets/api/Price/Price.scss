@@ -1,3 +1,35 @@
-.price-index{
+.price-index {
   background-color: white;
+}
+
+.price-top {
+  padding: 24px;
+}
+
+.price-inner {
+  max-width: 1140px;
+  margin: auto;
+}
+
+.search-box {
+  display: flex;
+  margin-bottom: 32px;
+}
+
+.search-box > section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  box-shadow: rgba(17, 51, 83, 0.02) 0px 8px 16px 0px;
+  padding: 20px 32px;
+  border: 1px solid rgb(236, 239, 241);
+  border-radius: 4px; 
+}
+
+.price-at {
+  box-shadow: rgba(17, 51, 83, 0.02) 0px 8px 16px 0px;
+  border: 1px solid rgb(236, 239, 241);
+  border-radius: 4px;
 }
