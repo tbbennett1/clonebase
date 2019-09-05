@@ -3,22 +3,6 @@ import { Route, Link } from 'react-router-dom';
 import SignUp from '../session_form/signup_form_container'
 
 class CenterMessage extends React.Component{
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {email: ""};
-
-  //   this.handleSubmit = this.handleSubmit.bind(this);
-  // }
-
-  // handleSubmit(e){
-  //   e.preventDefault();
-  //   return <Route path='/signup' component={SignUp} />
-  // }
-
-  // update(email){
-  //   this.setState({email})
-  // }
-
   render() {
     return(
       <div className="center-message">
