@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 
-const Heading = ({ currentUser, logout }) => {
+const Heading = ({ user, logout }) => {
   const sessionLinks = () => (
     <div className="heading-background">
       <header>
@@ -29,34 +29,31 @@ const Heading = ({ currentUser, logout }) => {
     </div>
   );
 
-  const personalGreeting = () => (
-    <div className="heading-background">
-      <header>
-        <div className="nav-bar">
-          <Link to="/" className="header-link">
-            clonebase
-          </Link>
-          <nav className="nav-list">
-            <ul>
-              <li>Prices</li>
-              <li>Products</li>
-              <li>Company</li>
-            </ul>
-          </nav>
-          <div className="end-nav">
-            <nav className="login-signup">
-              <button className="header-button" onClick={logout}>Log Out</button>
-            </nav>
-          </div>
-        </div>
-      </header>
-      <h2 className="header-name">Hi, {currentUser.email}!</h2>
-    </div>
-    
-  
-  );
+  // const personalGreeting = () => (
+  //   <div className="heading-background">
+  //     <header>
+  //       <div className="nav-bar">
+  //         <Link to="/" className="header-link">
+  //           clonebase
+  //         </Link>
+  //         <nav className="nav-list">
+  //           <ul>
+  //             <li>Prices</li>
+  //             <li>Products</li>
+  //             <li>Company</li>
+  //           </ul>
+  //         </nav>
+  //         <div className="end-nav">
+  //           <nav className="login-signup">
+  //             <button className="header-button" onClick={logout}>Log Out</button>
+  //           </nav>
+  //         </div>
+  //       </div>
+  //     </header>
+  //   </div>
+  //  );
 
-  return currentUser ? personalGreeting() : sessionLinks();
+  return sessionLinks();
 };
 
 export default Heading;

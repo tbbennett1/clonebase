@@ -260,7 +260,9 @@ var App = function App() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _homepage_heading__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../homepage/heading */ "./frontend/components/homepage/heading.jsx");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/session_actions */ "./frontend/actions/session_actions.js");
+/* harmony import */ var _homepage_heading__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../homepage/heading */ "./frontend/components/homepage/heading.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -282,6 +284,24 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
+
+var msp = function msp(_ref) {
+  var session = _ref.session;
+  return {
+    email: session.email,
+    first_name: session.first_name
+  };
+};
+
+var mdp = function mdp(dispatch) {
+  return {
+    logout: function logout() {
+      return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_2__["logout"])());
+    }
+  };
+};
+
 var Dashboard =
 /*#__PURE__*/
 function (_React$Component) {
@@ -298,14 +318,14 @@ function (_React$Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "dashboard-index"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_homepage_heading__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Welcome to the Dashboard!"));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_homepage_heading__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Welcome to the Dashboard!"));
     }
   }]);
 
   return Dashboard;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["default"] = (Dashboard);
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(msp, mdp)(Dashboard));
 
 /***/ }),
 
@@ -551,7 +571,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Heading = function Heading(_ref) {
-  var currentUser = _ref.currentUser,
+  var user = _ref.user,
       logout = _ref.logout;
 
   var sessionLinks = function sessionLinks() {
@@ -577,31 +597,32 @@ var Heading = function Heading(_ref) {
       to: "/signup",
       className: "get-started-btn"
     }, "Get started"))))));
-  };
+  }; // const personalGreeting = () => (
+  //   <div className="heading-background">
+  //     <header>
+  //       <div className="nav-bar">
+  //         <Link to="/" className="header-link">
+  //           clonebase
+  //         </Link>
+  //         <nav className="nav-list">
+  //           <ul>
+  //             <li>Prices</li>
+  //             <li>Products</li>
+  //             <li>Company</li>
+  //           </ul>
+  //         </nav>
+  //         <div className="end-nav">
+  //           <nav className="login-signup">
+  //             <button className="header-button" onClick={logout}>Log Out</button>
+  //           </nav>
+  //         </div>
+  //       </div>
+  //     </header>
+  //   </div>
+  //  );
 
-  var personalGreeting = function personalGreeting() {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "heading-background"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "nav-bar"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-      to: "/",
-      className: "header-link"
-    }, "clonebase"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-      className: "nav-list"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Prices"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Products"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Company"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "end-nav"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-      className: "login-signup"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      className: "header-button",
-      onClick: logout
-    }, "Log Out"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-      className: "header-name"
-    }, "Hi, ", currentUser.email, "!"));
-  };
 
-  return currentUser ? personalGreeting() : sessionLinks();
+  return sessionLinks();
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Heading);
@@ -625,8 +646,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var mapStateToProps = function mapStateToProps(state, ownProps) {
+  debugger;
   return {
-    currentUser: state.entities.users[state.session.id]
+    user: state.entities.users[state.session.id]
   };
 };
 
@@ -1246,7 +1268,7 @@ var mapStateToProps = function mapStateToProps(_ref) {
   var errors = _ref.errors;
   return {
     errors: errors.session,
-    formType: 'signup',
+    // formType: 'signup',
     navLink: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
       to: "/signin"
     }, "Already have a Clonebase account? Log in")
@@ -1504,11 +1526,20 @@ var Auth = function Auth(_ref) {
     exact: exact,
     render: function render(props) {
       return !loggedIn ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Component, props) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Redirect"], {
-        to: "/"
+        to: "/dashboard"
       });
     }
   });
-};
+}; // const LoggedIn = ({ component: Component, path, loggedIn, exact }) => (
+//   <Route path={path} exact={exact} render={(props) => (
+//     loggedIn ? (
+//       <Component {...props} />
+//     ) : (
+//         <Redirect to="/dashboard" />
+//       )
+//   )} />
+// );
+
 
 var Protected = function Protected(_ref2) {
   var Component = _ref2.component,
@@ -1520,7 +1551,7 @@ var Protected = function Protected(_ref2) {
     exact: exact,
     render: function render(props) {
       return loggedIn ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Component, props) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Redirect"], {
-        to: "/signin"
+        to: "/"
       });
     }
   });
@@ -1533,7 +1564,7 @@ var mapStateToProps = function mapStateToProps(state) {
 };
 
 var AuthRoute = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps)(Auth));
-var ProtectedRoute = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps)(Protected));
+var ProtectedRoute = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps)(Protected)); // export const LoggedInRoute = withRouter(connect(mapStateToProps)(LoggedIn));
 
 /***/ }),
 

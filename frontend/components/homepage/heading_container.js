@@ -4,8 +4,9 @@ import { logout } from '../../actions/session_actions';
 import Heading from './heading';
 
 const mapStateToProps = (state, ownProps) => {
+  debugger
   return {
-    currentUser: state.entities.users[state.session.id]
+    user: state.entities.users[state.session.id]
   };
 };
 
