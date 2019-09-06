@@ -14,7 +14,7 @@ class Price extends React.Component{
                   <img src={window.search} alt=""/>
                   <input type="text" placeholder="Search all assets..."/>
                 </div>
-                <div>
+                <div className="search-time">
                   <ul>
                     <li>1H</li>
                     <li>24H</li>
