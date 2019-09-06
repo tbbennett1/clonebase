@@ -38,7 +38,7 @@ class Features extends React.Component {
             </div>
             <div className="feature-pic">
               <picture>
-                
+                <img src={window.features_pic} />
               </picture>
             </div>
           </div>
