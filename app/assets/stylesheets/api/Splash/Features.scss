@@ -42,6 +42,42 @@
 .feature-pic{
   padding: 10px;
 }
+
 .feature-pic picture img {
   max-width: 700px;
+}
+
+.feature-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0%;
+  margin-right: 20px;
+}
+
+.feature-info > div {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+}
+
+.feature-info img {
+  width: 72px;
+  height: 72px;
+  margin-right: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-info h3 {
+  margin-top: 0px;
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.feature-info p {
+  margin: 0px;
+  line-height: 1.6;
+  text-align: left;
 }
