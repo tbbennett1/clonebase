@@ -1,5 +1,5 @@
 import React from 'react';
-import {Redirect} from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 import Heading from '../homepage/heading';
 
 class LoginForm extends React.Component {
@@ -87,4 +87,4 @@ class LoginForm extends React.Component {
   }
 }
 
-export default LoginForm;
+export default withRouter(LoginForm);

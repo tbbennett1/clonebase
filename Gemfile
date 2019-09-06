@@ -51,7 +51,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'annotate'
   # comment this out to try to get heroku working
-  # gem 'jquery-rails'
+  gem 'jquery-rails'
 end
 
 group :test do
