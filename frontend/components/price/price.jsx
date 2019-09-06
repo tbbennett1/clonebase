@@ -10,9 +10,9 @@ class Price extends React.Component{
           <div className="price-inner">
             <div className="search-box">
               <section>
-                <div>
+                <div className="search-bar">
                   <svg></svg>
-                  <input type="text"/>
+                  <input type="text" placeholder="Search all assets..."/>
                 </div>
                 <div>
                   <ul>

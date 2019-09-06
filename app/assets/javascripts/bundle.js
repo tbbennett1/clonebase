@@ -752,8 +752,11 @@ function (_React$Component) {
         className: "price-inner"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "search-box"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "text"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "search-bar"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        placeholder: "Search all assets..."
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "1H"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "24H"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "1W"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "1M"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "1Y"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "price-at"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
