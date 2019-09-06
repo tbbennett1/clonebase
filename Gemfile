@@ -50,7 +50,8 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'annotate'
-  gem 'jquery-rails'
+  # comment this out to try to get heroku working
+  # gem 'jquery-rails'
 end
 
 group :test do
