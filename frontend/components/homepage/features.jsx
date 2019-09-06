@@ -10,27 +10,28 @@ class Features extends React.Component {
           <div className="pic-container">
             <div className="feature-info">
               <div>
-                <img></img>
-                <div>
+                <img src={window.features_mngprtflio} />
+                <div className="feature-info-box">
                   <h3>Manage your portfolio</h3>
                   <p>Buy and sell popular digital currencies, keep track of them in one place</p>
                 </div>
               </div>
               <div>
-                <img></img>
-                <div>
+                <img src={window.features_recbuys} />
+                <div className="feature-info-box">
                   <h3>Recurring buys</h3>
                   <p>Invest in cryptocurrency slowly over time by scheduling buys daily, weekly, or monthly</p>
                 </div>
               </div>
-              <div><img></img>
-                <div>
+              <div>
+                <img src={window.features_vault} />
+                <div className="feature-info-box">
                   <h3>Vault Protection</h3>
                   <p>For added security, story your funds in a vault with time delayed withdrawals</p>
                 </div></div>
               <div>
-                <img></img>
-                <div>
+                <img src={window.features_vault} />
+                <div className="feature-info-box">
                   <h3>Mobile apps</h3>
                   <p>Clonebase does not have any, but give me two more weeks and who knows.</p>
                 </div>

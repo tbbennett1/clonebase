@@ -438,7 +438,23 @@ function (_React$Component) {
         className: "pic-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "feature-info"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Manage your portfolio"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Buy and sell popular digital currencies, keep track of them in one place"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Recurring buys"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Invest in cryptocurrency slowly over time by scheduling buys daily, weekly, or monthly"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Vault Protection"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "For added security, story your funds in a vault with time delayed withdrawals"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Mobile apps"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Clonebase does not have any, but give me two more weeks and who knows.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.features_mngprtflio
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "feature-info-box"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Manage your portfolio"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Buy and sell popular digital currencies, keep track of them in one place"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.features_recbuys
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "feature-info-box"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Recurring buys"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Invest in cryptocurrency slowly over time by scheduling buys daily, weekly, or monthly"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.features_vault
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "feature-info-box"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Vault Protection"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "For added security, story your funds in a vault with time delayed withdrawals"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.features_vault
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "feature-info-box"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Mobile apps"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Clonebase does not have any, but give me two more weeks and who knows.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "feature-pic"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("picture", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: window.features_pic
