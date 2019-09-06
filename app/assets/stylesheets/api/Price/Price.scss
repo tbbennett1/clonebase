@@ -35,7 +35,7 @@
   flex: 1 1 0%;
 }
 
-.search-bar > svg {
+.search-bar > img {
   margin-right: 16px;
   width: 20px;
   height: 20px;
@@ -47,6 +47,11 @@
   font-size: 16px;
   border-style: none;
   font-weight: 100;
+}
+
+.search-box > ul > li {
+  display: flex;
+  flex-direction: row;
 }
 
 .price-at {

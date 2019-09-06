@@ -11,7 +11,7 @@ class Price extends React.Component{
             <div className="search-box">
               <section>
                 <div className="search-bar">
-                  <svg></svg>
+                  <img src={window.search} alt=""/>
                   <input type="text" placeholder="Search all assets..."/>
                 </div>
                 <div>
