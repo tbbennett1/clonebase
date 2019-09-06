@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {logout} from '../../actions/session_actions'
-import Heading from '../homepage/heading';
+import Header from './header';
 
 const msp = ({session}) => ({
   email: session.email, 
@@ -16,7 +16,7 @@ class Dashboard extends React.Component {
   render() {
     return (
       <div className="dashboard-index">
-        <Heading />
+        <Header />
         <h4>Welcome to the Dashboard!</h4>
       </div>
     )
