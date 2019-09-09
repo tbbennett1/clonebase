@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {logout} from '../../actions/session_actions'
 import Header from './header';
+import PortfolioVal from './portfolio_val';
 
 const msp = ({session}) => ({
   email: session.email, 
@@ -17,19 +18,19 @@ class Dashboard extends React.Component {
     return (
       <div className="dashboard-index">
         <Header logout={this.props.logout}/>
-        <div className="dashboard-top">
-          <div className="portfolio-value">
-
-          </div>
-          <section className="following">
-
-          </section>
-          <div className="portfolio-ra">
-            <div className="portfolio">
-
-            </div>
-            <div className="recent-activity">
-
+        <div className="db">
+          <div className="dashboard-top">
+            <PortfolioVal />
+            <section className="following">
+  
+            </section>
+            <div className="portfolio-ra">
+              <div className="portfolio">
+  
+              </div>
+              <div className="recent-activity">
+  
+              </div>
             </div>
           </div>
         </div>

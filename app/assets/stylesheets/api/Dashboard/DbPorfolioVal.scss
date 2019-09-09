@@ -1,0 +1,89 @@
+.db{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dashboard-top{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: 12px;
+  margin: 25px 0;
+  width: 1180px;
+}
+
+.portfolio-value {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 310px;
+  margin-bottom: 24px;
+  box-shadow: rgba(17, 51, 83, 0.02) 0px 4px 12px 0px;
+  flex: 1 1 auto;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(236, 239, 241);
+  border-image: initial;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.portfolio-value-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 auto;
+  width: 100%;
+  position: relative;
+}
+
+.portfolio-value-head span:first-child{
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 1;
+  color: rgba(17, 51, 83, 0.6);
+}
+
+.value {
+  font-size: 48px;
+  color: black;
+  font-weight: 400;
+}
+
+.portfolio-value-head > ul {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.portfolio-value-head > ul > li {
+  margin: 0 5px;
+  font-size: 12px;
+  line-height: 1;
+  color: rgba(17, 51, 83, 0.6);
+}
+
+.pv-chart{
+  height: 100%;
+  width: 100%
+}
+
+.pv-timeline{
+  border-top: 1px solid rgb(236, 239, 241);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 40px;
+}
+
+.pv-timeline > span {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  color: rgba(17, 51, 83, 0.6)
+}
