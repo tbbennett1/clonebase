@@ -1,14 +1,17 @@
-import React from 'react';
 import { connect } from 'react-redux';
-import { fetchPrices } from '../../actions/price_actions';
 import Price from './price';
+import { fetchPrices } from '../../actions/price_actions';
 
-const msp = ({entities}) => ({
-  prices: entities.prices
-})
+const msp = ({entities}) => {
+  return ({
+    prices: entities.prices
+  });
+};
 
-const mdp = (dispatch) => ({
-  fetchPrices: () => dispatch(fetchPrices)
-})
+const mdp = (dispatch) => {
+  return ({
+    fetchPrices: () => dispatch(fetchPrices())
+  })
+}
 
 export default connect(msp, mdp)(Price);

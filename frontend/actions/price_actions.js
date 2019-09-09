@@ -4,9 +4,10 @@ export const RECEIVE_PRICES = "RECEIVE_PRICES";
 
 export const receivePrices = prices => ({
   type: RECEIVE_PRICES,
-  prices
-})
+  prices: prices
+});
+
 debugger
 export const fetchPrices = () => dispatch => (
-  PriceAPI.getPrices().then(prices => dispatch(receivePrices(prices)))
-)
+  PriceAPI.getPrices().then(res => dispatch(receivePrices(res)))
+);

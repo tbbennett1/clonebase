@@ -110,8 +110,8 @@ var receivePrices = function receivePrices(prices) {
 debugger;
 var fetchPrices = function fetchPrices() {
   return function (dispatch) {
-    return _util_price_api_util__WEBPACK_IMPORTED_MODULE_0__["getPrices"]().then(function (prices) {
-      return dispatch(receivePrices(prices));
+    return _util_price_api_util__WEBPACK_IMPORTED_MODULE_0__["getPrices"]().then(function (res) {
+      return dispatch(receivePrices(res));
     });
   };
 };
@@ -1053,14 +1053,20 @@ var Price =
 function (_React$Component) {
   _inherits(Price, _React$Component);
 
-  function Price(props) {
+  function Price() {
     _classCallCheck(this, Price);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Price).call(this, props));
+    return _possibleConstructorReturn(this, _getPrototypeOf(Price).apply(this, arguments));
   }
 
   _createClass(Price, [{
     key: "componentDidMount",
+    // constructor(props){
+    //   super(props);
+    //   this.state = {
+    //     prices: {}
+    //   }
+    // }
     value: function componentDidMount() {
       debugger;
       this.props.fetchPrices();
@@ -1070,7 +1076,7 @@ function (_React$Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "price-index"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_homepage_heading__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, this.props.prices), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_homepage_heading__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, "test"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "price-top"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "price-inner"
@@ -1313,7 +1319,6 @@ var mapStateToProps = function mapStateToProps(_ref) {
   var errors = _ref.errors;
   return {
     errors: errors.session,
-    // formType: 'login',
     navLink: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
       to: "/signup"
     }, "Don't have an account?")
@@ -1504,7 +1509,6 @@ var mapStateToProps = function mapStateToProps(_ref) {
   var errors = _ref.errors;
   return {
     errors: errors.session,
-    // formType: 'signup',
     navLink: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
       to: "/signin"
     }, "Already have a Clonebase account? Log in")
@@ -1565,9 +1569,7 @@ var PriceReducer = function PriceReducer() {
 
   switch (action.type) {
     case _actions_price_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_PRICES"]:
-      var newState = Object.assign({}, state);
-      debugger;
-      return newState;
+      return action.prices;
 
     default:
       return state;
@@ -1780,9 +1782,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPrices", function() { return getPrices; });
 var getPrices = function getPrices() {
   return $.ajax({
-    url: "api.coincap.io/v2/assets",
+    url: "https://api.coincap.io/v2/assets",
     method: "GET",
-    timeout: 0,
     limit: 5
   });
 };

@@ -1,14 +1,19 @@
 import React from 'react';
 import Heading from '../homepage/heading';
 
+
 class Price extends React.Component{
-  constructor(props){
-    super(props);
-  }
+  // constructor(props){
+  //   super(props);
+
+  //   this.state = {
+  //     prices: {}
+  //   }
+  // }
 
   componentDidMount() {
     debugger
-    this.props.fetchPrices()
+    this.props.fetchPrices();
   }
 
   render () {
@@ -16,7 +21,7 @@ class Price extends React.Component{
       <div className="price-index">
         <Heading />
         <section>
-          {this.props.prices}
+          test
         </section>
         <div className="price-top">
           <div className="price-inner">

@@ -7,7 +7,6 @@ import SignupForm from './signup_form';
 const mapStateToProps = ({ errors }) => {
   return {
     errors: errors.session,
-    // formType: 'signup',
     navLink: <Link to="/signin">Already have a Clonebase account? Log in</Link>,
   };
 };
