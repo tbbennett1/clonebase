@@ -1,6 +1,6 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-import {logout} from '../../actions/session_actions'
+import {Link, withRouter} from 'react-router-dom';
+
 
 class Header extends React.Component {
   constructor(props){
@@ -11,7 +11,8 @@ class Header extends React.Component {
 
   signOut(e){
     e.preventDefault();
-    logout();
+    this.props.logout()
+    .then(this.props.history.push('/'));
   }
 
   render () {
@@ -41,4 +42,4 @@ class Header extends React.Component {
   }
 }
 
-export default Header;
+export default withRouter(Header);

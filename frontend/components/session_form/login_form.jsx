@@ -81,10 +81,10 @@ class LoginForm extends React.Component {
                     placeholder="Password"
                   />
                 </label>
-                <br />
-                <input className="session-submit" onClick={this.demoLogin} type="submit" value="DEMO" />
-                <input className="session-submit" type="submit" value="SIGN IN" />
-                <br />
+                <div className="login-btns">
+                  <input className="session-submit-login" onClick={this.demoLogin} type="submit" value="DEMO" />
+                  <input className="session-submit-login" type="submit" value="SIGN IN" />
+                </div>
               </div>
             </div>
           </form>

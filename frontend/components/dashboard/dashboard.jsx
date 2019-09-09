@@ -16,13 +16,13 @@ class Dashboard extends React.Component {
   render() {
     return (
       <div className="dashboard-index">
-        <Header />
+        <Header logout={this.props.logout}/>
         <div className="dashboard-top">
           <div className="portfolio-value">
 
           </div>
           <section className="following">
-            
+
           </section>
           <div className="portfolio-ra">
             <div className="portfolio">

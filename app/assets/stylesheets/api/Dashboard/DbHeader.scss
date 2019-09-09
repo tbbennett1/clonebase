@@ -10,3 +10,21 @@
 .header-background .nav-list > ul > li {
   color: black;
 }
+
+.header-background .nav-list > ul > li:hover {
+  color: rgb(22, 82, 240);
+}
+
+.header-button {
+  padding-right: 20px;
+  color: black;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+}
+
+.header-button:hover{
+  color: rgb(22, 82, 240);
+}
