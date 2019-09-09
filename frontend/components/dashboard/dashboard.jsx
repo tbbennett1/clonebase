@@ -22,7 +22,7 @@ class Dashboard extends React.Component {
 
           </div>
           <section className="following">
-            <p>testyttestsyetysatyastsy</p>
+            
           </section>
           <div className="portfolio-ra">
             <div className="portfolio">

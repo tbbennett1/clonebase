@@ -324,7 +324,7 @@ function (_React$Component) {
         className: "portfolio-value"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "following"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "testyttestsyetysatyastsy")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "portfolio-ra"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "portfolio"
@@ -364,9 +364,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -381,13 +381,23 @@ var Header =
 function (_React$Component) {
   _inherits(Header, _React$Component);
 
-  function Header() {
+  function Header(props) {
+    var _this;
+
     _classCallCheck(this, Header);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Header).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Header).call(this, props));
+    _this.signOut = _this.signOut.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(Header, [{
+    key: "signOut",
+    value: function signOut(e) {
+      e.preventDefault();
+      Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_2__["logout"])();
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -401,12 +411,14 @@ function (_React$Component) {
         className: "nav-list"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Prices"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Products"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Company"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "end-nav"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-        className: "login-signup"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        className: "login-signup",
+        onSubmit: this.signOut
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "header-button",
-        onClick: _actions_session_actions__WEBPACK_IMPORTED_MODULE_2__["logout"]
-      }, "Log Out"))))));
+        type: "submit",
+        value: "Sign Out"
+      }))))));
     }
   }]);
 
