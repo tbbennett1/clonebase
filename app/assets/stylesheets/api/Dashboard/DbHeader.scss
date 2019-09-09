@@ -11,6 +11,15 @@
   color: black;
 }
 
+#db-price-link {
+  color: black;
+  text-decoration: none;
+}
+
+#db-price-link:hover {
+  color: rgb(22, 82, 240);
+}
+
 .header-background .nav-list > ul > li:hover {
   color: rgb(22, 82, 240);
 }

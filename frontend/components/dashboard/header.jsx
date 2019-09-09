@@ -25,7 +25,7 @@ class Header extends React.Component {
             </Link>
             <nav className="nav-list">
               <ul>
-                <li>Prices</li>
+                <li><Link to="/price" id="db-price-link">Prices</Link></li>
                 <li>Products</li>
                 <li>Company</li>
               </ul>

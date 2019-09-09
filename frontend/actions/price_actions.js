@@ -6,7 +6,7 @@ export const receivePrices = prices => ({
   type: RECEIVE_PRICES,
   prices
 })
-
+debugger
 export const fetchPrices = () => dispatch => (
   PriceAPI.getPrices().then(prices => dispatch(receivePrices(prices)))
 )

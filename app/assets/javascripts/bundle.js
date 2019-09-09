@@ -86,6 +86,38 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./frontend/actions/price_actions.js":
+/*!*******************************************!*\
+  !*** ./frontend/actions/price_actions.js ***!
+  \*******************************************/
+/*! exports provided: RECEIVE_PRICES, receivePrices, fetchPrices */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_PRICES", function() { return RECEIVE_PRICES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receivePrices", function() { return receivePrices; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchPrices", function() { return fetchPrices; });
+/* harmony import */ var _util_price_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/price_api_util */ "./frontend/util/price_api_util.js");
+
+var RECEIVE_PRICES = "RECEIVE_PRICES";
+var receivePrices = function receivePrices(prices) {
+  return {
+    type: RECEIVE_PRICES,
+    prices: prices
+  };
+};
+debugger;
+var fetchPrices = function fetchPrices() {
+  return function (dispatch) {
+    return _util_price_api_util__WEBPACK_IMPORTED_MODULE_0__["getPrices"]().then(function (prices) {
+      return dispatch(receivePrices(prices));
+    });
+  };
+};
+
+/***/ }),
+
 /***/ "./frontend/actions/session_actions.js":
 /*!*********************************************!*\
   !*** ./frontend/actions/session_actions.js ***!
@@ -411,7 +443,10 @@ function (_React$Component) {
         className: "header-link"
       }, "clonebase"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
         className: "nav-list"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Prices"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Products"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Company"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/price",
+        id: "db-price-link"
+      }, "Prices")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Products"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Company"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "end-nav"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         className: "login-signup",
@@ -1018,18 +1053,24 @@ var Price =
 function (_React$Component) {
   _inherits(Price, _React$Component);
 
-  function Price() {
+  function Price(props) {
     _classCallCheck(this, Price);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Price).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(Price).call(this, props));
   }
 
   _createClass(Price, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      debugger;
+      this.props.fetchPrices();
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "price-index"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_homepage_heading__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_homepage_heading__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, this.props.prices), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "price-top"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "price-inner"
@@ -1493,12 +1534,47 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var _users_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./users_reducer */ "./frontend/reducers/entities/users_reducer.js");
+/* harmony import */ var _price_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./price_reducer */ "./frontend/reducers/entities/price_reducer.js");
+
 
 
 var entitiesReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
-  users: _users_reducer__WEBPACK_IMPORTED_MODULE_1__["default"]
+  users: _users_reducer__WEBPACK_IMPORTED_MODULE_1__["default"],
+  prices: _price_reducer__WEBPACK_IMPORTED_MODULE_2__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (entitiesReducer);
+
+/***/ }),
+
+/***/ "./frontend/reducers/entities/price_reducer.js":
+/*!*****************************************************!*\
+  !*** ./frontend/reducers/entities/price_reducer.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_price_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../actions/price_actions */ "./frontend/actions/price_actions.js");
+
+
+var PriceReducer = function PriceReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  Object.freeze(state);
+
+  switch (action.type) {
+    case _actions_price_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_PRICES"]:
+      var newState = Object.assign({}, state);
+      debugger;
+      return newState;
+
+    default:
+      return state;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (PriceReducer);
 
 /***/ }),
 
@@ -1689,6 +1765,27 @@ var configureStore = function configureStore() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (configureStore);
+
+/***/ }),
+
+/***/ "./frontend/util/price_api_util.js":
+/*!*****************************************!*\
+  !*** ./frontend/util/price_api_util.js ***!
+  \*****************************************/
+/*! exports provided: getPrices */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPrices", function() { return getPrices; });
+var getPrices = function getPrices() {
+  return $.ajax({
+    url: "api.coincap.io/v2/assets",
+    method: "GET",
+    timeout: 0,
+    limit: 5
+  });
+};
 
 /***/ }),
 

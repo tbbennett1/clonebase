@@ -2,10 +2,22 @@ import React from 'react';
 import Heading from '../homepage/heading';
 
 class Price extends React.Component{
+  constructor(props){
+    super(props);
+  }
+
+  componentDidMount() {
+    debugger
+    this.props.fetchPrices()
+  }
+
   render () {
     return(
       <div className="price-index">
         <Heading />
+        <section>
+          {this.props.prices}
+        </section>
         <div className="price-top">
           <div className="price-inner">
             <div className="search-box">
