@@ -1,0 +1,1 @@
+import {RECEIVE_PRICES} from '../../actions/price_actions';
