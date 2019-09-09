@@ -17,7 +17,22 @@ class Dashboard extends React.Component {
     return (
       <div className="dashboard-index">
         <Header />
-        <h4>Welcome to the Dashboard!</h4>
+        <div className="dashboard-top">
+          <div className="portfolio-value">
+
+          </div>
+          <section className="following">
+            <p>testyttestsyetysatyastsy</p>
+          </section>
+          <div className="portfolio-ra">
+            <div className="portfolio">
+
+            </div>
+            <div className="recent-activity">
+
+            </div>
+          </div>
+        </div>
       </div>
     )
   }

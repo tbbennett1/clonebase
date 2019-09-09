@@ -5,7 +5,7 @@ import {logout} from '../../actions/session_actions';
 class Header extends React.Component {
   render () {
     return (
-      <div className="heading-background">
+      <div className="header-background">
         <header>
           <div className="nav-bar">
             <Link to="/" className="header-link">
