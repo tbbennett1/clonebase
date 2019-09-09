@@ -11,12 +11,19 @@ class LoginForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.demoLogin = this.demoLogin.bind(this);
   }
 
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
     });
+  }
+
+  demoLogin(e){
+    e.preventDefault();
+    const demoUser = {email: "brock@clonebase.com", password: "password"};
+    this.props.login(demoUser);
   }
 
   handleSubmit(e) {
@@ -75,6 +82,7 @@ class LoginForm extends React.Component {
                   />
                 </label>
                 <br />
+                <input className="session-submit" onClick={this.demoLogin} type="submit" value="DEMO" />
                 <input className="session-submit" type="submit" value="SIGN IN" />
                 <br />
               </div>

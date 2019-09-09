@@ -1065,6 +1065,7 @@ function (_React$Component) {
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_this));
+    _this.demoLogin = _this.demoLogin.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -1076,6 +1077,16 @@ function (_React$Component) {
       return function (e) {
         return _this2.setState(_defineProperty({}, field, e.currentTarget.value));
       };
+    }
+  }, {
+    key: "demoLogin",
+    value: function demoLogin(e) {
+      e.preventDefault();
+      var demoUser = {
+        email: "brock@clonebase.com",
+        password: "password"
+      };
+      this.props.login(demoUser);
     }
   }, {
     key: "handleSubmit",
@@ -1131,6 +1142,11 @@ function (_React$Component) {
         className: "session-input-login",
         placeholder: "Password"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "session-submit",
+        onClick: this.demoLogin,
+        type: "submit",
+        value: "DEMO"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "session-submit",
         type: "submit",
         value: "SIGN IN"
