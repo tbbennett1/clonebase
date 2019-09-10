@@ -1201,36 +1201,55 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      if (this.props.prices) // let btc_price = this.props.prices.prices.priceUsd;
+      if (!this.props.prices) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Loading...");
+      } else {
         debugger;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "price-index"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_homepage_heading__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, "btc_price"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "price-top"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "price-inner"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "search-box"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "search-bar"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: window.search
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "text",
-        placeholder: "Search all assets..."
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "search-time"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "1H"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "24H"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "1W"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "1M"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "1Y"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "price-at"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
-        className: "asset-table"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", {
-        className: "at-head"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
-        className: "at-row"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "#"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Price"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Change"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Market Cap"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Trade"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", {
-        className: "at-body"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Bitcoin"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$10000"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "- 0.2%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$189B"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Trade"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Ethereum"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$176"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "- 0.5%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$18.5B"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Trade"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "3"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "XRP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.25"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "- 1.79%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$11B"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Trade"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "4"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Litecoin"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$67"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "- 2.82%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "~~~~~"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Trade")))))))));
+        var btc_price = parseFloat(this.props.prices[0].priceUsd).toFixed(2);
+        var eth_price = parseFloat(this.props.prices[1].priceUsd).toFixed(2);
+        var xrp_price = parseFloat(this.props.prices[2].priceUsd).toFixed(2);
+        var ltc_price = parseFloat(this.props.prices[4].priceUsd).toFixed(2);
+        var btc_chng = parseFloat(this.props.prices[0].changePercent24Hr).toFixed(2);
+        var eth_chng = parseFloat(this.props.prices[1].changePercent24Hr).toFixed(2);
+        var xrp_chng = parseFloat(this.props.prices[2].changePercent24Hr).toFixed(2);
+        var ltc_chng = parseFloat(this.props.prices[4].changePercent24Hr).toFixed(2);
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "price-index"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_homepage_heading__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "price-top"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "price-inner"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "search-box"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "search-bar"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          src: window.search
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+          type: "text",
+          placeholder: "Search all assets..."
+        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "search-time"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "1H"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "24H"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "1W"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "1M"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "1Y"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "price-at"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
+          className: "asset-table"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", {
+          className: "at-head"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
+          className: "at-row"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "#"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Price"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Change"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Market Cap"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Trade"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", {
+          className: "at-body"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+          className: "at-deets"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          src: window.btc_logo
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Bitcoin"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "BTC")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$", btc_price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, btc_chng, "%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$189B"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Trade"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+          className: "at-deets"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          src: window.eth_logo
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Ethereum"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "ETH")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$", eth_price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, eth_chng, "%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$18.5B"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Trade"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "3"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "XRP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$", xrp_price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, xrp_chng, "%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$11B"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Trade"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "4"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Litecoin"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$", ltc_price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, ltc_chng, "%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "~~~~~"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Trade")))))))));
+      }
     }
   }]);
 

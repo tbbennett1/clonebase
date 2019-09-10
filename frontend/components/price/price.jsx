@@ -11,15 +11,25 @@ class Price extends React.Component{
   }
 
   render () {
-    if(this.props.prices)
-    // let btc_price = this.props.prices.prices.priceUsd;
-    debugger
+    if(!this.props.prices){
+      return(
+        <div>
+          Loading...
+        </div>
+      )
+    }else {
+      debugger
+      let btc_price = parseFloat(this.props.prices[0].priceUsd).toFixed(2);
+      let eth_price = parseFloat(this.props.prices[1].priceUsd).toFixed(2);
+      let xrp_price = parseFloat(this.props.prices[2].priceUsd).toFixed(2);
+      let ltc_price = parseFloat(this.props.prices[4].priceUsd).toFixed(2);
+      let btc_chng = parseFloat(this.props.prices[0].changePercent24Hr).toFixed(2);
+      let eth_chng = parseFloat(this.props.prices[1].changePercent24Hr).toFixed(2);
+      let xrp_chng = parseFloat(this.props.prices[2].changePercent24Hr).toFixed(2);
+      let ltc_chng = parseFloat(this.props.prices[4].changePercent24Hr).toFixed(2);
     return(
       <div className="price-index">
         <Heading />
-        <section>
-          btc_price
-        </section>
         <div className="price-top">
           <div className="price-inner">
             <div className="search-box">
@@ -54,33 +64,41 @@ class Price extends React.Component{
                 <tbody className="at-body">
                   <tr>
                     <td>1</td>
-                    <td>Bitcoin</td>
-                    <td>$10000</td>
-                    <td>- 0.2%</td>
+                    <td className="at-deets">
+                      <img src={window.btc_logo} />
+                      <span>Bitcoin</span>
+                      <h4>BTC</h4>
+                    </td>
+                    <td>${btc_price}</td>
+                    <td>{btc_chng}%</td>
                     <td>$189B</td>
                     <td><button>Trade</button></td>
                   </tr>
                   <tr>
                     <td>2</td>
-                    <td>Ethereum</td>
-                    <td>$176</td>
-                    <td>- 0.5%</td>
+                    <td className="at-deets">
+                      <img src={window.eth_logo} />
+                      <span>Ethereum</span>
+                      <h4>ETH</h4>
+                    </td>
+                    <td>${eth_price}</td>
+                    <td>{eth_chng}%</td>
                     <td>$18.5B</td>
                     <td><button>Trade</button></td>
                   </tr>
                   <tr>
                     <td>3</td>
                     <td>XRP</td>
-                    <td>$0.25</td>
-                    <td>- 1.79%</td>
+                    <td>${xrp_price}</td>
+                    <td>{xrp_chng}%</td>
                     <td>$11B</td>
                     <td><button>Trade</button></td>
                   </tr>
                   <tr>
                     <td>4</td>
                     <td>Litecoin</td>
-                    <td>$67</td>
-                    <td>- 2.82%</td>
+                    <td>${ltc_price}</td>
+                    <td>{ltc_chng}%</td>
                     <td>~~~~~</td>
                     <td><button>Trade</button></td>
                   </tr>
@@ -90,7 +108,7 @@ class Price extends React.Component{
           </div>
         </div>
       </div>
-    )
+    )}
   }
 }
 
