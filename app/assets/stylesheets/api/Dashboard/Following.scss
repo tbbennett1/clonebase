@@ -1,0 +1,69 @@
+.following-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 310px;
+  margin: 24px 0;
+  box-shadow: rgba(17, 51, 83, 0.02) 0px 4px 12px 0px;
+  flex: 1 1 auto;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #eceff1;
+  border-image: initial;
+  border-radius: 4px;
+}
+
+.following-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 54px;
+  padding: 0 24px;
+  border-bottom: 1px solid rgb(236, 239, 241);
+}
+
+.following-header > h2 {
+  line-height: 1.3;
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.following-edit-box {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.following-edit-box > span {
+  margin-right: 16px;
+  cursor: pointer;
+  font-size: 14px;
+  color: rgba(17,51,83,0.6);
+}
+
+.following-edit-box > div > svg {
+  height: 18px;
+  width: 18px;
+}
+
+.following-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; 
+}
+
+.following-item {
+  width: 20%;
+  max-width: 20%;
+  border-right: 1px solid rgb(236, 239, 241);
+  border-bottom: 1px solid rgb(236, 239, 241);
+}
+
+.following-item-head {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}

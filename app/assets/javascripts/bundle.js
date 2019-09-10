@@ -427,7 +427,9 @@ function (_React$Component) {
         className: "following-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "following-header"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Following"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Edit"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Following"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "following-edit-box"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Edit"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", null)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "following-grid"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "following-item"
@@ -439,6 +441,50 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Bitcoin"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "24h")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "following-item-price"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$10,353.94"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "-0.07%")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "following-item-chart"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", null, "~~~~~~~~~~~"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "following-item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "following-item-head"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "",
+        alt: ""
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Ethereum"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "24h")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "following-item-price"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$183.24"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "+2.42%")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "following-item-chart"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", null, "~~~~~~~~~~~"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "following-item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "following-item-head"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "",
+        alt: ""
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Basic Attention Token"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "24h")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "following-item-price"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$0.17"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "-0.55%")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "following-item-chart"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", null, "~~~~~~~~~~~"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "following-item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "following-item-head"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "",
+        alt: ""
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "0x"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "24h")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "following-item-price"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$0.17"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "+1.6%")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "following-item-chart"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", null, "~~~~~~~~~~~"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "following-item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "following-item-head"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "",
+        alt: ""
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Stellar Lumens"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "24h")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "following-item-price"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$0.06"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "+0.47%")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "following-item-chart"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", null, "~~~~~~~~~~~")))));
     }
@@ -665,7 +711,23 @@ function (_React$Component) {
         className: "at-row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "#"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Price"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Change"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Chart"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Trade"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", {
         className: "at-body"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Bitcoin"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$10,634"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "- 0.2%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "~~~~~"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Buy"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Ethereum"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$176"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "- 0.5%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "~~~~~"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Buy"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "3"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Bitcoin Cash"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$296"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "- 1.79%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "~~~~~"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Buy"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "4"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Litecoin"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$67"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "- 2.82%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "~~~~~"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Buy"))))));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+        className: "at-deets"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.btc_logo
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Bitcoin"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "BTC")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$10,634"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "- 0.2%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "~~~~~"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Buy"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+        className: "at-deets"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.eth_logo
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Ethereum"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "ETH")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$176"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "- 0.5%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "~~~~~"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Buy"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "3"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+        className: "at-deets"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.bch_logo
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Bitcoin Cash"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "BCH")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$296"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "- 1.79%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "~~~~~"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Buy"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "4"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+        className: "at-deets"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.ltc_logo
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Litecoin"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "LTC")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$67"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "- 2.82%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "~~~~~"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Buy"))))));
     }
   }]);
 
