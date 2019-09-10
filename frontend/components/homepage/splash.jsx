@@ -4,6 +4,7 @@ import Heading from './heading_container';
 import CenterMessage from './center_message';
 import AssetTable from './asset_table';
 import Features from './features';
+import Stats from './stats';
 
 class Splash extends React.Component {
   render() {
@@ -13,6 +14,7 @@ class Splash extends React.Component {
         <CenterMessage />
         <AssetTable />
         <Features />
+        <Stats />
       </div>
     )
   }

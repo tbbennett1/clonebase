@@ -1,0 +1,29 @@
+.stats-top {
+  background-color: rgb(22, 82, 240);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.stats-inner {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 0;
+  align-items: center;
+  flex: 1 1 auto;
+  color: white;
+}
+
+.stats-inner > h1 {
+  line-height: 48px;
+  font-size: 56px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.stats-inner > span {
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 100;
+  opacity: 0.7;
+}
