@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {logout} from '../../actions/session_actions'
 import Header from './header';
 import PortfolioVal from './portfolio_val';
+import Following from './following';
 
 const msp = ({session}) => ({
   email: session.email, 
@@ -21,9 +22,7 @@ class Dashboard extends React.Component {
         <div className="db">
           <div className="dashboard-top">
             <PortfolioVal />
-            <section className="following">
-  
-            </section>
+            <Following />
             <div className="portfolio-ra">
               <div className="portfolio">
   
