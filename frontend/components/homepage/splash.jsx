@@ -5,6 +5,7 @@ import CenterMessage from './center_message';
 import AssetTable from './asset_table_container';
 import Features from './features';
 import Stats from './stats';
+import GetStarted from './get_started';
 
 class Splash extends React.Component {
   render() {
@@ -15,6 +16,7 @@ class Splash extends React.Component {
         <AssetTable />
         <Features />
         <Stats />
+        <GetStarted />
       </div>
     )
   }
