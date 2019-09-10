@@ -18,7 +18,6 @@ class Price extends React.Component{
         </div>
       )
     }else {
-      debugger
       let btc_price = parseFloat(this.props.prices[0].priceUsd).toFixed(2);
       let eth_price = parseFloat(this.props.prices[1].priceUsd).toFixed(2);
       let xrp_price = parseFloat(this.props.prices[2].priceUsd).toFixed(2);
