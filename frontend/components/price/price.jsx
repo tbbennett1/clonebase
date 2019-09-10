@@ -13,18 +13,19 @@ class Price extends React.Component{
   render () {
     if(!this.props.prices){
       return(
-        <div>
-          Loading...
+        <div className="loading">
         </div>
       )
     }else {
       let btc_price = parseFloat(this.props.prices[0].priceUsd).toFixed(2);
       let eth_price = parseFloat(this.props.prices[1].priceUsd).toFixed(2);
       let xrp_price = parseFloat(this.props.prices[2].priceUsd).toFixed(2);
+      let bch_price = parseFloat(this.props.prices[3].priceUsd).toFixed(2);
       let ltc_price = parseFloat(this.props.prices[4].priceUsd).toFixed(2);
       let btc_chng = parseFloat(this.props.prices[0].changePercent24Hr).toFixed(2);
       let eth_chng = parseFloat(this.props.prices[1].changePercent24Hr).toFixed(2);
       let xrp_chng = parseFloat(this.props.prices[2].changePercent24Hr).toFixed(2);
+      let bch_chng = parseFloat(this.props.prices[3].changePercent24Hr).toFixed(2);
       let ltc_chng = parseFloat(this.props.prices[4].changePercent24Hr).toFixed(2);
     return(
       <div className="price-index">
@@ -87,18 +88,38 @@ class Price extends React.Component{
                   </tr>
                   <tr>
                     <td>3</td>
-                    <td>XRP</td>
+                    <td className="at-deets">
+                      <img src={window.xrp_logo} />
+                      <span>Ripple</span>
+                      <h4>XRP</h4>
+                    </td>
                     <td>${xrp_price}</td>
                     <td>{xrp_chng}%</td>
                     <td>$11B</td>
                     <td><button>Trade</button></td>
                   </tr>
                   <tr>
+                    <td>3</td>
+                    <td className="at-deets">
+                      <img src={window.bch_logo} />
+                      <span>Bitcoin Cash</span>
+                      <h4>BCH</h4>
+                    </td>
+                    <td>${bch_price}</td>
+                    <td>{bch_chng}%</td>
+                    <td>$5.4B</td>
+                    <td><button>Trade</button></td>
+                  </tr>
+                  <tr>
                     <td>4</td>
-                    <td>Litecoin</td>
+                    <td className="at-deets">
+                      <img src={window.ltc_logo} />
+                      <span>Litecoin</span>
+                      <h4>LTC</h4>
+                    </td>
                     <td>${ltc_price}</td>
                     <td>{ltc_chng}%</td>
-                    <td>~~~~~</td>
+                    <td>$4.5B</td>
                     <td><button>Trade</button></td>
                   </tr>
                 </tbody>

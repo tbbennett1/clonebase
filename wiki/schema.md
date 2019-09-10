@@ -5,7 +5,7 @@ column name     | data type | details
 `email  `      | string    | not null, indexed, unique
 `first_name` | string | not null
 `last_name` | string | not null
-`state` | char(2) | not null
+`state` | string | not null
 `dob` | date  | optional
 `address` | string | optional
 `country` | string  | optional
@@ -14,7 +14,7 @@ column name     | data type | details
 `created_at` | datetime | not null
 `updated_at` | datetime | not null
 
-## `Coins`
+<!-- ## `Coins`
 column name     | data type | details
 ----------------|-----------|---------------
 `id` | integer | not null, primary key
@@ -23,7 +23,7 @@ column name     | data type | details
 `market_cap` | float | not null
 `description` | text | not null
 `created_at` | datetime | not null
-`updated_at` | datetime | not null
+`updated_at` | datetime | not null -->
 
 ## `Transactions`
 column name     | data type | details
@@ -40,17 +40,18 @@ column name | data type | details
 `id` | integer | not null, primary key
 `total_value_USD` | float | not null
 `user_id` | integer | not null, foreign key
+`coins`   | array | array of coin symbols
 `created_at` | datetime | not null
 `updated_at` | datetime | not null
 
-## `Portfolio-Coins`
+<!-- ## `Portfolio-Coins`
 column name | data type | details
 ------------|-----------|---------
 `id` | integer | not null, primary key
 `coin_id` | string | not null, foreign key
 `portfolio_id` | integer | not null, foreign key
 `created_at` | datetime | not null
-`updated_at` | datetime | not null
+`updated_at` | datetime | not null -->
 
 ## `Following`
 column name | data type | details
