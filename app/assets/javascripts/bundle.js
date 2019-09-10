@@ -107,11 +107,12 @@ var receivePrices = function receivePrices(prices) {
     prices: prices
   };
 };
-debugger;
 var fetchPrices = function fetchPrices() {
   return function (dispatch) {
-    return _util_price_api_util__WEBPACK_IMPORTED_MODULE_0__["getPrices"]().then(function (res) {
-      return dispatch(receivePrices(res));
+    return Object(_util_price_api_util__WEBPACK_IMPORTED_MODULE_0__["getPrices"])().then(function (prices) {
+      debugger;
+      var res = dispatch(receivePrices(prices));
+      return res;
     });
   };
 };
@@ -1027,6 +1028,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _homepage_heading__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../homepage/heading */ "./frontend/components/homepage/heading.jsx");
+/* harmony import */ var _actions_price_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/price_actions */ "./frontend/actions/price_actions.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1044,6 +1046,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -1068,8 +1071,9 @@ function (_React$Component) {
     //   }
     // }
     value: function componentDidMount() {
-      debugger;
-      this.props.fetchPrices();
+      debugger; // this.props.fetchPrices();
+
+      Object(_actions_price_actions__WEBPACK_IMPORTED_MODULE_2__["fetchPrices"])();
     }
   }, {
     key: "render",
@@ -1569,7 +1573,10 @@ var PriceReducer = function PriceReducer() {
 
   switch (action.type) {
     case _actions_price_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_PRICES"]:
-      return action.prices;
+      var newState = Object.assign({}, state, {
+        prices: action.prices
+      });
+      return newState;
 
     default:
       return state;
@@ -1782,9 +1789,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPrices", function() { return getPrices; });
 var getPrices = function getPrices() {
   return $.ajax({
-    url: "https://api.coincap.io/v2/assets",
+    url: "https://api.coincap.io/v2/assets?limit=5",
     method: "GET",
-    limit: 5
+    timeout: 0
   });
 };
 

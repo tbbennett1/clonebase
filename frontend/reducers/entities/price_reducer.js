@@ -4,7 +4,10 @@ const PriceReducer = (state = {}, action) => {
   Object.freeze(state);
   switch(action.type){
     case RECEIVE_PRICES:
-      return action.prices;
+      let newState = Object.assign({}, state, {
+        prices: action.prices
+      })
+      return newState;
     default:
       return state;
   }

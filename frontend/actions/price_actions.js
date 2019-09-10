@@ -1,13 +1,16 @@
-import * as PriceAPI from '../util/price_api_util';
+import { getPrices } from '../util/price_api_util';
 
 export const RECEIVE_PRICES = "RECEIVE_PRICES";
 
 export const receivePrices = prices => ({
   type: RECEIVE_PRICES,
-  prices: prices
+  prices
 });
 
-debugger
 export const fetchPrices = () => dispatch => (
-  PriceAPI.getPrices().then(res => dispatch(receivePrices(res)))
+  getPrices().then(prices => {
+    debugger
+    let res = dispatch(receivePrices(prices))
+    return res;
+  })
 );

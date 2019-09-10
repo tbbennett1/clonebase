@@ -1,5 +1,6 @@
 import React from 'react';
 import Heading from '../homepage/heading';
+import {fetchPrices} from '../../actions/price_actions';
 
 
 class Price extends React.Component{
@@ -13,7 +14,8 @@ class Price extends React.Component{
 
   componentDidMount() {
     debugger
-    this.props.fetchPrices();
+    // this.props.fetchPrices();
+    fetchPrices();
   }
 
   render () {
