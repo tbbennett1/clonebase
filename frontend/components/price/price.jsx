@@ -14,8 +14,8 @@ class Price extends React.Component{
 
   componentDidMount() {
     debugger
-    // this.props.fetchPrices();
-    fetchPrices();
+    this.props.fetchPrices();
+    // fetchPrices();
   }
 
   render () {

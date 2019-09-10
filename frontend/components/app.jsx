@@ -11,7 +11,7 @@ import { AuthRoute, ProtectedRoute, LoggedInRoute } from '../util/route_util';
 import SignUp from './session_form/signup_form_container';
 import LogIn from './session_form/login_form_container';
 import Splash from './homepage/splash';
-import Price from './price/price';
+import Price from './price/price_container';
 import Dashboard from './dashboard/dashboard'
 import PageNotFound from './page_not_found';
 

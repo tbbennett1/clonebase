@@ -110,7 +110,7 @@ var receivePrices = function receivePrices(prices) {
 var fetchPrices = function fetchPrices() {
   return function (dispatch) {
     return Object(_util_price_api_util__WEBPACK_IMPORTED_MODULE_0__["getPrices"])().then(function (prices) {
-      debugger;
+      // debugger
       var res = dispatch(receivePrices(prices));
       return res;
     });
@@ -238,7 +238,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _session_form_signup_form_container__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./session_form/signup_form_container */ "./frontend/components/session_form/signup_form_container.jsx");
 /* harmony import */ var _session_form_login_form_container__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./session_form/login_form_container */ "./frontend/components/session_form/login_form_container.jsx");
 /* harmony import */ var _homepage_splash__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./homepage/splash */ "./frontend/components/homepage/splash.jsx");
-/* harmony import */ var _price_price__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./price/price */ "./frontend/components/price/price.jsx");
+/* harmony import */ var _price_price_container__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./price/price_container */ "./frontend/components/price/price_container.js");
 /* harmony import */ var _dashboard_dashboard__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./dashboard/dashboard */ "./frontend/components/dashboard/dashboard.jsx");
 /* harmony import */ var _page_not_found__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./page_not_found */ "./frontend/components/page_not_found.jsx");
 
@@ -268,7 +268,7 @@ var App = function App() {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_3__["AuthRoute"], {
     exact: true,
     path: "/price",
-    component: _price_price__WEBPACK_IMPORTED_MODULE_7__["default"]
+    component: _price_price_container__WEBPACK_IMPORTED_MODULE_7__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_3__["ProtectedRoute"], {
     exact: true,
     path: "/dashboard",
@@ -1206,9 +1206,8 @@ function (_React$Component) {
     //   }
     // }
     value: function componentDidMount() {
-      debugger; // this.props.fetchPrices();
-
-      Object(_actions_price_actions__WEBPACK_IMPORTED_MODULE_2__["fetchPrices"])();
+      debugger;
+      this.props.fetchPrices(); // fetchPrices();
     }
   }, {
     key: "render",
@@ -1248,6 +1247,41 @@ function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (Price);
+
+/***/ }),
+
+/***/ "./frontend/components/price/price_container.js":
+/*!******************************************************!*\
+  !*** ./frontend/components/price/price_container.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _price__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./price */ "./frontend/components/price/price.jsx");
+/* harmony import */ var _actions_price_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/price_actions */ "./frontend/actions/price_actions.js");
+
+
+
+
+var msp = function msp(_ref) {
+  var entities = _ref.entities;
+  return {
+    prices: entities.prices
+  };
+};
+
+var mdp = function mdp(dispatch) {
+  return {
+    fetchPrices: function fetchPrices() {
+      return dispatch(Object(_actions_price_actions__WEBPACK_IMPORTED_MODULE_2__["fetchPrices"])());
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(msp, mdp)(_price__WEBPACK_IMPORTED_MODULE_1__["default"]));
 
 /***/ }),
 
@@ -1705,6 +1739,7 @@ var PriceReducer = function PriceReducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var action = arguments.length > 1 ? arguments[1] : undefined;
   Object.freeze(state);
+  debugger;
 
   switch (action.type) {
     case _actions_price_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_PRICES"]:
@@ -1925,8 +1960,7 @@ __webpack_require__.r(__webpack_exports__);
 var getPrices = function getPrices() {
   return $.ajax({
     url: "https://api.coincap.io/v2/assets?limit=5",
-    method: "GET",
-    timeout: 0
+    method: "GET"
   });
 };
 

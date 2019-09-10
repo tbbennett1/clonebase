@@ -9,7 +9,7 @@ export const receivePrices = prices => ({
 
 export const fetchPrices = () => dispatch => (
   getPrices().then(prices => {
-    debugger
+    // debugger
     let res = dispatch(receivePrices(prices))
     return res;
   })
