@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import Heading from './heading_container';
 import CenterMessage from './center_message';
-import AssetTable from './asset_table';
+import AssetTable from './asset_table_container';
 import Features from './features';
 import Stats from './stats';
 

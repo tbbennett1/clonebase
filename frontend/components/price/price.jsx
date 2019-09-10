@@ -70,7 +70,7 @@ class Price extends React.Component{
                       <h4>BTC</h4>
                     </td>
                     <td>${btc_price}</td>
-                    <td>{btc_chng}%</td>
+                    <td style={{ color: btc_chng > 0 ? "green" : "red" }}>{btc_chng}%</td>
                     <td>$189B</td>
                     <td><button>Trade</button></td>
                   </tr>
@@ -82,7 +82,7 @@ class Price extends React.Component{
                       <h4>ETH</h4>
                     </td>
                     <td>${eth_price}</td>
-                    <td>{eth_chng}%</td>
+                    <td style={{ color: eth_chng > 0 ? "green" : "red" }}>{eth_chng}%</td>
                     <td>$18.5B</td>
                     <td><button>Trade</button></td>
                   </tr>
@@ -94,7 +94,7 @@ class Price extends React.Component{
                       <h4>XRP</h4>
                     </td>
                     <td>${xrp_price}</td>
-                    <td>{xrp_chng}%</td>
+                    <td style={{ color: xrp_chng > 0 ? "green" : "red" }}>{xrp_chng}%</td>
                     <td>$11B</td>
                     <td><button>Trade</button></td>
                   </tr>
@@ -106,7 +106,7 @@ class Price extends React.Component{
                       <h4>BCH</h4>
                     </td>
                     <td>${bch_price}</td>
-                    <td>{bch_chng}%</td>
+                    <td style={{color: bch_chng > 0 ? "green" : "red" }}>{bch_chng}%</td>
                     <td>$5.4B</td>
                     <td><button>Trade</button></td>
                   </tr>
@@ -118,7 +118,7 @@ class Price extends React.Component{
                       <h4>LTC</h4>
                     </td>
                     <td>${ltc_price}</td>
-                    <td>{ltc_chng}%</td>
+                    <td style={{ color: ltc_chng > 0 ? "green" : "red" }}>{ltc_chng}%</td>
                     <td>$4.5B</td>
                     <td><button>Trade</button></td>
                   </tr>
