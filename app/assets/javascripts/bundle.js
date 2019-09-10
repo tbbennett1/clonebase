@@ -101,18 +101,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _util_price_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/price_api_util */ "./frontend/util/price_api_util.js");
 
 var RECEIVE_PRICES = "RECEIVE_PRICES";
-var receivePrices = function receivePrices(prices) {
+var receivePrices = function receivePrices(response) {
   return {
     type: RECEIVE_PRICES,
-    prices: prices
+    response: response
   };
 };
 var fetchPrices = function fetchPrices() {
   return function (dispatch) {
-    return Object(_util_price_api_util__WEBPACK_IMPORTED_MODULE_0__["getPrices"])().then(function (prices) {
-      // debugger
-      var res = dispatch(receivePrices(prices));
-      return res;
+    return Object(_util_price_api_util__WEBPACK_IMPORTED_MODULE_0__["getPrices"])().then(function (response) {
+      return dispatch(receivePrices(response));
     });
   };
 };
@@ -1163,7 +1161,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _homepage_heading__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../homepage/heading */ "./frontend/components/homepage/heading.jsx");
-/* harmony import */ var _actions_price_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/price_actions */ "./frontend/actions/price_actions.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1185,36 +1182,30 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-
 var Price =
 /*#__PURE__*/
 function (_React$Component) {
   _inherits(Price, _React$Component);
 
-  function Price() {
+  function Price(props) {
     _classCallCheck(this, Price);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Price).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(Price).call(this, props));
   }
 
   _createClass(Price, [{
     key: "componentDidMount",
-    // constructor(props){
-    //   super(props);
-    //   this.state = {
-    //     prices: {}
-    //   }
-    // }
     value: function componentDidMount() {
-      debugger;
-      this.props.fetchPrices(); // fetchPrices();
+      this.props.fetchPrices();
     }
   }, {
     key: "render",
     value: function render() {
+      if (this.props.prices) // let btc_price = this.props.prices.prices.priceUsd;
+        debugger;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "price-index"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_homepage_heading__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, "test"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_homepage_heading__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, "btc_price"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "price-top"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "price-inner"
@@ -1239,7 +1230,7 @@ function (_React$Component) {
         className: "at-row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "#"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Price"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Change"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Market Cap"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Trade"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", {
         className: "at-body"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Bitcoin"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$10,634"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "- 0.2%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$189B"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Trade"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Ethereum"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$176"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "- 0.5%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$18.5B"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Trade"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "3"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "XRP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.25"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "- 1.79%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$11B"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Trade"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "4"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Litecoin"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$67"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "- 2.82%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "~~~~~"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Trade")))))))));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Bitcoin"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$10000"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "- 0.2%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$189B"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Trade"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Ethereum"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$176"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "- 0.5%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$18.5B"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Trade"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "3"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "XRP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$0.25"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "- 1.79%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$11B"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Trade"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "4"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Litecoin"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$67"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "- 2.82%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "~~~~~"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Trade")))))))));
     }
   }]);
 
@@ -1269,7 +1260,7 @@ __webpack_require__.r(__webpack_exports__);
 var msp = function msp(_ref) {
   var entities = _ref.entities;
   return {
-    prices: entities.prices
+    prices: entities.prices.prices
   };
 };
 
@@ -1739,12 +1730,11 @@ var PriceReducer = function PriceReducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var action = arguments.length > 1 ? arguments[1] : undefined;
   Object.freeze(state);
-  debugger;
 
   switch (action.type) {
     case _actions_price_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_PRICES"]:
       var newState = Object.assign({}, state, {
-        prices: action.prices
+        prices: action.response.data
       });
       return newState;
 

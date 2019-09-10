@@ -1,29 +1,24 @@
 import React from 'react';
 import Heading from '../homepage/heading';
-import {fetchPrices} from '../../actions/price_actions';
-
 
 class Price extends React.Component{
-  // constructor(props){
-  //   super(props);
-
-  //   this.state = {
-  //     prices: {}
-  //   }
-  // }
+  constructor(props){
+    super(props);
+  }
 
   componentDidMount() {
-    debugger
     this.props.fetchPrices();
-    // fetchPrices();
   }
 
   render () {
+    if(this.props.prices)
+    // let btc_price = this.props.prices.prices.priceUsd;
+    debugger
     return(
       <div className="price-index">
         <Heading />
         <section>
-          test
+          btc_price
         </section>
         <div className="price-top">
           <div className="price-inner">
@@ -60,7 +55,7 @@ class Price extends React.Component{
                   <tr>
                     <td>1</td>
                     <td>Bitcoin</td>
-                    <td>$10,634</td>
+                    <td>$10000</td>
                     <td>- 0.2%</td>
                     <td>$189B</td>
                     <td><button>Trade</button></td>

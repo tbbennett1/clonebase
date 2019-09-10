@@ -4,7 +4,7 @@ import { fetchPrices } from '../../actions/price_actions';
 
 const msp = ({entities}) => {
   return ({
-    prices: entities.prices
+    prices: entities.prices.prices
   });
 };
 
