@@ -17,76 +17,86 @@ class Following extends React.Component {
         <div className="following-grid">
           <div className="following-item">
             <div className="following-item-head">
-              <img src="" alt=""/>
-              <label>Bitcoin</label>
-              <span>24h</span>
+              <div className="symbol">
+                <img src={window.btc_logo}/>
+                <label>Bitcoin</label>
+              </div>
+              <div className="interval">24h</div>
             </div>
             <div className="following-item-price">
               <span>$10,353.94</span>
               <h5>-0.07%</h5>
             </div>
             <div className="following-item-chart">
-              <svg>~~~~~~~~~~~</svg>
+              <div>~~~~~~~~~~~</div>
             </div>
           </div>
 
           <div className="following-item">
             <div className="following-item-head">
-              <img src="" alt=""/>
-              <label>Ethereum</label>
-              <span>24h</span>
+              <div className="symbol">
+                <img src={window.eth_logo}/>
+                <label>Ethereum</label>
+              </div>
+              <div className="interval">24h</div>
             </div>
             <div className="following-item-price">
               <span>$183.24</span>
               <h5>+2.42%</h5>
             </div>
             <div className="following-item-chart">
-              <svg>~~~~~~~~~~~</svg>
+              <div>~~~~~~~~~~~</div>
             </div>
           </div>
 
           <div className="following-item">
             <div className="following-item-head">
-              <img src="" alt=""/>
-              <label>Basic Attention Token</label>
-              <span>24h</span>
+              <div className="symbol">
+                <img src={window.bat_logo}/>
+                <label>Basic Attention Token</label>
+              </div>
+              <div className="interval">24h</div>
             </div>
             <div className="following-item-price">
               <span>$0.17</span>
               <h5>-0.55%</h5>
             </div>
             <div className="following-item-chart">
-              <svg>~~~~~~~~~~~</svg>
+              <div>~~~~~~~~~~~</div>
             </div>
           </div>
 
           <div className="following-item">
             <div className="following-item-head">
-              <img src="" alt=""/>
-              <label>0x</label>
-              <span>24h</span>
+              <div className="symbol">
+                <img src={window.zrx_logo}/>
+                <label>0x</label>
+              </div>
+              <div className="interval">24h</div>
             </div>
             <div className="following-item-price">
               <span>$0.17</span>
               <h5>+1.6%</h5>
             </div>
             <div className="following-item-chart">
-              <svg>~~~~~~~~~~~</svg>
+              <div>~~~~~~~~~~~</div>
             </div>
           </div>
 
           <div className="following-item">
             <div className="following-item-head">
-              <img src="" alt=""/>
-              <label>Stellar Lumens</label>
-              <span>24h</span>
+              <div className="symbol">
+                <img src={window.xlm_logo}/>
+                <label>Stellar Lumens</label>
+              </div>
+              <div className="interval">24h</div>
             </div>
             <div className="following-item-price">
               <span>$0.06</span>
               <h5>+0.47%</h5>
             </div>
             <div className="following-item-chart">
-              <svg>~~~~~~~~~~~</svg>
+              <div>~~~~~~~~~~~</div>
             </div>
           </div>
 
