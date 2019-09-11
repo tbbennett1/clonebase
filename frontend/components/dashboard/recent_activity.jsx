@@ -5,7 +5,7 @@ class RecentActivity extends React.Component {
     return (
       <div className="ra-container">
         <div className="ra-header">
-
+          <h2>RecentActivity</h2>
         </div>
       </div>
     )

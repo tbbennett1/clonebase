@@ -726,7 +726,9 @@ function (_React$Component) {
         className: "portfolio-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "portfolio-header"
-      }));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Your Portfolio"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "portfolio-list-chart"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "List"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Chart"))));
     }
   }]);
 
@@ -856,7 +858,7 @@ function (_React$Component) {
         className: "ra-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "ra-header"
-      }));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "RecentActivity")));
     }
   }]);
 

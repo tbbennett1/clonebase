@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   min-height: 310px;
-  margin: 24px 0;
+  margin: 12px 0px 12px 12px;
   box-shadow: rgba(17, 51, 83, 0.02) 0px 4px 12px 0px;
   flex: 1 1 auto;
   border-width: 1px;
@@ -11,4 +11,22 @@
   border-color: #eceff1;
   border-image: initial;
   border-radius: 4px;
+}
+
+.ra-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 54px;
+  padding: 0 24px;
+  border-bottom: 1px solid rgb(236, 239, 241);
+}
+
+.ra-header > h2 {
+  line-height: 1.3;
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
 }
