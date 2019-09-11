@@ -8,13 +8,13 @@
   flex-direction: column;
   flex: 1 0 auto;
   height: 100vh;
-  padding-bottom: 150px;
+  padding-bottom: 800px;
   padding-top: 100px;
   background-color: rgb(22, 82, 240);
  }
 
  .sfc-box {
-   position: fixed;
+  position: absolute;
   top: 60px;
   display: flex;
   flex-direction: column;
