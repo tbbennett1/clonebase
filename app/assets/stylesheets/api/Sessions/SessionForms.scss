@@ -9,7 +9,15 @@
   flex: 1 0 auto;
   height: 100vh;
   padding-bottom: 150px;
+  padding-top: 100px;
   background-color: rgb(22, 82, 240);
+ }
+
+ .sfc-box {
+   position: fixed;
+  top: 60px;
+  display: flex;
+  flex-direction: column;
  }
 
 .session-form-container h2, .session-form-container-login h2 {
@@ -148,6 +156,7 @@
   flex: 1 0 auto;
   height: 100vh;
   padding-bottom: 500px;
+  padding-top: 200px;
   background-color: rgb(22, 82, 240);
  }
 

@@ -43,70 +43,72 @@ class SignupForm extends React.Component {
       <div>
         <Heading />
         <div className="session-form-container">
-          <h2>Create your account</h2>
-          <form onSubmit={this.handleSubmit} className="session-form-box">
-            {this.renderErrors()}
-            <div className="session-form">
-              <div className="box-form">
-                <div className="form-row">
-                  <label>
-                    <span>First name</span>
-                    <input type="text"
-                      value={this.state.first_name}
-                      onChange={this.update('first_name')}
-                      className="session-input"
-                      placeholder="First name"
-                    />
-                  </label>
-                  <label>
-                    <span>Last name</span>
-                    <input type="text"
-                      value={this.state.last_name}
-                      onChange={this.update('last_name')}
-                      className="session-input"
-                      placeholder="Last name"
-                    />
-                  </label>
+          <div className="sfc-box">
+            <h2>Create your account</h2>
+            <form onSubmit={this.handleSubmit} className="session-form-box">
+              {this.renderErrors()}
+              <div className="session-form">
+                <div className="box-form">
+                  <div className="form-row">
+                    <label>
+                      <span>First name</span>
+                      <input type="text"
+                        value={this.state.first_name}
+                        onChange={this.update('first_name')}
+                        className="session-input"
+                        placeholder="First name"
+                      />
+                    </label>
+                    <label>
+                      <span>Last name</span>
+                      <input type="text"
+                        value={this.state.last_name}
+                        onChange={this.update('last_name')}
+                        className="session-input"
+                        placeholder="Last name"
+                      />
+                    </label>
+                  </div>
+                  <div className="form-row">
+                    <label>
+                      <span>Email</span>
+                      <input type="email"
+                        value={this.state.email}
+                        onChange={this.update('email')}
+                        className="session-input"
+                        placeholder="Your email address"
+                      />
+                    </label>
+                  </div>
+                  <div className="form-row">
+                    <label>
+                      <span>Password</span>
+                      <input type="password"
+                        value={this.state.password}
+                        onChange={this.update('password')}
+                        className="session-input"
+                        placeholder="Choose a password"
+                      />
+                    </label>
+                  </div>
+                  <div className="form-row">
+                    <label>
+                      <span>State</span>
+                      <input type="text"
+                        value={this.state.state}
+                        onChange={this.update('state')}
+                        className="session-input"
+                        placeholder="California"
+                      />
+                    </label>
+                  </div>
+                  <input className="session-submit" type="submit" value="Create account" />
                 </div>
-                <div className="form-row">
-                  <label>
-                    <span>Email</span>
-                    <input type="email"
-                      value={this.state.email}
-                      onChange={this.update('email')}
-                      className="session-input"
-                      placeholder="Your email address"
-                    />
-                  </label>
-                </div>
-                <div className="form-row">
-                  <label>
-                    <span>Password</span>
-                    <input type="password"
-                      value={this.state.password}
-                      onChange={this.update('password')}
-                      className="session-input"
-                      placeholder="Choose a password"
-                    />
-                  </label>
-                </div>
-                <div className="form-row">
-                  <label>
-                    <span>State</span>
-                    <input type="text"
-                      value={this.state.state}
-                      onChange={this.update('state')}
-                      className="session-input"
-                      placeholder="California"
-                    />
-                  </label>
-                </div>
-                <input className="session-submit" type="submit" value="Create account" />
               </div>
-            </div>
-          </form>
-          {this.props.navLink}
-        </div>
+            </form>
+            {this.props.navLink}
+          </div>
+          </div>
       </div>
     );
   }

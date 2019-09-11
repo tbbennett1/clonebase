@@ -59,37 +59,39 @@ class LoginForm extends React.Component {
       <div>
         <Heading />
         <div className="session-form-container-login">
-          {errors.length > 0 ? this.renderErrors() : null} 
-          <h2>Sign in to Clonebase</h2>
-          <form onSubmit={this.handleSubmit} className="session-form-box-login">
-            <div className="session-form">
-              <div className="box-form">
-                <label>
-                  <input type="email"
-                    value={this.state.email}
-                    onChange={this.update('email')}
-                    className="session-input-login"
-                    placeholder="Email"
-                  />
-                </label>
-                <br />
-                <label>
-                  <input type="password"
-                    value={this.state.password}
-                    onChange={this.update('password')}
-                    className="session-input-login"
-                    placeholder="Password"
-                  />
-                </label>
-                <div className="login-btns">
-                  <input className="session-submit-login" onClick={this.demoLogin} type="submit" value="DEMO" />
-                  <input className="session-submit-login" type="submit" value="SIGN IN" />
+          <div className="sfc-box">
+            {errors.length > 0 ? this.renderErrors() : null} 
+            <h2>Sign in to Clonebase</h2>
+            <form onSubmit={this.handleSubmit} className="session-form-box-login">
+              <div className="session-form">
+                <div className="box-form">
+                  <label>
+                    <input type="email"
+                      value={this.state.email}
+                      onChange={this.update('email')}
+                      className="session-input-login"
+                      placeholder="Email"
+                    />
+                  </label>
+                  <br />
+                  <label>
+                    <input type="password"
+                      value={this.state.password}
+                      onChange={this.update('password')}
+                      className="session-input-login"
+                      placeholder="Password"
+                    />
+                  </label>
+                  <div className="login-btns">
+                    <input className="session-submit-login" onClick={this.demoLogin} type="submit" value="DEMO" />
+                    <input className="session-submit-login" type="submit" value="SIGN IN" />
+                  </div>
                 </div>
               </div>
-            </div>
-          </form>
-          {this.props.navLink}
-        </div>
+            </form>
+            {this.props.navLink}
+          </div>
+          </div>
       </div>
     );
   }

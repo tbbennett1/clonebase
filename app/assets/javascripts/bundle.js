@@ -1747,6 +1747,8 @@ function (_React$Component) {
       var errors = this.props.errors;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_homepage_heading__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "session-form-container-login"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sfc-box"
       }, errors.length > 0 ? this.renderErrors() : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Sign in to Clonebase"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit,
         className: "session-form-box-login"
@@ -1777,7 +1779,7 @@ function (_React$Component) {
         className: "session-submit-login",
         type: "submit",
         value: "SIGN IN"
-      }))))), this.props.navLink));
+      }))))), this.props.navLink)));
     }
   }]);
 
@@ -1918,6 +1920,8 @@ function (_React$Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_homepage_heading__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "session-form-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sfc-box"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Create your account"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit,
         className: "session-form-box"
@@ -1967,7 +1971,7 @@ function (_React$Component) {
         className: "session-submit",
         type: "submit",
         value: "Create account"
-      })))), this.props.navLink));
+      })))), this.props.navLink)));
     }
   }]);
 
@@ -32233,7 +32237,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
