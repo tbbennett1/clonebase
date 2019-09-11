@@ -6,6 +6,7 @@ import AssetTable from './asset_table_container';
 import Features from './features';
 import Stats from './stats';
 import GetStarted from './get_started';
+import Footer from './footer';
 
 class Splash extends React.Component {
   render() {
@@ -17,6 +18,7 @@ class Splash extends React.Component {
         <Features />
         <Stats />
         <GetStarted />
+        <Footer />
       </div>
     )
   }
