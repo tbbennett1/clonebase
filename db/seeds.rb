@@ -13,6 +13,17 @@ brock = User.create!(
   state: "California"
   );
 
+portfolio = brock.portfolioItems
+
+# portfolio.each do |item|
+#   if item.coin_sym == "BTC"
+#     item.amount = 10
+#   elsif item.coin_sym == "ETH"
+#     item.amount = 25
+#   end
+#   item.save!
+# end
+
 satosh = User.create!( 
   email: "yaboysatosh@bitcoin.com",
   password: "password", 
@@ -20,4 +31,6 @@ satosh = User.create!(
   last_name: "Nakamoto", 
   state: "South Dakota"
   );
+
+
   

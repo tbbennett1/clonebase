@@ -29,12 +29,17 @@
     },
     porfolio: {
       1: {
-        coin_id: 1 
+        coins: [{id: 1, 
+                name: 'bitcoin', 
+                symbol: 'BTC', 
+                amount: 2.3}] 
       }
     },
     following: {
       1: {
-        coin_id: 1
+        coins: [{id: 1, 
+                name: 'bitcoin', 
+                symbol: 'BTC'}]
       }
     }
   },

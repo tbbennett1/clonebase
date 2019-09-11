@@ -40,7 +40,7 @@ column name | data type | details
 `id` | integer | not null, primary key
 `total_value_USD` | float | not null
 `user_id` | integer | not null, foreign key
-`coins`   | array | array of coin symbols
+`coins`   | array | array of coins and amounts
 `created_at` | datetime | not null
 `updated_at` | datetime | not null
 
