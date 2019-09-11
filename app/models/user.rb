@@ -24,7 +24,7 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 6 }, allow_nil: true
 
   after_initialize :ensure_session_token
-  # after_create :generate_portfolio
+  after_create :generate_portfolio
 
   has_many :portfolioItems,
   foreign_key: :user_id,
@@ -61,11 +61,15 @@ class User < ApplicationRecord
     self.session_token
   end
 
-  # def generate_portfolio
-  #   btc = PortfolioItem.new(coin_sym: 'BTC', user_id: self.id, amount: 10)
-  #   eth = PortfolioItem.new(coin_sym: 'ETH', user_id: self.id, amount: 10)
+  def generate_portfolio
+    btc = PortfolioItem.new(coin_sym: 'BTC', user_id: self.id, amount: 10)
+    eth = PortfolioItem.new(coin_sym: 'ETH', user_id: self.id, amount: 15)
+    ltc = PortfolioItem.new(coin_sym: 'LTC', user_id: self.id, amount: 35)
+    bat = PortfolioItem.new(coin_sym: 'BAT', user_id: self.id, amount: 1200)
 
-  #   btc.save!
-  #   eth.save!
-  # end
+    btc.save!
+    eth.save!
+    ltc.save!
+    bat.save!
+  end
 end
