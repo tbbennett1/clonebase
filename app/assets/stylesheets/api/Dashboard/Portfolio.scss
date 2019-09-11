@@ -1,0 +1,19 @@
+.portfolio-ra {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.portfolio-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 310px;
+  margin: 24px 0;
+  box-shadow: rgba(17, 51, 83, 0.02) 0px 4px 12px 0px;
+  flex: 1 1 auto;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #eceff1;
+  border-image: initial;
+  border-radius: 4px;
+}

@@ -4,6 +4,8 @@ import {logout} from '../../actions/session_actions'
 import Header from './header';
 import PortfolioVal from './portfolio_val';
 import Following from './following';
+import Portfolio from './portfolio';
+import RecentActivity from './recent_activity';
 
 const msp = ({session}) => ({
   email: session.email, 
@@ -26,12 +28,8 @@ class Dashboard extends React.Component {
             <PortfolioVal />
             <Following />
             <div className="portfolio-ra">
-              <div className="portfolio">
-  
-              </div>
-              <div className="recent-activity">
-  
-              </div>
+              <Portfolio />
+              <RecentActivity />
             </div>
           </div>
         </div>
