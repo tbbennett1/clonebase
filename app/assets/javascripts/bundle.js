@@ -499,7 +499,67 @@ function (_React$Component) {
         className: "following-item-price"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$0.06"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "+0.47%")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "following-item-chart"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "~~~~~~~~~~~")))));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "~~~~~~~~~~~"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "following-item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "following-item-head"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "symbol"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.bch_logo
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Bitcoin Cash")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "interval"
+      }, "24h")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "following-item-price"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$293.29"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "-1.57%")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "following-item-chart"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "~~~~~~~~~~~"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "following-item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "following-item-head"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "symbol"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.xrp_logo
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Ripple")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "interval"
+      }, "24h")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "following-item-price"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$0.29"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "-2.07%")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "following-item-chart"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "~~~~~~~~~~~"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "following-item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "following-item-head"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "symbol"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.ltc_logo
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Litecoin")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "interval"
+      }, "24h")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "following-item-price"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$68.71"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "-2.11%")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "following-item-chart"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "~~~~~~~~~~~"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "following-item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "following-item-head"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "symbol"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.eos_logo
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "EOS")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "interval"
+      }, "24h")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "following-item-price"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$3.68"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "-1.95%")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "following-item-chart"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "~~~~~~~~~~~"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "following-item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "discover-more"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Discover more assets >")))));
     }
   }]);
 

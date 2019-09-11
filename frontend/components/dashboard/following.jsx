@@ -100,6 +100,80 @@ class Following extends React.Component {
             </div>
           </div>
 
+          <div className="following-item">
+            <div className="following-item-head">
+              <div className="symbol">
+                <img src={window.bch_logo}/>
+                <label>Bitcoin Cash</label>
+              </div>
+              <div className="interval">24h</div>
+            </div>
+            <div className="following-item-price">
+              <span>$293.29</span>
+              <h5>-1.57%</h5>
+            </div>
+            <div className="following-item-chart">
+              <div>~~~~~~~~~~~</div>
+            </div>
+          </div>
+
+          <div className="following-item">
+            <div className="following-item-head">
+              <div className="symbol">
+                <img src={window.xrp_logo}/>
+                <label>Ripple</label>
+              </div>
+              <div className="interval">24h</div>
+            </div>
+            <div className="following-item-price">
+              <span>$0.29</span>
+              <h5>-2.07%</h5>
+            </div>
+            <div className="following-item-chart">
+              <div>~~~~~~~~~~~</div>
+            </div>
+          </div>
+
+          <div className="following-item">
+            <div className="following-item-head">
+              <div className="symbol">
+                <img src={window.ltc_logo}/>
+                <label>Litecoin</label>
+              </div>
+              <div className="interval">24h</div>
+            </div>
+            <div className="following-item-price">
+              <span>$68.71</span>
+              <h5>-2.11%</h5>
+            </div>
+            <div className="following-item-chart">
+              <div>~~~~~~~~~~~</div>
+            </div>
+          </div>
+
+          <div className="following-item">
+            <div className="following-item-head">
+              <div className="symbol">
+                <img src={window.eos_logo}/>
+                <label>EOS</label>
+              </div>
+              <div className="interval">24h</div>
+            </div>
+            <div className="following-item-price">
+              <span>$3.68</span>
+              <h5>-1.95%</h5>
+            </div>
+            <div className="following-item-chart">
+              <div>~~~~~~~~~~~</div>
+            </div>
+          </div>
+
+          <div className="following-item">
+            <div className="discover-more">
+              <div>Discover more assets ></div>
+            </div>
+          </div>
+
         </div>
       </div>
     )

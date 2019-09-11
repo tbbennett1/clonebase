@@ -62,9 +62,10 @@
   padding: 16px;
   border-right: 1px solid rgb(236, 239, 241);
   border-bottom: 1px solid rgb(236, 239, 241);
+  cursor: pointer;
 }
 
-.following-item:last-child {
+.following-item:nth-child(5), .following-item:last-child {
   border-right: none;
 }
 
@@ -130,4 +131,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.discover-more {
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+  color: rgb(22, 82, 240);
+  font-weight: 100;
 }
