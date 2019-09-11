@@ -222,8 +222,11 @@ document.addEventListener("DOMContentLoaded", function () {
     delete window.currentUser;
   } else {
     store = Object(_store_store__WEBPACK_IMPORTED_MODULE_3__["default"])();
-  }
+  } //TEST ONLY//
 
+
+  window.dispatch = store.dispatch;
+  window.getState = store.getState;
   var root = document.getElementById('root');
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_root__WEBPACK_IMPORTED_MODULE_2__["default"], {
     store: store
@@ -338,7 +341,9 @@ var msp = function msp(_ref) {
   var session = _ref.session;
   return {
     email: session.email,
-    first_name: session.first_name
+    first_name: session.first_name,
+    last_name: session.last_name,
+    portfolio: session.portfolioItems
   };
 };
 
@@ -1631,7 +1636,7 @@ function (_React$Component) {
           style: {
             color: xrp_chng > 0 ? "green" : "red"
           }
-        }, xrp_chng, "%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$11B"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Trade"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "3"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+        }, xrp_chng, "%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$11B"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Trade"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "4"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
           className: "at-deets"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
           src: window.bch_logo
@@ -1639,7 +1644,7 @@ function (_React$Component) {
           style: {
             color: bch_chng > 0 ? "green" : "red"
           }
-        }, bch_chng, "%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$5.4B"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Trade"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "4"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+        }, bch_chng, "%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$5.4B"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Trade"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "5"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
           className: "at-deets"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
           src: window.ltc_logo
@@ -2299,7 +2304,10 @@ __webpack_require__.r(__webpack_exports__);
 
 var _nullUser = Object.freeze({
   id: null,
-  email: null
+  email: null,
+  first_name: null,
+  last_name: null,
+  portfolio: null
 });
 
 var sessionReducer = function sessionReducer() {
@@ -2312,7 +2320,9 @@ var sessionReducer = function sessionReducer() {
       return {
         id: action.user.id,
         email: action.user.email,
-        first_name: action.user.first_name
+        first_name: action.user.first_name,
+        last_name: action.user.last_name,
+        portfolio: action.user.portfolioItems
       };
 
     case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["LOGOUT_CURRENT_USER"]:
@@ -32324,7 +32334,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

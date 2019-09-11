@@ -7,7 +7,9 @@ import Following from './following';
 
 const msp = ({session}) => ({
   email: session.email, 
-  first_name: session.first_name
+  first_name: session.first_name,
+  last_name: session.last_name,
+  portfolio: session.portfolioItems
 });
 
 const mdp = (dispatch) => ({

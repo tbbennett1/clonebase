@@ -34,13 +34,13 @@ column name     | data type | details
 `purchase_amount`   | float | not null
 `purchase_price` | float  | not null
 
-## `Portfolio`
+## `PortfolioItem`
 column name | data type | details
 ------------|-----------|---------
 `id` | integer | not null, primary key
-`total_value_USD` | float | not null
+`amount` | float | not null
 `user_id` | integer | not null, foreign key
-`coins`   | array | array of coins and amounts
+`coin_sym`   | string | 3 char coin symbol
 `created_at` | datetime | not null
 `updated_at` | datetime | not null
 

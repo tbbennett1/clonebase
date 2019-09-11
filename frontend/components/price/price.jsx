@@ -99,7 +99,7 @@ class Price extends React.Component{
                     <td><button>Trade</button></td>
                   </tr>
                   <tr>
-                    <td>3</td>
+                    <td>4</td>
                     <td className="at-deets">
                       <img src={window.bch_logo} />
                       <span>Bitcoin Cash</span>
@@ -111,7 +111,7 @@ class Price extends React.Component{
                     <td><button>Trade</button></td>
                   </tr>
                   <tr>
-                    <td>4</td>
+                    <td>5</td>
                     <td className="at-deets">
                       <img src={window.ltc_logo} />
                       <span>Litecoin</span>
