@@ -1,7 +1,19 @@
 import React from 'react';
 
 class Portfolio extends React.Component {
+  constructor(props){
+    super(props);
+  }
   render() {
+    if (!this.props.portfolio) {
+      debugger
+      return (
+        <div className="loading">
+        </div>
+      )
+    };
+
+    debugger
     return (
       <div className="portfolio-container">
         <div className="portfolio-header">
@@ -25,8 +37,8 @@ class Portfolio extends React.Component {
                     <p>50%</p>
                   </div>
                 </td>
-                <td></td>
-                <td></td>
+                <td className="coin-amount">10 BTC</td>
+                <td className="usd-value">$100,000</td>
               </tr>
               <tr>
                 <td>
@@ -39,8 +51,8 @@ class Portfolio extends React.Component {
                     <p>25%</p>
                   </div>
                 </td>
-                <td></td>
-                <td></td>
+                <td className="coin-amount">50 ETH</td>
+                <td className="usd-value">$5,000</td>
               </tr>
               <tr>
                 <td>
@@ -53,8 +65,8 @@ class Portfolio extends React.Component {
                     <p>10%</p>
                   </div>
                 </td>
-                <td></td>
-                <td></td>
+                <td className="coin-amount">2000 BAT</td>
+                <td className="usd-value">$1,000</td>
               </tr>
               <tr>
                 <td>
@@ -67,8 +79,8 @@ class Portfolio extends React.Component {
                     <p>10%</p>
                   </div>
                 </td>
-                <td></td>
-                <td></td>
+                <td className="coin-amount">2000 ZRX</td>
+                <td className="usd-value">$1,000</td>
               </tr>
               <tr>
                 <td>
@@ -81,8 +93,8 @@ class Portfolio extends React.Component {
                     <p>5%</p>
                   </div>
                 </td>
-                <td></td>
-                <td></td>
+                <td className="coin-amount">12 LTC</td>
+                <td className="usd-value">$600</td>
               </tr>
             </tbody>
           </table>

@@ -373,6 +373,8 @@ function (_React$Component) {
   _createClass(Dashboard, [{
     key: "render",
     value: function render() {
+      debugger;
+      var port = this.state.session.portfolio;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "dashboard-index"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_header__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -383,7 +385,9 @@ function (_React$Component) {
         className: "dashboard-top"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_portfolio_val__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_following__WEBPACK_IMPORTED_MODULE_5__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "portfolio-ra"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_portfolio__WEBPACK_IMPORTED_MODULE_6__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_activity__WEBPACK_IMPORTED_MODULE_7__["default"], null)))));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_portfolio__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        portfolio: this.props.portfolio
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_activity__WEBPACK_IMPORTED_MODULE_7__["default"], null)))));
     }
   }]);
 
@@ -713,15 +717,24 @@ var Portfolio =
 function (_React$Component) {
   _inherits(Portfolio, _React$Component);
 
-  function Portfolio() {
+  function Portfolio(props) {
     _classCallCheck(this, Portfolio);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Portfolio).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(Portfolio).call(this, props));
   }
 
   _createClass(Portfolio, [{
     key: "render",
     value: function render() {
+      if (!this.props.portfolio) {
+        debugger;
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "loading"
+        });
+      }
+
+      ;
+      debugger;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "portfolio-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -738,31 +751,51 @@ function (_React$Component) {
         className: "percentage"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "percent-bar-btc"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "50%"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "50%"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+        className: "coin-amount"
+      }, "10 BTC"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+        className: "usd-value"
+      }, "$100,000")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: window.eth_logo
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Ethereum")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "percentage"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "percent-bar-eth"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "25%"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "25%"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+        className: "coin-amount"
+      }, "50 ETH"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+        className: "usd-value"
+      }, "$5,000")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: window.bat_logo
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Basic Attention Token")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "percentage"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "percent-bar-bat"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "10%"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "10%"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+        className: "coin-amount"
+      }, "2000 BAT"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+        className: "usd-value"
+      }, "$1,000")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: window.zrx_logo
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "0x")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "percentage"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "percent-bar-zrx"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "10%"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "10%"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+        className: "coin-amount"
+      }, "2000 ZRX"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+        className: "usd-value"
+      }, "$1,000")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: window.ltc_logo
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Litecoin")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "percentage"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "percent-bar-ltc"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "5%"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "5%"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+        className: "coin-amount"
+      }, "12 LTC"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+        className: "usd-value"
+      }, "$600")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "balance"
       })));
     }

@@ -20,6 +20,8 @@ const mdp = (dispatch) => ({
 
 class Dashboard extends React.Component {
   render() {
+    debugger
+    const port = this.state.session.portfolio;
     return (
       <div className="dashboard-index">
         <Header logout={this.props.logout}/>
@@ -28,7 +30,7 @@ class Dashboard extends React.Component {
             <PortfolioVal />
             <Following />
             <div className="portfolio-ra">
-              <Portfolio />
+              <Portfolio portfolio={this.props.portfolio}/>
               <RecentActivity />
             </div>
           </div>

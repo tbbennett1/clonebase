@@ -47,9 +47,12 @@
   color: rgba(17,51,83,0.6);
 }
 
+.prt-data-table tr {
+  border-color: #eceff1;
+}
 
 .prt-data-table td:first-child {
-  padding-left: 12px;
+  padding: 0 12px;
   align-items: center;
   display: flex; 
 }
@@ -63,7 +66,7 @@
 .percentage {
   display: flex;
   flex-direction: row;
-  width: 200px;
+  width: 150px;
   align-items: center;
 }
 
@@ -112,4 +115,16 @@
   font-size: 14px;
   font-weight: 400;
   color: black;
+}
+
+.coin-amount {
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.usd-value {
+  font-size: 14px;
+  font-weight: 200;
+  color: rgba(17, 51, 83, 0.6);
+  padding-left: 12px
 }
