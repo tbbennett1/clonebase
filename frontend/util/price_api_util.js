@@ -1,6 +1,6 @@
 export const getPrices = () => (
   $.ajax({
-    url: "https://api.coincap.io/v2/assets?limit=15",
+    url: "https://api.coincap.io/v2/assets?limit=50",
     method: "GET"
   })
 );

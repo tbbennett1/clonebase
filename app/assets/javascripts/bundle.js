@@ -771,11 +771,18 @@ function (_React$Component) {
         });
       }
 
+      this.coin_amount = {};
+      this.coin_price = {};
       this.total_value = 0;
       var portfolio = this.props.portfolio;
 
-      for (var i = 0; i < portfolio.length; i++) {
-        this.total_value += portfolio[i].amount * this.props.prices[i].priceUsd;
+      for (var i = 0; i < this.props.prices.length; i++) {
+        this.coin_price[this.props.prices[i].symbol] = this.props.prices[i].priceUsd;
+      }
+
+      for (var _i = 0; _i < portfolio.length; _i++) {
+        this.coin_amount[portfolio[_i].coin_sym] = portfolio[_i].amount;
+        this.total_value += this.coin_amount[portfolio[_i].coin_sym] * this.coin_price[portfolio[_i].coin_sym];
       }
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -794,51 +801,51 @@ function (_React$Component) {
         className: "percentage"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "percent-bar-btc"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, Math.floor(100 * (portfolio[0].amount * this.props.prices[0].priceUsd / this.total_value)), "%"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, Math.floor(100 * (this.coin_amount["BTC"] * this.coin_price["BTC"] / this.total_value)), "%"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
         className: "coin-amount"
-      }, portfolio[0].amount, " BTC"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      }, this.coin_amount["BTC"], " BTC"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
         className: "usd-value"
-      }, _util_price_api_util__WEBPACK_IMPORTED_MODULE_1__["formatter"].format(portfolio[0].amount * this.props.prices[0].priceUsd))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      }, _util_price_api_util__WEBPACK_IMPORTED_MODULE_1__["formatter"].format(this.coin_amount["BTC"] * this.coin_price["BTC"]))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: window.eth_logo
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Ethereum")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "percentage"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "percent-bar-eth"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, Math.floor(100 * (portfolio[1].amount * this.props.prices[1].priceUsd / this.total_value)), "%"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, Math.floor(100 * (this.coin_amount["ETH"] * this.coin_price["ETH"] / this.total_value)), "%"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
         className: "coin-amount"
-      }, portfolio[1].amount, " ETH"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      }, this.coin_amount["ETH"], " ETH"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
         className: "usd-value"
-      }, _util_price_api_util__WEBPACK_IMPORTED_MODULE_1__["formatter"].format(portfolio[1].amount * this.props.prices[1].priceUsd))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: window.bat_logo
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Basic Attention Token")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "percentage"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "percent-bar-bat"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "10%"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
-        className: "coin-amount"
-      }, portfolio[3].amount, " BAT"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
-        className: "usd-value"
-      }, _util_price_api_util__WEBPACK_IMPORTED_MODULE_1__["formatter"].format(portfolio[3].amount * this.props.prices[12].priceUsd))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: window.zrx_logo
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "0x")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "percentage"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "percent-bar-zrx"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "10%"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
-        className: "coin-amount"
-      }, portfolio[4].amount, " ZRX"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
-        className: "usd-value"
-      }, _util_price_api_util__WEBPACK_IMPORTED_MODULE_1__["formatter"].format(portfolio[4].amount * this.props.prices[14].priceUsd))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      }, _util_price_api_util__WEBPACK_IMPORTED_MODULE_1__["formatter"].format(this.coin_amount["ETH"] * this.coin_price["ETH"]))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: window.ltc_logo
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Litecoin")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "percentage"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "percent-bar-ltc"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, Math.floor(100 * (portfolio[3].amount * this.props.prices[4].priceUsd / this.total_value)), "%"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, Math.floor(100 * (this.coin_amount["LTC"] * this.coin_price["LTC"] / this.total_value)), "%"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
         className: "coin-amount"
-      }, portfolio[3].amount, " LTC"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      }, this.coin_amount["LTC"], " LTC"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
         className: "usd-value"
-      }, _util_price_api_util__WEBPACK_IMPORTED_MODULE_1__["formatter"].format(portfolio[3].amount * this.props.prices[4].priceUsd))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, _util_price_api_util__WEBPACK_IMPORTED_MODULE_1__["formatter"].format(this.coin_amount["LTC"] * this.coin_price["LTC"]))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.bat_logo
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Basic Attention Token")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "percentage"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "percent-bar-bat"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, Math.floor(100 * (this.coin_amount["BAT"] * this.coin_price["BAT"] / this.total_value)), "%"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+        className: "coin-amount"
+      }, this.coin_amount["BAT"], " BAT"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+        className: "usd-value"
+      }, _util_price_api_util__WEBPACK_IMPORTED_MODULE_1__["formatter"].format(this.coin_amount["BAT"] * this.coin_price["BAT"]))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.zrx_logo
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "0x")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "percentage"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "percent-bar-zrx"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, Math.floor(100 * (this.coin_amount["ZRX"] * this.coin_price["ZRX"] / this.total_value)), "%"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+        className: "coin-amount"
+      }, this.coin_amount["ZRX"], " ZRX"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+        className: "usd-value"
+      }, _util_price_api_util__WEBPACK_IMPORTED_MODULE_1__["formatter"].format(this.coin_amount["ZRX"] * this.coin_price["ZRX"]))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "balance"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Total Balance = ", _util_price_api_util__WEBPACK_IMPORTED_MODULE_1__["formatter"].format(this.total_value)))));
     }
@@ -904,11 +911,18 @@ function (_React$Component) {
         });
       }
 
+      this.coin_amount = {};
+      this.coin_price = {};
       this.total_value = 0;
       var portfolio = this.props.portfolio;
 
-      for (var i = 0; i < portfolio.length; i++) {
-        this.total_value += portfolio[i].amount * this.props.prices[i].priceUsd;
+      for (var i = 0; i < this.props.prices.length; i++) {
+        this.coin_price[this.props.prices[i].symbol] = this.props.prices[i].priceUsd;
+      }
+
+      for (var _i = 0; _i < portfolio.length; _i++) {
+        this.coin_amount[portfolio[_i].coin_sym] = portfolio[_i].amount;
+        this.total_value += this.coin_amount[portfolio[_i].coin_sym] * this.coin_price[portfolio[_i].coin_sym];
       }
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2634,7 +2648,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatter", function() { return formatter; });
 var getPrices = function getPrices() {
   return $.ajax({
-    url: "https://api.coincap.io/v2/assets?limit=15",
+    url: "https://api.coincap.io/v2/assets?limit=50",
     method: "GET"
   });
 };
@@ -32591,7 +32605,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

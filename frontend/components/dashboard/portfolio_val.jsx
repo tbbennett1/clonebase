@@ -10,10 +10,16 @@ class PortfolioVal extends React.Component{
       )
     }
 
+    this.coin_amount = {};
+    this.coin_price = {};
     this.total_value = 0;
     const portfolio = this.props.portfolio;
-    for(let i = 0; i < portfolio.length; i++){
-      this.total_value += (portfolio[i].amount * this.props.prices[i].priceUsd);
+    for (let i = 0; i < this.props.prices.length; i++) {
+      this.coin_price[this.props.prices[i].symbol] = this.props.prices[i].priceUsd;
+    }
+    for (let i = 0; i < portfolio.length; i++) {
+      this.coin_amount[portfolio[i].coin_sym] = portfolio[i].amount;
+      this.total_value += (this.coin_amount[portfolio[i].coin_sym] * this.coin_price[portfolio[i].coin_sym]);
     }
     return(
       <div className="portfolio-value">

@@ -17,15 +17,15 @@ portfolio = brock.portfolioItems
 
 portfolio.each do |item|
   if item.coin_sym == "BTC"
-    item.amount = 10
+    item.amount = 5
   elsif item.coin_sym == "ETH"
     item.amount = 25
   elsif item.coin_sym == "LTC"
     item.amount = 20
   elsif item.coin_sym == "BAT"
-    item.amount = 3000
+    item.amount = 5000
   elsif item.coin_sym == "ZRX"
-    item.amount = 2000
+    item.amount = 4000
   end
   item.save!
 end

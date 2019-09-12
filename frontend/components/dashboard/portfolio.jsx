@@ -12,10 +12,16 @@ class Portfolio extends React.Component {
         </div>
       )
     }
+    this.coin_amount = {};
+    this.coin_price = {};
     this.total_value = 0;
     const portfolio = this.props.portfolio;
+    for(let i = 0; i < this.props.prices.length; i++){
+      this.coin_price[this.props.prices[i].symbol] = this.props.prices[i].priceUsd;
+    }
     for (let i = 0; i < portfolio.length; i++) {
-      this.total_value += (portfolio[i].amount * this.props.prices[i].priceUsd);
+      this.coin_amount[portfolio[i].coin_sym] = portfolio[i].amount;
+      this.total_value += (this.coin_amount[portfolio[i].coin_sym] * this.coin_price[portfolio[i].coin_sym]);
     }
     return (
       <div className="portfolio-container">
@@ -37,11 +43,11 @@ class Portfolio extends React.Component {
                 <td>
                   <div className="percentage">
                     <div className="percent-bar-btc"></div>
-                    <p>{Math.floor(100 * ((portfolio[0].amount * this.props.prices[0].priceUsd)/this.total_value))}%</p>
+                    <p>{Math.floor(100 * ((this.coin_amount["BTC"] * this.coin_price["BTC"])/this.total_value))}%</p>
                   </div>
                 </td>
-                <td className="coin-amount">{portfolio[0].amount} BTC</td>
-                <td className="usd-value">{formatter.format(portfolio[0].amount * this.props.prices[0].priceUsd)}</td>
+                <td className="coin-amount">{this.coin_amount["BTC"]} BTC</td>
+                <td className="usd-value">{formatter.format(this.coin_amount["BTC"] * this.coin_price["BTC"])}</td>
               </tr>
               <tr>
                 <td>
@@ -51,39 +57,11 @@ class Portfolio extends React.Component {
                 <td>
                   <div className="percentage">
                     <div className="percent-bar-eth"></div>
-                    <p>{Math.floor(100 * ((portfolio[1].amount * this.props.prices[1].priceUsd)/this.total_value))}%</p>
+                    <p>{Math.floor(100 * ((this.coin_amount["ETH"] * this.coin_price["ETH"]) / this.total_value))}%</p>
                   </div>
                 </td>
-                <td className="coin-amount">{portfolio[1].amount} ETH</td>
-                <td className="usd-value">{formatter.format(portfolio[1].amount * this.props.prices[1].priceUsd)}</td>
-              </tr>
-              <tr>
-                <td>
-                  <img src={window.bat_logo}/>
-                  <h4>Basic Attention Token</h4>
-                </td>
-                <td>
-                  <div className="percentage">
-                    <div className="percent-bar-bat"></div>
-                    <p>10%</p>
-                  </div>
-                </td>
-                <td className="coin-amount">{portfolio[3].amount} BAT</td>
-                <td className="usd-value">{formatter.format(portfolio[3].amount * this.props.prices[12].priceUsd)}</td>
-              </tr>
-              <tr>
-                <td>
-                  <img src={window.zrx_logo}/>
-                  <h4>0x</h4>
-                </td>
-                <td>
-                  <div className="percentage">
-                    <div className="percent-bar-zrx"></div>
-                    <p>10%</p>
-                  </div>
-                </td>
-                <td className="coin-amount">{portfolio[4].amount} ZRX</td>
-                <td className="usd-value">{formatter.format(portfolio[4].amount * this.props.prices[14].priceUsd)}</td>
+                <td className="coin-amount">{this.coin_amount["ETH"]} ETH</td>
+                <td className="usd-value">{formatter.format(this.coin_amount["ETH"] * this.coin_price["ETH"])}</td>
               </tr>
               <tr>
                 <td>
@@ -93,11 +71,39 @@ class Portfolio extends React.Component {
                 <td>
                   <div className="percentage">
                     <div className="percent-bar-ltc"></div>
-                    <p>{Math.floor(100 * ((portfolio[3].amount * this.props.prices[4].priceUsd) / this.total_value))}%</p>
+                    <p>{Math.floor(100 * ((this.coin_amount["LTC"] * this.coin_price["LTC"]) / this.total_value))}%</p>
                   </div>
                 </td>
-                <td className="coin-amount">{portfolio[3].amount} LTC</td>
-                <td className="usd-value">{formatter.format(portfolio[3].amount * this.props.prices[4].priceUsd)}</td>
+                <td className="coin-amount">{this.coin_amount["LTC"]} LTC</td>
+                <td className="usd-value">{formatter.format(this.coin_amount["LTC"] * this.coin_price["LTC"])}</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src={window.bat_logo}/>
+                  <h4>Basic Attention Token</h4>
+                </td>
+                <td>
+                  <div className="percentage">
+                    <div className="percent-bar-bat"></div>
+                    <p>{Math.floor(100 * ((this.coin_amount["BAT"] * this.coin_price["BAT"]) / this.total_value))}%</p>
+                  </div>
+                </td>
+                <td className="coin-amount">{this.coin_amount["BAT"]} BAT</td>
+                <td className="usd-value">{formatter.format(this.coin_amount["BAT"] * this.coin_price["BAT"])}</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src={window.zrx_logo}/>
+                  <h4>0x</h4>
+                </td>
+                <td>
+                  <div className="percentage">
+                    <div className="percent-bar-zrx"></div>
+                    <p>{Math.floor(100 * ((this.coin_amount["ZRX"] * this.coin_price["ZRX"]) / this.total_value))}%</p>
+                  </div>
+                </td>
+                <td className="coin-amount">{this.coin_amount["ZRX"]} ZRX</td>
+                <td className="usd-value">{formatter.format(this.coin_amount["ZRX"] * this.coin_price["ZRX"])}</td>
               </tr>
             </tbody>
           </table>
