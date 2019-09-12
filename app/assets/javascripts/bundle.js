@@ -215,7 +215,8 @@ document.addEventListener("DOMContentLoaded", function () {
         email: window.currentUser.email,
         first_name: window.currentUser.first_name,
         last_name: window.currentUser.last_name,
-        state: window.currentUser.state
+        state: window.currentUser.state,
+        portfolio: window.currentUser.portfolioItems
       }
     };
     store = Object(_store_store__WEBPACK_IMPORTED_MODULE_3__["default"])(preloadedState);
@@ -253,7 +254,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _session_form_login_form_container__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./session_form/login_form_container */ "./frontend/components/session_form/login_form_container.jsx");
 /* harmony import */ var _homepage_splash__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./homepage/splash */ "./frontend/components/homepage/splash.jsx");
 /* harmony import */ var _price_price_container__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./price/price_container */ "./frontend/components/price/price_container.js");
-/* harmony import */ var _dashboard_dashboard__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./dashboard/dashboard */ "./frontend/components/dashboard/dashboard.jsx");
+/* harmony import */ var _dashboard_dashboard_container__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./dashboard/dashboard_container */ "./frontend/components/dashboard/dashboard_container.js");
 /* harmony import */ var _page_not_found__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./page_not_found */ "./frontend/components/page_not_found.jsx");
 
 
@@ -286,7 +287,7 @@ var App = function App() {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_3__["ProtectedRoute"], {
     exact: true,
     path: "/dashboard",
-    component: _dashboard_dashboard__WEBPACK_IMPORTED_MODULE_8__["default"]
+    component: _dashboard_dashboard_container__WEBPACK_IMPORTED_MODULE_8__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     component: _page_not_found__WEBPACK_IMPORTED_MODULE_9__["default"]
   }));
@@ -307,13 +308,11 @@ var App = function App() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/session_actions */ "./frontend/actions/session_actions.js");
-/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./header */ "./frontend/components/dashboard/header.jsx");
-/* harmony import */ var _portfolio_val__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./portfolio_val */ "./frontend/components/dashboard/portfolio_val.jsx");
-/* harmony import */ var _following__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./following */ "./frontend/components/dashboard/following.jsx");
-/* harmony import */ var _portfolio__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./portfolio */ "./frontend/components/dashboard/portfolio.jsx");
-/* harmony import */ var _recent_activity__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./recent_activity */ "./frontend/components/dashboard/recent_activity.jsx");
+/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header */ "./frontend/components/dashboard/header.jsx");
+/* harmony import */ var _portfolio_val__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./portfolio_val */ "./frontend/components/dashboard/portfolio_val.jsx");
+/* harmony import */ var _following__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./following */ "./frontend/components/dashboard/following.jsx");
+/* harmony import */ var _portfolio__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./portfolio */ "./frontend/components/dashboard/portfolio.jsx");
+/* harmony import */ var _recent_activity__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./recent_activity */ "./frontend/components/dashboard/recent_activity.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -339,62 +338,100 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-
-
-var msp = function msp(_ref) {
-  var session = _ref.session;
-  return {
-    email: session.email,
-    first_name: session.first_name,
-    last_name: session.last_name,
-    portfolio: session.portfolioItems
-  };
-};
-
-var mdp = function mdp(dispatch) {
-  return {
-    logout: function logout() {
-      return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_2__["logout"])());
-    }
-  };
-};
-
 var Dashboard =
 /*#__PURE__*/
 function (_React$Component) {
   _inherits(Dashboard, _React$Component);
 
-  function Dashboard() {
+  function Dashboard(props) {
     _classCallCheck(this, Dashboard);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Dashboard).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(Dashboard).call(this, props));
   }
 
   _createClass(Dashboard, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.fetchPrices();
+    }
+  }, {
     key: "render",
     value: function render() {
-      debugger;
-      var port = this.state.session.portfolio;
+      if (!this.props.prices) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "loading"
+        });
+      }
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "dashboard-index"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_header__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_header__WEBPACK_IMPORTED_MODULE_1__["default"], {
         logout: this.props.logout
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "db"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "dashboard-top"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_portfolio_val__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_following__WEBPACK_IMPORTED_MODULE_5__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_portfolio_val__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        portfolio: this.props.portfolio,
+        prices: this.props.prices
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_following__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "portfolio-ra"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_portfolio__WEBPACK_IMPORTED_MODULE_6__["default"], {
-        portfolio: this.props.portfolio
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_activity__WEBPACK_IMPORTED_MODULE_7__["default"], null)))));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_portfolio__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        portfolio: this.props.portfolio,
+        prices: this.props.prices
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_recent_activity__WEBPACK_IMPORTED_MODULE_5__["default"], null)))));
     }
   }]);
 
   return Dashboard;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(msp, mdp)(Dashboard));
+/* harmony default export */ __webpack_exports__["default"] = (Dashboard);
+
+/***/ }),
+
+/***/ "./frontend/components/dashboard/dashboard_container.js":
+/*!**************************************************************!*\
+  !*** ./frontend/components/dashboard/dashboard_container.js ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../actions/session_actions */ "./frontend/actions/session_actions.js");
+/* harmony import */ var _actions_price_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/price_actions */ "./frontend/actions/price_actions.js");
+/* harmony import */ var _dashboard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./dashboard */ "./frontend/components/dashboard/dashboard.jsx");
+
+
+
+
+
+var msp = function msp(_ref) {
+  var session = _ref.session,
+      entities = _ref.entities;
+  return {
+    email: session.email,
+    first_name: session.first_name,
+    last_name: session.last_name,
+    portfolio: session.portfolio,
+    prices: entities.prices.prices
+  };
+};
+
+var mdp = function mdp(dispatch) {
+  return {
+    logout: function logout() {
+      return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_1__["logout"])());
+    },
+    fetchPrices: function fetchPrices() {
+      return dispatch(Object(_actions_price_actions__WEBPACK_IMPORTED_MODULE_2__["fetchPrices"])());
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(msp, mdp)(_dashboard__WEBPACK_IMPORTED_MODULE_3__["default"]));
 
 /***/ }),
 
@@ -726,14 +763,6 @@ function (_React$Component) {
   _createClass(Portfolio, [{
     key: "render",
     value: function render() {
-      if (!this.props.portfolio) {
-        debugger;
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "loading"
-        });
-      }
-
-      ;
       debugger;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "portfolio-container"
@@ -853,6 +882,15 @@ function (_React$Component) {
   _createClass(PortfolioVal, [{
     key: "render",
     value: function render() {
+      var total_value = 0;
+      var portfolio = this.props.portfolio;
+
+      for (var i = 0; i < portfolio.length; i++) {
+        total_value += portfolio[i].amount;
+        debugger;
+      }
+
+      debugger;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "portfolio-value"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {

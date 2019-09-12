@@ -5,14 +5,6 @@ class Portfolio extends React.Component {
     super(props);
   }
   render() {
-    if (!this.props.portfolio) {
-      debugger
-      return (
-        <div className="loading">
-        </div>
-      )
-    };
-
     debugger
     return (
       <div className="portfolio-container">

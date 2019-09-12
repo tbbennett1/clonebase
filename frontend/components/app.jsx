@@ -12,7 +12,7 @@ import SignUp from './session_form/signup_form_container';
 import LogIn from './session_form/login_form_container';
 import Splash from './homepage/splash';
 import Price from './price/price_container';
-import Dashboard from './dashboard/dashboard'
+import Dashboard from './dashboard/dashboard_container'
 import PageNotFound from './page_not_found';
 
 const App = () => (

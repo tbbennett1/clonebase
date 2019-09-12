@@ -2,6 +2,13 @@ import React from 'react';
 
 class PortfolioVal extends React.Component{
   render(){
+    let total_value = 0;
+    const portfolio = this.props.portfolio;
+    for(let i = 0; i < portfolio.length; i++){
+      total_value += portfolio[i].amount;
+      debugger
+    }
+    debugger
     return(
       <div className="portfolio-value">
         <div className="portfolio-value-head">
