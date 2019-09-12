@@ -16,6 +16,11 @@
   max-width: 49%;
 }
 
+.prt-data-table{
+  border-collapse: collapse;
+  width: 100%;
+}
+
 .portfolio-header {
   display: flex;
   justify-content: space-between;
@@ -47,8 +52,8 @@
   color: rgba(17,51,83,0.6);
 }
 
-.prt-data-table tr {
-  border-color: #eceff1;
+.prt-data-table tr{
+  border-bottom: 1px solid rgb(236, 239, 241);
 }
 
 .prt-data-table td:first-child {
@@ -127,4 +132,19 @@
   font-weight: 200;
   color: rgba(17, 51, 83, 0.6);
   padding-left: 12px
+}
+
+.balance {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 54px;
+  border-top: 1px solid rgb(236, 239, 241);
+}
+
+.balance > span {
+  padding: 24px 0;
+  font-weight: 500;
+  color: rgba(17, 51, 83, 0.6);
 }
