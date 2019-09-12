@@ -2,18 +2,22 @@ import React from 'react';
 
 class PortfolioVal extends React.Component{
   render(){
-    let total_value = 0;
+    if (!this.props.prices || !this.props.portfolio) {
+      return (
+        <div className="loading">
+        </div>
+      )
+    }
+    this.total_value = 0;
     const portfolio = this.props.portfolio;
     for(let i = 0; i < portfolio.length; i++){
-      total_value += portfolio[i].amount;
-      debugger
+      this.total_value += (portfolio[i].amount * this.props.prices[i].priceUsd);
     }
-    debugger
     return(
       <div className="portfolio-value">
         <div className="portfolio-value-head">
           <span>YOUR PORTFOLIO VALUE</span>
-          <span className="value">$100,274.73</span>
+          <span className="value">${this.total_value.toFixed(2)}</span>
           <ul>
             <li>1H</li>
             <li>24H</li>

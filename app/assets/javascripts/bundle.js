@@ -763,7 +763,19 @@ function (_React$Component) {
   _createClass(Portfolio, [{
     key: "render",
     value: function render() {
-      debugger;
+      if (!this.props.prices || !this.props.portfolio) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "loading"
+        });
+      }
+
+      this.total_value = 0;
+      var portfolio = this.props.portfolio;
+
+      for (var i = 0; i < portfolio.length; i++) {
+        this.total_value += portfolio[i].amount * this.props.prices[i].priceUsd;
+      }
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "portfolio-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -826,7 +838,7 @@ function (_React$Component) {
         className: "usd-value"
       }, "$600")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "balance"
-      })));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Total Balance = $", this.total_value.toFixed(2)))));
     }
   }]);
 
@@ -882,22 +894,26 @@ function (_React$Component) {
   _createClass(PortfolioVal, [{
     key: "render",
     value: function render() {
-      var total_value = 0;
+      if (!this.props.prices || !this.props.portfolio) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "loading"
+        });
+      }
+
+      this.total_value = 0;
       var portfolio = this.props.portfolio;
 
       for (var i = 0; i < portfolio.length; i++) {
-        total_value += portfolio[i].amount;
-        debugger;
+        this.total_value += portfolio[i].amount * this.props.prices[i].priceUsd;
       }
 
-      debugger;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "portfolio-value"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "portfolio-value-head"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "YOUR PORTFOLIO VALUE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "value"
-      }, "$100,274.73"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "1H"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "24H"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "1W"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "1M"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "1Y"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "ALL"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "$", this.total_value.toFixed(2)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "1H"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "24H"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "1W"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "1M"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "1Y"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "ALL"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "portfolio-value-body"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pv-chart"

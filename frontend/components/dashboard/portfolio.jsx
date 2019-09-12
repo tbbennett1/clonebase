@@ -5,7 +5,17 @@ class Portfolio extends React.Component {
     super(props);
   }
   render() {
-    debugger
+    if (!this.props.prices || !this.props.portfolio) {
+      return (
+        <div className="loading">
+        </div>
+      )
+    }
+    this.total_value = 0;
+    const portfolio = this.props.portfolio;
+    for (let i = 0; i < portfolio.length; i++) {
+      this.total_value += (portfolio[i].amount * this.props.prices[i].priceUsd);
+    }
     return (
       <div className="portfolio-container">
         <div className="portfolio-header">
@@ -91,7 +101,7 @@ class Portfolio extends React.Component {
             </tbody>
           </table>
           <div className="balance">
-
+            <span>Total Balance = ${this.total_value.toFixed(2)}</span>
           </div>
         </div>
       </div>
