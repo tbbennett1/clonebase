@@ -4,9 +4,6 @@
   justify-content: space-between;
 }
 .portfolio-container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   min-height: 310px;
   margin: 12px 12px 12px 0;
   box-shadow: rgba(17, 51, 83, 0.02) 0px 4px 12px 0px;
@@ -48,4 +45,71 @@
   cursor: pointer;
   font-size: 14px;
   color: rgba(17,51,83,0.6);
+}
+
+
+.prt-data-table td:first-child {
+  padding-left: 12px;
+  align-items: center;
+  display: flex; 
+}
+
+.prt-data-table h4 {
+  font-size: 18px;
+  font-weight: 300;
+  padding-left: 8px;
+}
+
+.percentage {
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+  align-items: center;
+}
+
+.prt-data-table img {
+  width: 38px;
+  height: 38px;
+}
+
+.percent-bar-btc {
+  width: 50%;
+  background-color: orange;
+  margin-right: 8px;
+  height: 8px;
+  border-radius: 4px;
+}
+.percent-bar-eth {
+  width: 25%;
+  background-color: blue;
+  margin-right: 8px;
+  height: 8px;
+  border-radius: 4px;
+}
+.percent-bar-bat {
+  width: 10%;
+  background-color: orangered;
+  margin-right: 8px;
+  height: 8px;
+  border-radius: 4px;
+}
+.percent-bar-zrx {
+  width: 10%;
+  background-color: black;
+  margin-right: 8px;
+  height: 8px;
+  border-radius: 4px;
+}
+.percent-bar-ltc {
+  width: 5%;
+  background-color: grey;
+  margin-right: 8px;
+  height: 8px;
+  border-radius: 4px;
+}
+
+.percentage p {
+  font-size: 14px;
+  font-weight: 400;
+  color: black;
 }

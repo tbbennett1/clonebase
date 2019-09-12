@@ -728,7 +728,43 @@ function (_React$Component) {
         className: "portfolio-header"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Your Portfolio"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "portfolio-list-chart"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "List"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Chart"))));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "List"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Chart"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "portfolio-data"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
+        className: "prt-data-table"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.btc_logo
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Bitcoin")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "percentage"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "percent-bar-btc"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "50%"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.eth_logo
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Ethereum")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "percentage"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "percent-bar-eth"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "25%"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.bat_logo
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Basic Attention Token")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "percentage"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "percent-bar-bat"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "10%"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.zrx_logo
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "0x")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "percentage"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "percent-bar-zrx"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "10%"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.ltc_logo
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Litecoin")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "percentage"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "percent-bar-ltc"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "5%"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "balance"
+      })));
     }
   }]);
 
