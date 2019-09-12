@@ -2504,7 +2504,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPrices", function() { return getPrices; });
 var getPrices = function getPrices() {
   return $.ajax({
-    url: "https://api.coincap.io/v2/assets?limit=5",
+    url: "https://api.coincap.io/v2/assets?limit=10",
     method: "GET"
   });
 };
