@@ -20,6 +20,12 @@ portfolio.each do |item|
     item.amount = 10
   elsif item.coin_sym == "ETH"
     item.amount = 25
+  elsif item.coin_sym == "LTC"
+    item.amount = 20
+  elsif item.coin_sym == "BAT"
+    item.amount = 3000
+  elsif item.coin_sym == "ZRX"
+    item.amount = 2000
   end
   item.save!
 end
@@ -31,6 +37,13 @@ satosh = User.create!(
   last_name: "Nakamoto", 
   state: "South Dakota"
   );
+
+satosh.portfolioItems.each do |item|
+  if item.coin_sym == "BTC"
+    item.amount = 1000000
+  end
+  item.save!
+end
 
 
   

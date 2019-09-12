@@ -1,4 +1,5 @@
 import React from 'react';
+import {formatter} from '../../util/price_api_util';
 
 class AssetTable extends React.Component {
   constructor(props) {
@@ -16,7 +17,7 @@ class AssetTable extends React.Component {
         </div>
       )
     } else {
-      let btc_price = parseFloat(this.props.prices[0].priceUsd).toFixed(2);
+      let btc_price = formatter.format(parseFloat(this.props.prices[0].priceUsd));
       let eth_price = parseFloat(this.props.prices[1].priceUsd).toFixed(2);
       let xrp_price = parseFloat(this.props.prices[2].priceUsd).toFixed(2);
       let bch_price = parseFloat(this.props.prices[3].priceUsd).toFixed(2);
@@ -47,7 +48,7 @@ class AssetTable extends React.Component {
                 <span>Bitcoin</span>
                 <h4>BTC</h4>
               </td>
-              <td>${btc_price}</td>
+              <td>{btc_price}</td>
               <td style={{ color: btc_chng > 0 ? "green" : "red" }}>{btc_chng}%</td>
               <td>~~~~~</td>
               <td><button>Buy</button></td>

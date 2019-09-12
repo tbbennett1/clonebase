@@ -1,6 +1,7 @@
 import React from 'react';
+import {formatter} from '../../util/price_api_util';
 
-class PortfolioVal extends React.Component{
+class PortfolioVal extends React.Component{  
   render(){
     if (!this.props.prices || !this.props.portfolio) {
       return (
@@ -8,6 +9,7 @@ class PortfolioVal extends React.Component{
         </div>
       )
     }
+
     this.total_value = 0;
     const portfolio = this.props.portfolio;
     for(let i = 0; i < portfolio.length; i++){
@@ -17,7 +19,7 @@ class PortfolioVal extends React.Component{
       <div className="portfolio-value">
         <div className="portfolio-value-head">
           <span>YOUR PORTFOLIO VALUE</span>
-          <span className="value">${this.total_value.toFixed(2)}</span>
+          <span className="value">{formatter.format(this.total_value)}</span>
           <ul>
             <li>1H</li>
             <li>24H</li>

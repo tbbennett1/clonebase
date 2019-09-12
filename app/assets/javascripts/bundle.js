@@ -729,6 +729,7 @@ function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util_price_api_util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util/price_api_util */ "./frontend/util/price_api_util.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -746,6 +747,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -792,21 +794,21 @@ function (_React$Component) {
         className: "percentage"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "percent-bar-btc"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "50%"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, Math.floor(100 * (portfolio[0].amount * this.props.prices[0].priceUsd / this.total_value)), "%"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
         className: "coin-amount"
-      }, "10 BTC"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      }, portfolio[0].amount, " BTC"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
         className: "usd-value"
-      }, "$100,000")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      }, _util_price_api_util__WEBPACK_IMPORTED_MODULE_1__["formatter"].format(portfolio[0].amount * this.props.prices[0].priceUsd))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: window.eth_logo
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Ethereum")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "percentage"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "percent-bar-eth"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "25%"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, Math.floor(100 * (portfolio[1].amount * this.props.prices[1].priceUsd / this.total_value)), "%"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
         className: "coin-amount"
-      }, "50 ETH"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      }, portfolio[1].amount, " ETH"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
         className: "usd-value"
-      }, "$5,000")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      }, _util_price_api_util__WEBPACK_IMPORTED_MODULE_1__["formatter"].format(portfolio[1].amount * this.props.prices[1].priceUsd))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: window.bat_logo
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Basic Attention Token")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "percentage"
@@ -814,9 +816,9 @@ function (_React$Component) {
         className: "percent-bar-bat"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "10%"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
         className: "coin-amount"
-      }, "2000 BAT"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      }, portfolio[3].amount, " BAT"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
         className: "usd-value"
-      }, "$1,000")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      }, _util_price_api_util__WEBPACK_IMPORTED_MODULE_1__["formatter"].format(portfolio[3].amount * this.props.prices[12].priceUsd))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: window.zrx_logo
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "0x")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "percentage"
@@ -824,21 +826,21 @@ function (_React$Component) {
         className: "percent-bar-zrx"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "10%"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
         className: "coin-amount"
-      }, "2000 ZRX"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      }, portfolio[4].amount, " ZRX"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
         className: "usd-value"
-      }, "$1,000")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      }, _util_price_api_util__WEBPACK_IMPORTED_MODULE_1__["formatter"].format(portfolio[4].amount * this.props.prices[14].priceUsd))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: window.ltc_logo
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Litecoin")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "percentage"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "percent-bar-ltc"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "5%"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, Math.floor(100 * (portfolio[3].amount * this.props.prices[4].priceUsd / this.total_value)), "%"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
         className: "coin-amount"
-      }, "12 LTC"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      }, portfolio[3].amount, " LTC"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
         className: "usd-value"
-      }, "$600")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, _util_price_api_util__WEBPACK_IMPORTED_MODULE_1__["formatter"].format(portfolio[3].amount * this.props.prices[4].priceUsd))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "balance"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Total Balance = $", this.total_value.toFixed(2)))));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Total Balance = ", _util_price_api_util__WEBPACK_IMPORTED_MODULE_1__["formatter"].format(this.total_value)))));
     }
   }]);
 
@@ -860,6 +862,7 @@ function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util_price_api_util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util/price_api_util */ "./frontend/util/price_api_util.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -877,6 +880,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -913,7 +917,7 @@ function (_React$Component) {
         className: "portfolio-value-head"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "YOUR PORTFOLIO VALUE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "value"
-      }, "$", this.total_value.toFixed(2)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "1H"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "24H"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "1W"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "1M"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "1Y"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "ALL"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, _util_price_api_util__WEBPACK_IMPORTED_MODULE_1__["formatter"].format(this.total_value)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "1H"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "24H"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "1W"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "1M"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "1Y"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "ALL"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "portfolio-value-body"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pv-chart"
@@ -1003,6 +1007,7 @@ function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util_price_api_util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util/price_api_util */ "./frontend/util/price_api_util.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1020,6 +1025,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -1047,7 +1053,7 @@ function (_React$Component) {
           className: "loading"
         });
       } else {
-        var btc_price = parseFloat(this.props.prices[0].priceUsd).toFixed(2);
+        var btc_price = _util_price_api_util__WEBPACK_IMPORTED_MODULE_1__["formatter"].format(parseFloat(this.props.prices[0].priceUsd));
         var eth_price = parseFloat(this.props.prices[1].priceUsd).toFixed(2);
         var xrp_price = parseFloat(this.props.prices[2].priceUsd).toFixed(2);
         var bch_price = parseFloat(this.props.prices[3].priceUsd).toFixed(2);
@@ -1071,7 +1077,7 @@ function (_React$Component) {
           className: "at-deets"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
           src: window.btc_logo
-        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Bitcoin"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "BTC")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$", btc_price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Bitcoin"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "BTC")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, btc_price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
           style: {
             color: btc_chng > 0 ? "green" : "red"
           }
@@ -2619,18 +2625,24 @@ var configureStore = function configureStore() {
 /*!*****************************************!*\
   !*** ./frontend/util/price_api_util.js ***!
   \*****************************************/
-/*! exports provided: getPrices */
+/*! exports provided: getPrices, formatter */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPrices", function() { return getPrices; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatter", function() { return formatter; });
 var getPrices = function getPrices() {
   return $.ajax({
-    url: "https://api.coincap.io/v2/assets?limit=10",
+    url: "https://api.coincap.io/v2/assets?limit=15",
     method: "GET"
   });
 };
+var formatter = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+  minimumFractionDigits: 2
+});
 
 /***/ }),
 
@@ -32579,7 +32591,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

@@ -1,4 +1,5 @@
 import React from 'react';
+import {formatter} from '../../util/price_api_util';
 
 class Portfolio extends React.Component {
   constructor(props){
@@ -36,11 +37,11 @@ class Portfolio extends React.Component {
                 <td>
                   <div className="percentage">
                     <div className="percent-bar-btc"></div>
-                    <p>50%</p>
+                    <p>{Math.floor(100 * ((portfolio[0].amount * this.props.prices[0].priceUsd)/this.total_value))}%</p>
                   </div>
                 </td>
-                <td className="coin-amount">10 BTC</td>
-                <td className="usd-value">$100,000</td>
+                <td className="coin-amount">{portfolio[0].amount} BTC</td>
+                <td className="usd-value">{formatter.format(portfolio[0].amount * this.props.prices[0].priceUsd)}</td>
               </tr>
               <tr>
                 <td>
@@ -50,11 +51,11 @@ class Portfolio extends React.Component {
                 <td>
                   <div className="percentage">
                     <div className="percent-bar-eth"></div>
-                    <p>25%</p>
+                    <p>{Math.floor(100 * ((portfolio[1].amount * this.props.prices[1].priceUsd)/this.total_value))}%</p>
                   </div>
                 </td>
-                <td className="coin-amount">50 ETH</td>
-                <td className="usd-value">$5,000</td>
+                <td className="coin-amount">{portfolio[1].amount} ETH</td>
+                <td className="usd-value">{formatter.format(portfolio[1].amount * this.props.prices[1].priceUsd)}</td>
               </tr>
               <tr>
                 <td>
@@ -67,8 +68,8 @@ class Portfolio extends React.Component {
                     <p>10%</p>
                   </div>
                 </td>
-                <td className="coin-amount">2000 BAT</td>
-                <td className="usd-value">$1,000</td>
+                <td className="coin-amount">{portfolio[3].amount} BAT</td>
+                <td className="usd-value">{formatter.format(portfolio[3].amount * this.props.prices[12].priceUsd)}</td>
               </tr>
               <tr>
                 <td>
@@ -81,8 +82,8 @@ class Portfolio extends React.Component {
                     <p>10%</p>
                   </div>
                 </td>
-                <td className="coin-amount">2000 ZRX</td>
-                <td className="usd-value">$1,000</td>
+                <td className="coin-amount">{portfolio[4].amount} ZRX</td>
+                <td className="usd-value">{formatter.format(portfolio[4].amount * this.props.prices[14].priceUsd)}</td>
               </tr>
               <tr>
                 <td>
@@ -92,16 +93,16 @@ class Portfolio extends React.Component {
                 <td>
                   <div className="percentage">
                     <div className="percent-bar-ltc"></div>
-                    <p>5%</p>
+                    <p>{Math.floor(100 * ((portfolio[3].amount * this.props.prices[4].priceUsd) / this.total_value))}%</p>
                   </div>
                 </td>
-                <td className="coin-amount">12 LTC</td>
-                <td className="usd-value">$600</td>
+                <td className="coin-amount">{portfolio[3].amount} LTC</td>
+                <td className="usd-value">{formatter.format(portfolio[3].amount * this.props.prices[4].priceUsd)}</td>
               </tr>
             </tbody>
           </table>
           <div className="balance">
-            <span>Total Balance = ${this.total_value.toFixed(2)}</span>
+            <span>Total Balance = {formatter.format(this.total_value)}</span>
           </div>
         </div>
       </div>

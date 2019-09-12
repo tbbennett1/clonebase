@@ -63,13 +63,23 @@ class User < ApplicationRecord
 
   def generate_portfolio
     btc = PortfolioItem.new(coin_sym: 'BTC', user_id: self.id, amount: 10)
-    eth = PortfolioItem.new(coin_sym: 'ETH', user_id: self.id, amount: 15)
-    ltc = PortfolioItem.new(coin_sym: 'LTC', user_id: self.id, amount: 35)
-    bat = PortfolioItem.new(coin_sym: 'BAT', user_id: self.id, amount: 1200)
+    eth = PortfolioItem.new(coin_sym: 'ETH', user_id: self.id, amount: 10)
+    xrp = PortfolioItem.new(coin_sym: 'XRP', user_id: self.id, amount: 10)
+    bch = PortfolioItem.new(coin_sym: 'BCH', user_id: self.id, amount: 10)
+    ltc = PortfolioItem.new(coin_sym: 'LTC', user_id: self.id, amount: 10)
+    eos = PortfolioItem.new(coin_sym: 'EOS', user_id: self.id, amount: 10)
+    xlm = PortfolioItem.new(coin_sym: 'XLM', user_id: self.id, amount: 10)
+    bat = PortfolioItem.new(coin_sym: 'BAT', user_id: self.id, amount: 10)
+    zrx = PortfolioItem.new(coin_sym: 'ZRX', user_id: self.id, amount: 10)
 
     btc.save!
     eth.save!
+    xrp.save!
+    bch.save!
     ltc.save!
+    eos.save!
+    xlm.save!
     bat.save!
+    zrx.save!
   end
 end
