@@ -18,16 +18,22 @@ class Price extends React.Component{
         </div>
       )
     }else {
-      let btc_price = formatter.format(this.props.prices[0].priceUsd);
-      let eth_price = formatter.format(this.props.prices[1].priceUsd);
-      let xrp_price = formatter.format(this.props.prices[2].priceUsd);
-      let bch_price = formatter.format(this.props.prices[3].priceUsd);
-      let ltc_price = formatter.format(this.props.prices[4].priceUsd);
-      let btc_chng = parseFloat(this.props.prices[0].changePercent24Hr).toFixed(2);
-      let eth_chng = parseFloat(this.props.prices[1].changePercent24Hr).toFixed(2);
-      let xrp_chng = parseFloat(this.props.prices[2].changePercent24Hr).toFixed(2);
-      let bch_chng = parseFloat(this.props.prices[3].changePercent24Hr).toFixed(2);
-      let ltc_chng = parseFloat(this.props.prices[4].changePercent24Hr).toFixed(2);
+      // // let btc_price = formatter.format(this.props.prices[0].priceUsd);
+      // let eth_price = formatter.format(this.props.prices[1].priceUsd);
+      // let xrp_price = formatter.format(this.props.prices[2].priceUsd);
+      // let bch_price = formatter.format(this.props.prices[3].priceUsd);
+      // let ltc_price = formatter.format(this.props.prices[4].priceUsd);
+      // // let btc_chng = parseFloat(this.props.prices[0].changePercent24Hr).toFixed(2);
+      // let eth_chng = parseFloat(this.props.prices[1].changePercent24Hr).toFixed(2);
+      // let xrp_chng = parseFloat(this.props.prices[2].changePercent24Hr).toFixed(2);
+      // let bch_chng = parseFloat(this.props.prices[3].changePercent24Hr).toFixed(2);
+      // let ltc_chng = parseFloat(this.props.prices[4].changePercent24Hr).toFixed(2);
+      this.coin_price = {};
+      this.coin_change = {}
+      for (let i = 0; i < this.props.prices.length; i++) {
+        this.coin_price[this.props.prices[i].symbol] = formatter.format(this.props.prices[i].priceUsd);
+        this.coin_change[this.props.prices[i].symbol] = parseFloat((this.props.prices[i].changePercent24Hr)).toFixed(2);
+      }
     return(
       <div className="price-index">
         <Heading />
@@ -70,8 +76,8 @@ class Price extends React.Component{
                       <span>Bitcoin</span>
                       <h4>BTC</h4>
                     </td>
-                    <td>{btc_price}</td>
-                    <td style={{ color: btc_chng > 0 ? "green" : "red" }}>{btc_chng}%</td>
+                    <td>{this.coin_price["BTC"]}</td>
+                    <td style={{ color: this.coin_change["BTC"] > 0 ? "green" : "red" }}>{this.coin_change["BTC"]}%</td>
                     <td>$189B</td>
                     <td><button>Trade</button></td>
                   </tr>
@@ -82,8 +88,8 @@ class Price extends React.Component{
                       <span>Ethereum</span>
                       <h4>ETH</h4>
                     </td>
-                    <td>{eth_price}</td>
-                    <td style={{ color: eth_chng > 0 ? "green" : "red" }}>{eth_chng}%</td>
+                    <td>{this.coin_price["ETH"]}</td>
+                    <td style={{ color: this.coin_change["ETH"] > 0 ? "green" : "red" }}>{this.coin_change["ETH"]}%</td>
                     <td>$18.5B</td>
                     <td><button>Trade</button></td>
                   </tr>
@@ -94,8 +100,8 @@ class Price extends React.Component{
                       <span>Ripple</span>
                       <h4>XRP</h4>
                     </td>
-                    <td>{xrp_price}</td>
-                    <td style={{ color: xrp_chng > 0 ? "green" : "red" }}>{xrp_chng}%</td>
+                    <td>{this.coin_price["XRP"]}</td>
+                    <td style={{ color: this.coin_change["XRP"] > 0 ? "green" : "red" }}>{this.coin_change["XRP"]}%</td>
                     <td>$11B</td>
                     <td><button>Trade</button></td>
                   </tr>
@@ -106,8 +112,8 @@ class Price extends React.Component{
                       <span>Bitcoin Cash</span>
                       <h4>BCH</h4>
                     </td>
-                    <td>{bch_price}</td>
-                    <td style={{color: bch_chng > 0 ? "green" : "red" }}>{bch_chng}%</td>
+                    <td>{this.coin_price["BCH"]}</td>
+                    <td style={{ color: this.coin_change["BCH"] > 0 ? "green" : "red" }}>{this.coin_change["BCH"]}%</td>
                     <td>$5.4B</td>
                     <td><button>Trade</button></td>
                   </tr>
@@ -118,9 +124,57 @@ class Price extends React.Component{
                       <span>Litecoin</span>
                       <h4>LTC</h4>
                     </td>
-                    <td>{ltc_price}</td>
-                    <td style={{ color: ltc_chng > 0 ? "green" : "red" }}>{ltc_chng}%</td>
+                    <td>{this.coin_price["LTC"]}</td>
+                    <td style={{ color: this.coin_change["LTC"] > 0 ? "green" : "red" }}>{this.coin_change["LTC"]}%</td>
                     <td>$4.5B</td>
+                    <td><button>Trade</button></td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td className="at-deets">
+                      <img src={window.eos_logo} />
+                      <span>EOS</span>
+                      <h4>EOS</h4>
+                    </td>
+                    <td>{this.coin_price["EOS"]}</td>
+                    <td style={{ color: this.coin_change["EOS"] > 0 ? "green" : "red" }}>{this.coin_change["EOS"]}%</td>
+                    <td>$3.5B</td>
+                    <td><button>Trade</button></td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td className="at-deets">
+                      <img src={window.xlm_logo} />
+                      <span>Stellar Lumens</span>
+                      <h4>XLM</h4>
+                    </td>
+                    <td>{this.coin_price["XLM"]}</td>
+                    <td style={{ color: this.coin_change["XLM"] > 0 ? "green" : "red" }}>{this.coin_change["XLM"]}%</td>
+                    <td>$1.1B</td>
+                    <td><button>Trade</button></td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td className="at-deets">
+                      <img src={window.bat_logo} />
+                      <span>Basic Attention Token</span>
+                      <h4>BAT</h4>
+                    </td>
+                    <td>{this.coin_price["BAT"]}</td>
+                    <td style={{ color: this.coin_change["BAT"] > 0 ? "green" : "red" }}>{this.coin_change["BAT"]}%</td>
+                    <td>$228M</td>
+                    <td><button>Trade</button></td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td className="at-deets">
+                      <img src={window.zrx_logo} />
+                      <span>0x</span>
+                      <h4>ZRX</h4>
+                    </td>
+                    <td>{this.coin_price["ZRX"]}</td>
+                    <td style={{ color: this.coin_change["ZRX"] > 0 ? "green" : "red" }}>{this.coin_change["ZRX"]}%</td>
+                    <td>$228M</td>
                     <td><button>Trade</button></td>
                   </tr>
                 </tbody>
