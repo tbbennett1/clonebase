@@ -1894,6 +1894,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _homepage_heading__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../homepage/heading */ "./frontend/components/homepage/heading.jsx");
+/* harmony import */ var _util_price_api_util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util/price_api_util */ "./frontend/util/price_api_util.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1911,6 +1912,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -1939,11 +1941,11 @@ function (_React$Component) {
           className: "loading"
         });
       } else {
-        var btc_price = parseFloat(this.props.prices[0].priceUsd).toFixed(2);
-        var eth_price = parseFloat(this.props.prices[1].priceUsd).toFixed(2);
-        var xrp_price = parseFloat(this.props.prices[2].priceUsd).toFixed(2);
-        var bch_price = parseFloat(this.props.prices[3].priceUsd).toFixed(2);
-        var ltc_price = parseFloat(this.props.prices[4].priceUsd).toFixed(2);
+        var btc_price = _util_price_api_util__WEBPACK_IMPORTED_MODULE_2__["formatter"].format(this.props.prices[0].priceUsd);
+        var eth_price = _util_price_api_util__WEBPACK_IMPORTED_MODULE_2__["formatter"].format(this.props.prices[1].priceUsd);
+        var xrp_price = _util_price_api_util__WEBPACK_IMPORTED_MODULE_2__["formatter"].format(this.props.prices[2].priceUsd);
+        var bch_price = _util_price_api_util__WEBPACK_IMPORTED_MODULE_2__["formatter"].format(this.props.prices[3].priceUsd);
+        var ltc_price = _util_price_api_util__WEBPACK_IMPORTED_MODULE_2__["formatter"].format(this.props.prices[4].priceUsd);
         var btc_chng = parseFloat(this.props.prices[0].changePercent24Hr).toFixed(2);
         var eth_chng = parseFloat(this.props.prices[1].changePercent24Hr).toFixed(2);
         var xrp_chng = parseFloat(this.props.prices[2].changePercent24Hr).toFixed(2);
@@ -1980,7 +1982,7 @@ function (_React$Component) {
           className: "at-deets"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
           src: window.btc_logo
-        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Bitcoin"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "BTC")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$", btc_price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Bitcoin"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "BTC")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, btc_price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
           style: {
             color: btc_chng > 0 ? "green" : "red"
           }
@@ -1988,7 +1990,7 @@ function (_React$Component) {
           className: "at-deets"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
           src: window.eth_logo
-        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Ethereum"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "ETH")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$", eth_price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Ethereum"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "ETH")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, eth_price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
           style: {
             color: eth_chng > 0 ? "green" : "red"
           }
@@ -1996,7 +1998,7 @@ function (_React$Component) {
           className: "at-deets"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
           src: window.xrp_logo
-        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Ripple"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "XRP")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$", xrp_price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Ripple"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "XRP")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, xrp_price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
           style: {
             color: xrp_chng > 0 ? "green" : "red"
           }
@@ -2004,7 +2006,7 @@ function (_React$Component) {
           className: "at-deets"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
           src: window.bch_logo
-        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Bitcoin Cash"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "BCH")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$", bch_price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Bitcoin Cash"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "BCH")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, bch_price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
           style: {
             color: bch_chng > 0 ? "green" : "red"
           }
@@ -2012,7 +2014,7 @@ function (_React$Component) {
           className: "at-deets"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
           src: window.ltc_logo
-        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Litecoin"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "LTC")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "$", ltc_price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Litecoin"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "LTC")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, ltc_price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
           style: {
             color: ltc_chng > 0 ? "green" : "red"
           }

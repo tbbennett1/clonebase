@@ -4,6 +4,14 @@
 
 .price-top {
   padding: 24px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1 1 auto;
+  margin: 12px 0;
+  width: 100%;
+  position: absolute;
+  top: 72px;
 }
 
 .price-inner {
