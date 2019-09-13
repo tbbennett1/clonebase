@@ -1,7 +1,14 @@
 import React from 'react';
+import {formatter} from '../../util/price_api_util'
 
 class Following extends React.Component {
   render() {
+    this.coin_price = {};
+    this.coin_change = {}
+    for (let i = 0; i < this.props.prices.length; i++) {
+      this.coin_price[this.props.prices[i].symbol] = formatter.format(this.props.prices[i].priceUsd);
+      this.coin_change[this.props.prices[i].symbol] = parseFloat((this.props.prices[i].changePercent24Hr)).toFixed(2);
+    }
     return (
       <div className="following-container">
         <div className="following-header">
@@ -24,8 +31,8 @@ class Following extends React.Component {
               <div className="interval">24h</div>
             </div>
             <div className="following-item-price">
-              <span>$10,353.94</span>
-              <h5>-0.07%</h5>
+              <span>{this.coin_price["BTC"]}</span>
+              <h5 style={{ color: this.coin_change["BTC"] > 0 ? "green" : "red" }}>{this.coin_change["BTC"]}%</h5>
             </div>
             <div className="following-item-chart">
               <div>~~~~~~~~~~~</div>
@@ -41,8 +48,8 @@ class Following extends React.Component {
               <div className="interval">24h</div>
             </div>
             <div className="following-item-price">
-              <span>$183.24</span>
-              <h5>+2.42%</h5>
+              <span>{this.coin_price["ETH"]}</span>
+              <h5 style={{ color: this.coin_change["ETH"] > 0 ? "green" : "red" }}>{this.coin_change["ETH"]}%</h5>
             </div>
             <div className="following-item-chart">
               <div>~~~~~~~~~~~</div>
@@ -58,8 +65,8 @@ class Following extends React.Component {
               <div className="interval">24h</div>
             </div>
             <div className="following-item-price">
-              <span>$0.17</span>
-              <h5>-0.55%</h5>
+              <span>{this.coin_price["BAT"]}</span>
+              <h5 style={{ color: this.coin_change["BAT"] > 0 ? "green" : "red" }}>{this.coin_change["BAT"]}%</h5>
             </div>
             <div className="following-item-chart">
               <div>~~~~~~~~~~~</div>
@@ -75,8 +82,8 @@ class Following extends React.Component {
               <div className="interval">24h</div>
             </div>
             <div className="following-item-price">
-              <span>$0.17</span>
-              <h5>+1.6%</h5>
+              <span>{this.coin_price["ZRX"]}</span>
+              <h5 style={{ color: this.coin_change["ZRX"] > 0 ? "green" : "red" }}>{this.coin_change["ZRX"]}%</h5>
             </div>
             <div className="following-item-chart">
               <div>~~~~~~~~~~~</div>
@@ -92,8 +99,8 @@ class Following extends React.Component {
               <div className="interval">24h</div>
             </div>
             <div className="following-item-price">
-              <span>$0.06</span>
-              <h5>+0.47%</h5>
+              <span>{this.coin_price["XLM"]}</span>
+              <h5 style={{ color: this.coin_change["XLM"] > 0 ? "green" : "red" }}>{this.coin_change["XLM"]}%</h5>
             </div>
             <div className="following-item-chart">
               <div>~~~~~~~~~~~</div>
@@ -109,8 +116,8 @@ class Following extends React.Component {
               <div className="interval">24h</div>
             </div>
             <div className="following-item-price">
-              <span>$293.29</span>
-              <h5>-1.57%</h5>
+              <span>{this.coin_price["BCH"]}</span>
+              <h5 style={{ color: this.coin_change["BCH"] > 0 ? "green" : "red" }}>{this.coin_change["BCH"]}%</h5>
             </div>
             <div className="following-item-chart">
               <div>~~~~~~~~~~~</div>
@@ -126,8 +133,8 @@ class Following extends React.Component {
               <div className="interval">24h</div>
             </div>
             <div className="following-item-price">
-              <span>$0.29</span>
-              <h5>-2.07%</h5>
+              <span>{this.coin_price["XRP"]}</span>
+              <h5 style={{ color: this.coin_change["XRP"] > 0 ? "green" : "red" }}>{this.coin_change["XRP"]}%</h5>
             </div>
             <div className="following-item-chart">
               <div>~~~~~~~~~~~</div>
@@ -143,8 +150,8 @@ class Following extends React.Component {
               <div className="interval">24h</div>
             </div>
             <div className="following-item-price">
-              <span>$68.71</span>
-              <h5>-2.11%</h5>
+              <span>{this.coin_price["LTC"]}</span>
+              <h5 style={{ color: this.coin_change["LTC"] > 0 ? "green" : "red" }}>{this.coin_change["LTC"]}%</h5>
             </div>
             <div className="following-item-chart">
               <div>~~~~~~~~~~~</div>
@@ -160,8 +167,8 @@ class Following extends React.Component {
               <div className="interval">24h</div>
             </div>
             <div className="following-item-price">
-              <span>$3.68</span>
-              <h5>-1.95%</h5>
+              <span>{this.coin_price["EOS"]}</span>
+              <h5 style={{ color: this.coin_change["EOS"] > 0 ? "green" : "red" }}>{this.coin_change["EOS"]}%</h5>
             </div>
             <div className="following-item-chart">
               <div>~~~~~~~~~~~</div>

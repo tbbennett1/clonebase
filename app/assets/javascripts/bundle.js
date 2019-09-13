@@ -374,7 +374,9 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_portfolio_val__WEBPACK_IMPORTED_MODULE_2__["default"], {
         portfolio: this.props.portfolio,
         prices: this.props.prices
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_following__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_following__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        prices: this.props.prices
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "portfolio-ra"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_portfolio__WEBPACK_IMPORTED_MODULE_4__["default"], {
         portfolio: this.props.portfolio,
@@ -446,6 +448,7 @@ var mdp = function mdp(dispatch) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util_price_api_util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util/price_api_util */ "./frontend/util/price_api_util.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -466,6 +469,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var Following =
 /*#__PURE__*/
 function (_React$Component) {
@@ -480,6 +484,14 @@ function (_React$Component) {
   _createClass(Following, [{
     key: "render",
     value: function render() {
+      this.coin_price = {};
+      this.coin_change = {};
+
+      for (var i = 0; i < this.props.prices.length; i++) {
+        this.coin_price[this.props.prices[i].symbol] = _util_price_api_util__WEBPACK_IMPORTED_MODULE_1__["formatter"].format(this.props.prices[i].priceUsd);
+        this.coin_change[this.props.prices[i].symbol] = parseFloat(this.props.prices[i].changePercent24Hr).toFixed(2);
+      }
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "following-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -500,7 +512,11 @@ function (_React$Component) {
         className: "interval"
       }, "24h")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "following-item-price"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$10,353.94"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "-0.07%")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, this.coin_price["BTC"]), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        style: {
+          color: this.coin_change["BTC"] > 0 ? "green" : "red"
+        }
+      }, this.coin_change["BTC"], "%")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "following-item-chart"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "~~~~~~~~~~~"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "following-item"
@@ -514,7 +530,11 @@ function (_React$Component) {
         className: "interval"
       }, "24h")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "following-item-price"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$183.24"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "+2.42%")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, this.coin_price["ETH"]), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        style: {
+          color: this.coin_change["ETH"] > 0 ? "green" : "red"
+        }
+      }, this.coin_change["ETH"], "%")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "following-item-chart"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "~~~~~~~~~~~"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "following-item"
@@ -528,7 +548,11 @@ function (_React$Component) {
         className: "interval"
       }, "24h")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "following-item-price"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$0.17"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "-0.55%")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, this.coin_price["BAT"]), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        style: {
+          color: this.coin_change["BAT"] > 0 ? "green" : "red"
+        }
+      }, this.coin_change["BAT"], "%")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "following-item-chart"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "~~~~~~~~~~~"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "following-item"
@@ -542,7 +566,11 @@ function (_React$Component) {
         className: "interval"
       }, "24h")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "following-item-price"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$0.17"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "+1.6%")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, this.coin_price["ZRX"]), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        style: {
+          color: this.coin_change["ZRX"] > 0 ? "green" : "red"
+        }
+      }, this.coin_change["ZRX"], "%")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "following-item-chart"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "~~~~~~~~~~~"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "following-item"
@@ -556,7 +584,11 @@ function (_React$Component) {
         className: "interval"
       }, "24h")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "following-item-price"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$0.06"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "+0.47%")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, this.coin_price["XLM"]), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        style: {
+          color: this.coin_change["XLM"] > 0 ? "green" : "red"
+        }
+      }, this.coin_change["XLM"], "%")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "following-item-chart"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "~~~~~~~~~~~"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "following-item"
@@ -570,7 +602,11 @@ function (_React$Component) {
         className: "interval"
       }, "24h")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "following-item-price"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$293.29"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "-1.57%")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, this.coin_price["BCH"]), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        style: {
+          color: this.coin_change["BCH"] > 0 ? "green" : "red"
+        }
+      }, this.coin_change["BCH"], "%")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "following-item-chart"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "~~~~~~~~~~~"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "following-item"
@@ -584,7 +620,11 @@ function (_React$Component) {
         className: "interval"
       }, "24h")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "following-item-price"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$0.29"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "-2.07%")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, this.coin_price["XRP"]), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        style: {
+          color: this.coin_change["XRP"] > 0 ? "green" : "red"
+        }
+      }, this.coin_change["XRP"], "%")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "following-item-chart"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "~~~~~~~~~~~"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "following-item"
@@ -598,7 +638,11 @@ function (_React$Component) {
         className: "interval"
       }, "24h")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "following-item-price"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$68.71"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "-2.11%")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, this.coin_price["LTC"]), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        style: {
+          color: this.coin_change["LTC"] > 0 ? "green" : "red"
+        }
+      }, this.coin_change["LTC"], "%")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "following-item-chart"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "~~~~~~~~~~~"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "following-item"
@@ -612,7 +656,11 @@ function (_React$Component) {
         className: "interval"
       }, "24h")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "following-item-price"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$3.68"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "-1.95%")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, this.coin_price["EOS"]), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        style: {
+          color: this.coin_change["EOS"] > 0 ? "green" : "red"
+        }
+      }, this.coin_change["EOS"], "%")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "following-item-chart"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "~~~~~~~~~~~"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "following-item"

@@ -30,7 +30,7 @@ class Dashboard extends React.Component {
         <div className="db">
           <div className="dashboard-top">
             <PortfolioVal portfolio={this.props.portfolio} prices={this.props.prices}/>
-            <Following />
+            <Following prices={this.props.prices}/>
             <div className="portfolio-ra">
               <Portfolio portfolio={this.props.portfolio} prices={this.props.prices}/>
               <RecentActivity />
