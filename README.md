@@ -27,5 +27,7 @@
     this.coin_change[this.props.prices[i].symbol] = parseFloat((this.props.prices[i].changePercent24Hr)).toFixed(2);
   }
 ```
-Once prices were fetched on the price page, I needed an easy way to access the price and 24hr change for each coin e.g. this.coin_price["BTC"] = current price of BTC pulled from CoinCap.io.
+<sub>Once prices were fetched on the price page, I needed an easy way to access the price and 24hr change for each coin e.g. this.coin_price["BTC"] = current price of BTC pulled from CoinCap.io.<sub>
+
+#### [SignUp](http://clonebase.herokuapp.com/#/signup) - or - [Demo](http://clonebase.herokuapp.com/#/signin)
 
