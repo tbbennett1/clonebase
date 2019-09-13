@@ -12,4 +12,9 @@
 * React
 * Redux
 
+## Features
+* Real-Time price data using [CoinCap Api](https://docs.coincap.io/?version=latest)
+* Users can signup and instantly have access to a portfolio of assets
+* Users can see the breakdown and total amount of their portfolios
+
 
