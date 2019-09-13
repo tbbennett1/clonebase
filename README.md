@@ -1,4 +1,4 @@
-# [clonebase](www.clonebase.herokuapp.com)
+# [clonebase](http://clonebase.herokuapp.com)
 
 * clonebase is a website where the crypto-curious can follow and trade cryptocurrencies. 
 * It is 100% free and is meant for educational purposes.
