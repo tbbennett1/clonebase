@@ -7,3 +7,9 @@
 
 ![Web Site System](wiki/clonebase_demo-min.gif)
 
+## Technologies
+* Rails
+* React
+* Redux
+
+
