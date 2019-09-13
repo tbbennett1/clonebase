@@ -16,7 +16,7 @@
   max-width: 49%;
 }
 
-.prt-data-table{
+.prt-data-table, .ra-data-table{
   border-collapse: collapse;
   width: 100%;
 }
@@ -75,7 +75,7 @@
   align-items: center;
 }
 
-.prt-data-table img {
+.prt-data-table img,{
   width: 38px;
   height: 38px;
 }
@@ -95,21 +95,21 @@
   border-radius: 4px;
 }
 .percent-bar-bat {
-  width: 10%;
+  width: 5%;
   background-color: orangered;
   margin-right: 8px;
   height: 8px;
   border-radius: 4px;
 }
 .percent-bar-zrx {
-  width: 10%;
+  width: 5%;
   background-color: black;
   margin-right: 8px;
   height: 8px;
   border-radius: 4px;
 }
 .percent-bar-ltc {
-  width: 5%;
+  width: 15%;
   background-color: grey;
   margin-right: 8px;
   height: 8px;
@@ -131,7 +131,7 @@
   font-size: 14px;
   font-weight: 200;
   color: rgba(17, 51, 83, 0.6);
-  padding-left: 12px
+  padding-left: 12px;
 }
 
 .balance {

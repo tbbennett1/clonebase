@@ -1047,7 +1047,58 @@ function (_React$Component) {
         className: "ra-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "ra-header"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "RecentActivity")));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Recent Activity")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "ra-data"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
+        className: "ra-data-table"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "ra-date"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "SEP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "03"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.bat_logo,
+        className: "ra-img"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "ra-type"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Withdrew Funds"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "To Bank Account *****03"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "ra-usd-value"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "-$1,000"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "-$1,000")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "ra-date"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "SEP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "03"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.btc_logo,
+        className: "ra-img"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "ra-type"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Withdrew Funds"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "To Bank Account *****03"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "ra-usd-value"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "-$12,000"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "-$12,000")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "ra-date"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "SEP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "03"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.eth_logo,
+        className: "ra-img"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "ra-type"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Bought Ethereum"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Using USD Wallet"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "ra-usd-value"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "+$19,000"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "+$19,000")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "ra-date"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "SEP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "02"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.bat_logo,
+        className: "ra-img"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "ra-type"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Withdrew Funds"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "To Bank Account *****03"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "ra-usd-value"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "-$1,000"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "-$1,000")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "ra-date"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "AUG"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "11"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.bat_logo,
+        className: "ra-img"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "ra-type"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Bought Basic Attention Token"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Using USD Wallet"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "ra-usd-value"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "+$1,000"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "+$1,000")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "balance"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "View your accounts >"))));
     }
   }]);
 
