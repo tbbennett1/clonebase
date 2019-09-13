@@ -18,16 +18,6 @@ class Price extends React.Component{
         </div>
       )
     }else {
-      // // let btc_price = formatter.format(this.props.prices[0].priceUsd);
-      // let eth_price = formatter.format(this.props.prices[1].priceUsd);
-      // let xrp_price = formatter.format(this.props.prices[2].priceUsd);
-      // let bch_price = formatter.format(this.props.prices[3].priceUsd);
-      // let ltc_price = formatter.format(this.props.prices[4].priceUsd);
-      // // let btc_chng = parseFloat(this.props.prices[0].changePercent24Hr).toFixed(2);
-      // let eth_chng = parseFloat(this.props.prices[1].changePercent24Hr).toFixed(2);
-      // let xrp_chng = parseFloat(this.props.prices[2].changePercent24Hr).toFixed(2);
-      // let bch_chng = parseFloat(this.props.prices[3].changePercent24Hr).toFixed(2);
-      // let ltc_chng = parseFloat(this.props.prices[4].changePercent24Hr).toFixed(2);
       this.coin_price = {};
       this.coin_change = {}
       for (let i = 0; i < this.props.prices.length; i++) {
