@@ -1,5 +1,6 @@
 import React from 'react';
-import Heading from '../homepage/heading';
+import Heading from '../homepage/heading_container';
+import Header from '../dashboard/header';
 import {formatter} from '../../util/price_api_util';
 
 class Price extends React.Component{
@@ -17,16 +18,24 @@ class Price extends React.Component{
         <div className="loading">
         </div>
       )
-    }else {
-      this.coin_price = {};
-      this.coin_change = {}
-      for (let i = 0; i < this.props.prices.length; i++) {
-        this.coin_price[this.props.prices[i].symbol] = formatter.format(this.props.prices[i].priceUsd);
-        this.coin_change[this.props.prices[i].symbol] = parseFloat((this.props.prices[i].changePercent24Hr)).toFixed(2);
-      }
+    }
+
+    this.coin_price = {};
+    this.coin_change = {}
+    for (let i = 0; i < this.props.prices.length; i++) {
+      this.coin_price[this.props.prices[i].symbol] = formatter.format(this.props.prices[i].priceUsd);
+      this.coin_change[this.props.prices[i].symbol] = parseFloat((this.props.prices[i].changePercent24Hr)).toFixed(2);
+    }
+    let heading;
+    if(this.props.currentUser.id){
+      heading = <Header logout={this.props.logout}/>;
+    }else{
+      heading = <Heading />;
+    }
+
     return(
       <div className="price-index">
-        <Heading />
+        {heading}
         <div className="price-top">
           <div className="price-inner">
             <div className="search-box">
@@ -174,7 +183,6 @@ class Price extends React.Component{
         </div>
       </div>
     )}
-  }
 }
 
 export default Price;

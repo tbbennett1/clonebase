@@ -1,6 +1,13 @@
 .footer-top {
-  background: image-url('footer.png');
+  background-color: #e7f4ff;
   background-size: 100% 100%;
   width: 100%;
-  height: 450px;
+  height: 240px;
+  position: relative;
+}
+
+.footer-top img{
+  position: absolute;
+  right: 0;
+  top: 0;
 }

@@ -20,7 +20,7 @@ const App = () => (
       <AuthRoute exact path="/" component={Splash} />
       <AuthRoute exact path="/signin" component={LogIn} />
       <AuthRoute exact path="/signup" component={SignUp} />
-      <AuthRoute exact path="/price" component={Price} />
+      <Route exact path="/price" component={Price} />
       <ProtectedRoute exact path="/dashboard" component={Dashboard} />
       <Route component={PageNotFound} />
   </Switch>

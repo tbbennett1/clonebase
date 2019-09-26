@@ -1,16 +1,19 @@
 import { connect } from 'react-redux';
 import Price from './price';
 import { fetchPrices } from '../../actions/price_actions';
+import { logout } from '../../actions/session_actions';
 
-const msp = ({entities}) => {
+const msp = (state) => {
   return ({
-    prices: entities.prices.prices
+    prices: state.entities.prices.prices,
+    currentUser: state.session
   });
 };
 
 const mdp = (dispatch) => {
   return ({
-    fetchPrices: () => dispatch(fetchPrices())
+    fetchPrices: () => dispatch(fetchPrices()),
+    logout: () => dispatch(logout())
   })
 }
 
