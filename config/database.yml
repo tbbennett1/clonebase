@@ -19,6 +19,9 @@ default: &default
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
+  
+  # Here we make sure we can pass the connection URL for the database
+  url: <%= ENV['DATABASE_URL'] %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
@@ -80,6 +83,8 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  host: db
   database: clonebase_production
   username: clonebase
-  password: <%= ENV['CLONEBASE_DATABASE_PASSWORD'] %>
+  password: #<%= ENV['CLONEBASE_DATABASE_PASSWORD'] %>
