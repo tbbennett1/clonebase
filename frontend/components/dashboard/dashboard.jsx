@@ -5,6 +5,7 @@ import PortfolioVal from './portfolio_val';
 import Following from './following';
 import Portfolio from './portfolio';
 import RecentActivity from './recent_activity';
+import Footer from '../homepage/footer';
 
 
 class Dashboard extends React.Component {
@@ -25,19 +26,19 @@ class Dashboard extends React.Component {
     }
 
     return (
-      <div className="dashboard-index">
-        <Header logout={this.props.logout}/>
-        <div className="db">
-          <div className="dashboard-top">
-            <PortfolioVal portfolio={this.props.portfolio} prices={this.props.prices}/>
-            <Following prices={this.props.prices}/>
-            <div className="portfolio-ra">
-              <Portfolio portfolio={this.props.portfolio} prices={this.props.prices}/>
-              <RecentActivity />
+        <div className="dashboard-index">
+          <Header logout={this.props.logout}/>
+          <div className="db">
+            <div className="dashboard-top">
+              <PortfolioVal portfolio={this.props.portfolio} prices={this.props.prices}/>
+              <Following prices={this.props.prices}/>
+              <div className="portfolio-ra">
+                <Portfolio portfolio={this.props.portfolio} prices={this.props.prices}/>
+                <RecentActivity />
+              </div>
             </div>
           </div>
         </div>
-      </div>
     )
   }
 }

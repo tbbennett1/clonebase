@@ -313,6 +313,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _following__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./following */ "./frontend/components/dashboard/following.jsx");
 /* harmony import */ var _portfolio__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./portfolio */ "./frontend/components/dashboard/portfolio.jsx");
 /* harmony import */ var _recent_activity__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./recent_activity */ "./frontend/components/dashboard/recent_activity.jsx");
+/* harmony import */ var _homepage_footer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../homepage/footer */ "./frontend/components/homepage/footer.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -330,6 +331,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -746,7 +748,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/price",
         id: "db-price-link"
-      }, "Prices")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Products"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Company"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Prices")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "end-nav"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         className: "login-signup",
