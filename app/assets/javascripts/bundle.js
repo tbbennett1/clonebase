@@ -2051,11 +2051,15 @@ function (_React$Component) {
         className: "at-row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "#"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Price"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Change"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Market Cap"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Trade"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", {
         className: "at-body"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://bitcoin.org/en/"
+      }, "1")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
         className: "at-deets"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://bitcoin.org/en/"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: window.btc_logo
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Bitcoin"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "BTC")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, this.coin_price["BTC"]), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Bitcoin"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "BTC"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, this.coin_price["BTC"]), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
         style: {
           color: this.coin_change["BTC"] > 0 ? "green" : "red"
         }

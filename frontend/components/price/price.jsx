@@ -69,11 +69,13 @@ class Price extends React.Component{
                 </thead>
                 <tbody className="at-body">
                   <tr>
-                    <td>1</td>
+                    <td><a href="https://bitcoin.org/en/">1</a></td>
                     <td className="at-deets">
-                      <img src={window.btc_logo} />
-                      <span>Bitcoin</span>
-                      <h4>BTC</h4>
+                      <a href="https://bitcoin.org/en/">
+                        <img src={window.btc_logo} />
+                        <span>Bitcoin</span>
+                        <h4>BTC</h4>
+                      </a>
                     </td>
                     <td>{this.coin_price["BTC"]}</td>
                     <td style={{ color: this.coin_change["BTC"] > 0 ? "green" : "red" }}>{this.coin_change["BTC"]}%</td>
