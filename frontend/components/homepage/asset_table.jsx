@@ -41,62 +41,62 @@ class AssetTable extends React.Component {
             </tr>
           </thead>
           <tbody className="at-body">
-            <a href="https://bitcoin.org/en/">
-              <tr>
-                <td>1</td>
+            <tr>
+              <td><a href="https://bitcoin.org/en/">1</a></td>
+              <td className="at-deets">
+                <a href="https://bitcoin.org/en/">
+                <img src={window.btc_logo} />
+                <span>Bitcoin</span>
+                <h4>BTC</h4>
+                </a>
+              </td>
+              <td>{btc_price}</td>
+              <td style={{ color: btc_chng > 0 ? "green" : "red" }}>{btc_chng}%</td>
+              <td>~~~~~</td>
+              <td><button>Buy</button></td>
+            </tr>
+            <tr>
+              <td><a href="https://ethereum.org/">2</a></td>
                 <td className="at-deets">
-                  <img src={window.btc_logo} />
-                  <span>Bitcoin</span>
-                  <h4>BTC</h4>
-                </td>
-                <td>{btc_price}</td>
-                <td style={{ color: btc_chng > 0 ? "green" : "red" }}>{btc_chng}%</td>
-                <td>~~~~~</td>
-                <td><button>Buy</button></td>
-              </tr>
-            </a>
-            <a href="https://ethereum.org/">
-              <tr>
-                <td>2</td>
-                <td className="at-deets">
-                  <img src={window.eth_logo} />
-                  <span>Ethereum</span>
-                  <h4>ETH</h4>
+                  <a href="https://ethereum.org/">
+                    <img src={window.eth_logo} />
+                    <span>Ethereum</span>
+                    <h4>ETH</h4>
+                  </a>
                 </td>
                 <td>${eth_price}</td>
                 <td style={{ color: eth_chng > 0 ? "green" : "red" }}>{eth_chng}%</td>
                 <td>~~~~~</td>
                 <td><button>Buy</button></td>
-              </tr>
-            </a>
-            <a href="https://www.bitcoincash.org/">
-              <tr>
-                <td>3</td>
-                <td className="at-deets">
+            </tr>
+            <tr>
+            <td><a href="https://www.bitcoincash.org/">3</a></td>
+              <td className="at-deets">
+                <a href="https://www.bitcoincash.org/">
                   <img src={window.bch_logo} />
                   <span>Bitcoin Cash</span>
                   <h4>BCH</h4>
-                </td>
-                <td>${bch_price}</td>
-                <td style={{ color: bch_chng > 0 ? "green" : "red" }}>{bch_chng}%</td>
-                <td>~~~~~</td>
-                <td><button>Buy</button></td>
-              </tr>
-            </a>
-            <a href="https://litecoin.org/">
-                <tr>
-                <td>4</td>
-                <td className="at-deets">
+                </a>
+              </td>
+              <td>${bch_price}</td>
+              <td style={{ color: bch_chng > 0 ? "green" : "red" }}>{bch_chng}%</td>
+              <td>~~~~~</td>
+              <td><button>Buy</button></td>
+            </tr>
+            <tr>
+              <td><a href="https://litecoin.org/">4</a></td>
+              <td className="at-deets">
+                <a href="https://litecoin.org/">
                   <img src={window.ltc_logo} />
                   <span>Litecoin</span>
                   <h4>LTC</h4>
-                </td>
-                <td>${ltc_price}</td>
-                <td style={{ color: ltc_chng > 0 ? "green" : "red" }}>{ltc_chng}%</td>
-                <td>~~~~~</td>
-                <td><button>Buy</button></td>
-              </tr>
-              </a>
+                </a>
+              </td>
+              <td>${ltc_price}</td>
+              <td style={{ color: ltc_chng > 0 ? "green" : "red" }}>{ltc_chng}%</td>
+              <td>~~~~~</td>
+              <td><button>Buy</button></td>
+            </tr>
           </tbody>
         </table>
       </div>

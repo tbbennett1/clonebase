@@ -33,9 +33,9 @@
   border: 5px solid black;
 }
 
-.at-body a{
-  text-decoration: none;
-}
+// .at-body a{
+//   text-decoration: none;
+// }
 
 .at-row th {
   text-align: left;
@@ -47,7 +47,7 @@
   color: rgba(17, 51, 83, 0.6);
 }
 
-.at-row th:first-child {
+.at-row > th:first-child {
   padding-left: 32px;
 }
 
@@ -66,26 +66,37 @@
   margin-right: 16px;
 }
 
-.at-body > a > tr{
+.at-body > tr{
   font-size: 18px;
   user-select: none;
   padding: 28px 36px;
   background: rgb(255, 255, 255);
 }
 
-.at-body > a > tr:hover{
+.at-body > tr:hover{
   background: rgb(238, 240, 243);
 }
 
-.at-body > a > tr > td {
+.at-body > tr > td {
   cursor: pointer;
   border-top: 1px solid rgb(236, 239, 241);
   padding: 14px 48px 14px 0px;
   align-items: center;
   color: black;
+  text-decoration: none;
 }
 
-.at-deets {
+.at-body > tr > td:first-child{
+  padding-left: 32px;
+}
+
+.at-body a{
+  align-items: center;
+  color: black;
+  text-decoration: none;
+}
+
+.at-deets > a {
   display: flex;
   flex-direction: row;
 }
