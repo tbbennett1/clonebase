@@ -83,11 +83,13 @@ class Price extends React.Component{
                     <td><button>Trade</button></td>
                   </tr>
                   <tr>
-                    <td>2</td>
+                    <td><a href="https://ethereum.org/">2</a></td>
                     <td className="at-deets">
-                      <img src={window.eth_logo} />
-                      <span>Ethereum</span>
-                      <h4>ETH</h4>
+                      <a href="https://ethereum.org/">
+                        <img src={window.eth_logo} />
+                        <span>Ethereum</span>
+                        <h4>ETH</h4>
+                      </a>
                     </td>
                     <td>{this.coin_price["ETH"]}</td>
                     <td style={{ color: this.coin_change["ETH"] > 0 ? "green" : "red" }}>{this.coin_change["ETH"]}%</td>
@@ -95,11 +97,13 @@ class Price extends React.Component{
                     <td><button>Trade</button></td>
                   </tr>
                   <tr>
-                    <td>3</td>
+                    <td><a href="https://www.ripple.com/xrp/">3</a></td>
                     <td className="at-deets">
-                      <img src={window.xrp_logo} />
-                      <span>Ripple</span>
-                      <h4>XRP</h4>
+                      <a href="https://www.ripple.com/xrp/">
+                        <img src={window.xrp_logo} />
+                        <span>Ripple</span>
+                        <h4>XRP</h4>
+                      </a>
                     </td>
                     <td>{this.coin_price["XRP"]}</td>
                     <td style={{ color: this.coin_change["XRP"] > 0 ? "green" : "red" }}>{this.coin_change["XRP"]}%</td>
@@ -107,11 +111,13 @@ class Price extends React.Component{
                     <td><button>Trade</button></td>
                   </tr>
                   <tr>
-                    <td>4</td>
+                    <td><a href="https://www.bitcoincash.org/">4</a></td>
                     <td className="at-deets">
-                      <img src={window.bch_logo} />
-                      <span>Bitcoin Cash</span>
-                      <h4>BCH</h4>
+                      <a href="https://www.bitcoincash.org/">
+                        <img src={window.bch_logo} />
+                        <span>Bitcoin Cash</span>
+                        <h4>BCH</h4>
+                      </a>
                     </td>
                     <td>{this.coin_price["BCH"]}</td>
                     <td style={{ color: this.coin_change["BCH"] > 0 ? "green" : "red" }}>{this.coin_change["BCH"]}%</td>
@@ -119,11 +125,13 @@ class Price extends React.Component{
                     <td><button>Trade</button></td>
                   </tr>
                   <tr>
-                    <td>5</td>
+                    <td><a href="https://litecoin.org/">5</a></td>
                     <td className="at-deets">
-                      <img src={window.ltc_logo} />
-                      <span>Litecoin</span>
-                      <h4>LTC</h4>
+                      <a href="https://litecoin.org/">
+                        <img src={window.ltc_logo} />
+                        <span>Litecoin</span>
+                        <h4>LTC</h4>
+                      </a>
                     </td>
                     <td>{this.coin_price["LTC"]}</td>
                     <td style={{ color: this.coin_change["LTC"] > 0 ? "green" : "red" }}>{this.coin_change["LTC"]}%</td>
@@ -131,11 +139,13 @@ class Price extends React.Component{
                     <td><button>Trade</button></td>
                   </tr>
                   <tr>
-                    <td>6</td>
+                    <td><a href="https://eos.io/">6</a></td>
                     <td className="at-deets">
-                      <img src={window.eos_logo} />
-                      <span>EOS</span>
-                      <h4>EOS</h4>
+                      <a href="https://eos.io/">
+                        <img src={window.eos_logo} />
+                        <span>EOS</span>
+                        <h4>EOS</h4>
+                      </a>
                     </td>
                     <td>{this.coin_price["EOS"]}</td>
                     <td style={{ color: this.coin_change["EOS"] > 0 ? "green" : "red" }}>{this.coin_change["EOS"]}%</td>
@@ -143,11 +153,13 @@ class Price extends React.Component{
                     <td><button>Trade</button></td>
                   </tr>
                   <tr>
-                    <td>7</td>
+                    <td><a href="https://www.stellar.org/">7</a></td>
                     <td className="at-deets">
-                      <img src={window.xlm_logo} />
-                      <span>Stellar Lumens</span>
-                      <h4>XLM</h4>
+                      <a href="https://www.stellar.org/">
+                        <img src={window.xlm_logo} />
+                        <span>Stellar Lumens</span>
+                        <h4>XLM</h4>
+                      </a>
                     </td>
                     <td>{this.coin_price["XLM"]}</td>
                     <td style={{ color: this.coin_change["XLM"] > 0 ? "green" : "red" }}>{this.coin_change["XLM"]}%</td>
@@ -155,11 +167,13 @@ class Price extends React.Component{
                     <td><button>Trade</button></td>
                   </tr>
                   <tr>
-                    <td>8</td>
+                    <td><a href="https://publishers.basicattentiontoken.org/">8</a></td>
                     <td className="at-deets">
-                      <img src={window.bat_logo} />
-                      <span>Basic Attention Token</span>
-                      <h4>BAT</h4>
+                      <a href="https://publishers.basicattentiontoken.org/">
+                        <img src={window.bat_logo} />
+                        <span>Basic Attention Token</span>
+                        <h4>BAT</h4>
+                      </a>
                     </td>
                     <td>{this.coin_price["BAT"]}</td>
                     <td style={{ color: this.coin_change["BAT"] > 0 ? "green" : "red" }}>{this.coin_change["BAT"]}%</td>
@@ -167,11 +181,13 @@ class Price extends React.Component{
                     <td><button>Trade</button></td>
                   </tr>
                   <tr>
-                    <td>9</td>
+                    <td><a href="https://0x.org/">9</a></td>
                     <td className="at-deets">
-                      <img src={window.zrx_logo} />
-                      <span>0x</span>
-                      <h4>ZRX</h4>
+                      <a href="https://0x.org/">
+                        <img src={window.zrx_logo} />
+                        <span>0x</span>
+                        <h4>ZRX</h4>
+                      </a>
                     </td>
                     <td>{this.coin_price["ZRX"]}</td>
                     <td style={{ color: this.coin_change["ZRX"] > 0 ? "green" : "red" }}>{this.coin_change["ZRX"]}%</td>
