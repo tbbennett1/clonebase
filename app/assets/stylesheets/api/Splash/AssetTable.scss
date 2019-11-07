@@ -33,6 +33,10 @@
   border: 5px solid black;
 }
 
+.at-body a{
+  text-decoration: none;
+}
+
 .at-row th {
   text-align: left;
   padding: 16px 16px 16px 0;
@@ -62,22 +66,23 @@
   margin-right: 16px;
 }
 
-.at-body > tr {
+.at-body > a > tr{
   font-size: 18px;
   user-select: none;
   padding: 28px 36px;
   background: rgb(255, 255, 255);
 }
 
-.at-body > tr:hover{
+.at-body > a > tr:hover{
   background: rgb(238, 240, 243);
 }
 
-.at-body > tr > td {
+.at-body > a > tr > td {
   cursor: pointer;
   border-top: 1px solid rgb(236, 239, 241);
   padding: 14px 48px 14px 0px;
   align-items: center;
+  color: black;
 }
 
 .at-deets {
@@ -93,7 +98,7 @@
   margin: 0 0 0 16px;
 }
 
-.at-body > tr > td:first-child {
+.at-body > a > tr > td:first-child {
   padding-left: 32px;
 }
 
