@@ -1216,7 +1216,9 @@ function (_React$Component) {
           style: {
             color: eth_chng > 0 ? "green" : "red"
           }
-        }, eth_chng, "%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "~~~~~"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Buy"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        }, eth_chng, "%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "~~~~~"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+          to: "/signin"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Buy")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
           href: "https://www.bitcoincash.org/"
         }, "3")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
           className: "at-deets"
@@ -1228,7 +1230,9 @@ function (_React$Component) {
           style: {
             color: bch_chng > 0 ? "green" : "red"
           }
-        }, bch_chng, "%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "~~~~~"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Buy"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        }, bch_chng, "%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "~~~~~"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+          to: "/signin"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Buy")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
           href: "https://litecoin.org/"
         }, "4")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
           className: "at-deets"
@@ -1240,7 +1244,9 @@ function (_React$Component) {
           style: {
             color: ltc_chng > 0 ? "green" : "red"
           }
-        }, ltc_chng, "%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "~~~~~"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Buy"))))));
+        }, ltc_chng, "%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "~~~~~"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+          to: "/signin"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Buy")))))));
       }
     }
   }]);
@@ -33306,7 +33312,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

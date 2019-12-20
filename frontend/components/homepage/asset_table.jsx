@@ -68,7 +68,7 @@ class AssetTable extends React.Component {
                 <td>${eth_price}</td>
                 <td style={{ color: eth_chng > 0 ? "green" : "red" }}>{eth_chng}%</td>
                 <td>~~~~~</td>
-                <td><button>Buy</button></td>
+              <td><Link to="/signin"><button>Buy</button></Link></td>
             </tr>
             <tr>
             <td><a href="https://www.bitcoincash.org/">3</a></td>
@@ -82,7 +82,7 @@ class AssetTable extends React.Component {
               <td>${bch_price}</td>
               <td style={{ color: bch_chng > 0 ? "green" : "red" }}>{bch_chng}%</td>
               <td>~~~~~</td>
-              <td><button>Buy</button></td>
+              <td><Link to="/signin"><button>Buy</button></Link></td>
             </tr>
             <tr>
               <td><a href="https://litecoin.org/">4</a></td>
@@ -96,7 +96,7 @@ class AssetTable extends React.Component {
               <td>${ltc_price}</td>
               <td style={{ color: ltc_chng > 0 ? "green" : "red" }}>{ltc_chng}%</td>
               <td>~~~~~</td>
-              <td><button>Buy</button></td>
+              <td><Link to="/signin"><button>Buy</button></Link></td>
             </tr>
           </tbody>
         </table>
