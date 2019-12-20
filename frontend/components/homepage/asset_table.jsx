@@ -1,5 +1,6 @@
 import React from 'react';
 import {formatter} from '../../util/price_api_util';
+import {Link} from 'react-router-dom';
 
 class AssetTable extends React.Component {
   constructor(props) {
@@ -53,7 +54,7 @@ class AssetTable extends React.Component {
               <td>{btc_price}</td>
               <td style={{ color: btc_chng > 0 ? "green" : "red" }}>{btc_chng}%</td>
               <td>~~~~~</td>
-              <td><button>Buy</button></td>
+              <td><Link to="/signin"><button>Buy</button></Link></td>
             </tr>
             <tr>
               <td><a href="https://ethereum.org/">2</a></td>
